@@ -13,28 +13,45 @@ controller: homeCtrl
 
 <!--Cabecera--> 
 <div ng-if="actualBody == 0" class="cabecera">
-	
-	
-	<div class="titulos-div-cabecera" style="overflow: hidden;">
+	<div class="video-servicios-div" >
+		<iframe src="https://www.youtube.com/embed/VSVcZhWV1Rc?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=0dbig-gLoCo" frameborder="0" allowfullscreen class="video-servicios"></iframe>
+		<div style="position: absolute; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8);">
+		</div>    
+	</div>
+	<div style="position: absolute; left: 0; right: 0; width: 70%; height: 350px; background: blue; margin: auto; top: 300px;">
+		<div>
+			<img src="./assets/img/W-B-franquicias-min.png">
+		</div>
+		<div style="position: absolute; right: 0; width: 40%; background: red; top: 0;">
+			<h4>NEGOCIO + ACTITUD!</h4>
+			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta ut nulla vel elementum. Sed eu ligula auctor, consequat lorem.</p>
+			<div class="leerMas" ng-click="go('franquicias')">
+				<h6 class="whiteFont Lato-Regular">
+				<i class="fa fa-rocket whiteFont" aria-hidden="true"></i>
+					Solicitar info.
+				</h6>
+			</div>
+			<div style="position: absolute; right: 50px; top: 140px; width: 20%; background: green">
+				<i class="fa fa-angle-left whiteFont fa-3x" style="position: absolute; left: 0px" aria-hidden="true"></i>
+				<i class="fa fa-angle-right whiteFont fa-3x" style="position: absolute; right: 0px" aria-hidden="true"></i>
+			</div>
+		</div>
+	</div>
+	<!--div class="titulos-div-cabecera" style="overflow: hidden;">
 	
 		<h4 class="whiteFont text-center RobotoCondensed-Bold cabecera-titulo">WALL’S BARBERSHOP FRANQUICIAS</h4>
-		<!--
+		<!-$-
 		<h2 class="whiteFont text-center underline Lato-Regular slide-to-left" id="slide-text-1">Somos la cadena de barbería más importante de México con un nuevo concepto que crece en popularidad y presencia de marca.</h2>
-		<h2 class="whiteFont text-center underline Lato-Regular slide-to-left" id="slide-text-2">Somos la cadena de barbería más importante de México con un nuevo concepto que crece en popularidad y presencia de marca.</h2>-->
+		<h2 class="whiteFont text-center underline Lato-Regular slide-to-left" id="slide-text-2">Somos la cadena de barbería más importante de México con un nuevo concepto que crece en popularidad y presencia de marca.</h2>-$->
 		<p class="item-1 whiteFont text-center Lato-Regular">Somos la cadena de barbería más importante de México con un nuevo concepto que crece en popularidad y presencia de marca.</p>
 		<p class="item-2 whiteFont text-center Lato-Regular">Franquicias con conceptualización de espacios modernos y vanguardistas para una experiencia única en servicio de barbería.</p>
 		<p class="item-3 whiteFont text-center Lato-Regular">Actualmente somos 19 sucursales en toda la república mexicana.</p>
 		<p class="item-4 whiteFont text-center Lato-Regular">Somos un ejemplo de superación y orgullo mexicano tras emprender un negocio único con particularidad y prestigio.</p>
 		<p class="item-5 whiteFont text-center Lato-Regular">Espíritu emprendedor con potencial de crecimiento a escala.</p>
 		<p class="item-6 whiteFont text-center Lato-Regular">Espacios acogedores con servicios diseñados a tus necesidades.</p>
-	</div>
+	</div-->
 	<img src="./assets/img/sello.png" class="white-sello">
-	<div class="leerMas" ng-click="go('franquicias')">
-		<h6 class="whiteFont Lato-Regular">
-			<i class="fa fa-rocket whiteFont" aria-hidden="true"></i>
-			Solicitar info.
-		</h6>
-	</div>
+	
 
 	<div class="angleDiv">
 		<i class="fa fa-angle-down whiteFont fa-4x " aria-hidden="true"></i>

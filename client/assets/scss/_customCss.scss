@@ -66,12 +66,9 @@ body{
 
 .leerMas{
 	position: absolute;
-	bottom: 30%;
-	width: 10%;
-	height: auto;
-	margin: auto;
-	left: 0;
-	right: 0;
+	top: 150px;
+	width: 150px;
+	left: 0px;
 	background: #353432;
 	border: 2px solid white;
 	border-radius: 5px;
@@ -130,7 +127,7 @@ body{
 	
 }
 .cabecera{
-	background-image: url(/assets/img/fondo-cabecera.jpg);
+	background-image: url(/assets/img/bg-top.jpg);
 	background-size : cover;
 	width : 100%;
 	position : fixed;
