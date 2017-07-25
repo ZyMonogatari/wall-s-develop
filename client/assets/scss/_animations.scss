@@ -129,8 +129,6 @@
 }
 
 
-
-
 .slide-left-to-right{
 	-webkit-animation-name: slide-left-to-right; /* Safari 4.0 - 8.0 */
     -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
@@ -139,6 +137,8 @@
     -webkit-animation-fill-mode: forwards;
      animation-fill-mode:forwards;
 }
+
+
 
 .slide-right-to-left{
 	-webkit-animation-name: slide-right-to-left; /* Safari 4.0 - 8.0 */
@@ -153,6 +153,15 @@
     -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
     animation-name: slide-to-left;
     animation-duration: 1s;
+    animation-fill-mode:forwards;
+
+}
+
+.to-left-text{
+  -webkit-animation-name: to-left-text; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+    animation-name: to-left-text;
+    animation-duration: 3s;
     animation-fill-mode:forwards;
 
 }

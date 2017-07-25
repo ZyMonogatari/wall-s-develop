@@ -8,6 +8,7 @@ angular.module('application').controller('homeCtrl',
             $scope.displayMenu = 'initial';
         }
     }
+
     $scope.displaySesionN = 'none';
     $scope.goMap = function(e, state){
       $state.go(state).then(function(){

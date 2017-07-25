@@ -63,14 +63,29 @@ body{
 	top: 1%;
 	left: 30px;
 }
-
+.cabecera-titulos-v2{
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 60%;
+	height: 350px;
+	margin: auto;
+	top: 300px;
+}
+.titulos-div-cabecera-v2{
+	position: absolute;
+	right: 0;
+	width: 40%;
+	top: 0;
+	overflow: hidden;
+	height: 100%;
+}
 .leerMas{
 	position: absolute;
-	top: 150px;
+	top: 250px;
 	width: 150px;
 	left: 0px;
-	background: #353432;
-	border: 2px solid white;
+	background: #A4A4A4;
 	border-radius: 5px;
 	text-align: center;
 	cursor: pointer;
@@ -326,6 +341,12 @@ body{
 
 
 @media only screen and (max-width: 1400px){
+	.cabecera-titulos-v2{
+		top: 200px;
+	}
+	.leerMas{
+		top: 280px;
+	}
 	.cuerpo2{
 		top: 480%;
 	}
@@ -338,10 +359,24 @@ body{
 	#titulos-div-fondo-fixed{
 		bottom: 7%;	
 	}
+	.white-sello{
+		transform: scale(0.9, 0.9);
+    	-ms-transform: scale(0.9, 0.9);
+    	-webkit-transform: scale(0.9, 0.9);
+    	left: -70px;
+    	bottom: -3%;
+	}
 }
 	
-
+@media only screen and (max-width: 1280px){
+	.cabecera-titulos-v2{
+		width: 70%;
+	}
+}
 @media only screen and (max-width: 1024px){
+	.cabecera-titulos-v2{
+		width: 80%;
+	}
 	.socialIconsDiv{
 		left: 150px;
 	}
@@ -395,11 +430,6 @@ body{
 	.titulos-div-cabecera{
 		top: 15%;
 	}
-	.leerMas{
-		bottom: 60%;
-		width: 15%;
-	}
-
 	.angleDiv{
 		bottom: 50%;
 		width: 5%;
@@ -474,6 +504,10 @@ body{
 }
 
 @media only screen and (max-width: 768px){
+	.cabecera-titulos-v2{
+		width: 100%;
+		top: 150px;
+	}
 	.video {
 	    top: 10% !important;
 	    height: 25%;
@@ -486,8 +520,8 @@ body{
 	.titulos-div-cabecera{
 		width: 85%;
 	}
-	.leerMas{
-		bottom: 58%;
+	.white-sello{
+		display: none;
 	}
 }
 
@@ -498,6 +532,9 @@ body{
 	.video{
 		width: 60%;
 	}
+	.leerMas{
+		top: 130px;
+	}
 	.white-sello{
 		transform: scale(0.5, 0.5);
     	-ms-transform: scale(0.5, 0.5);
@@ -506,10 +543,6 @@ body{
 	}
 	.iconsDiv{
 		width: 25%;
-	}
-	.leerMas{
-		bottom: 70%;
-		width: 20%;
 	}
 	.angleDiv{
 		bottom: 57%;
@@ -538,6 +571,23 @@ body{
 }
 
 @media only screen and (max-width: 414px){
+	.imageCabecera{
+		transform: scale(0.3, 0.3);
+    	-ms-transform: scale(0.3, 0.3);
+    	-webkit-transform: scale(0.8, 0.8);
+	}
+	.div-image-cabecera{
+		position: absolute;
+    	left: 0px;
+    	width: 60%;
+	}
+	.titulos-div-cabecera-v2{
+		right: 20px;
+	}
+	.cabecera-titulos-v2{
+		width: 100%;
+    	top: 100px;
+	}
 	.cabecera-titulo{
 		font-size: 1rem;
 	}
@@ -582,9 +632,6 @@ body{
 		left: 50px;
     	top: 50px;
 	}
-	.leerMas{
-	 	width: 25%;
-	 }
 	 .leerMasFooter{
 	 	width: 25%;
 	 	bottom: 50%;
@@ -648,7 +695,9 @@ body{
 }
 
 @media only screen and (max-width: 375px){
-	
+	.cabecera-titulos-v2{
+		top: 80px;
+	}
 	.wallsCardLogoDiv{
 		width: 30%;
 		bottom: 48%;
@@ -675,12 +724,6 @@ body{
     	-webkit-transform: scale(0.7, 0.7);
     	bottom: 50%;
 	}
-	.leerMas{
-		transform: scale(0.7, 0.7);
-    	-ms-transform: scale(0.7, 0.7);
-    	-webkit-transform: scale(0.7, 0.7);
-    	bottom: 64%;
-	}
 	.iconsDiv{
 		transform: scale(0.7, 0.7);
     	-ms-transform: scale(0.7, 0.7);
@@ -694,8 +737,13 @@ body{
 	}
 }
 @media only screen and (max-width: 320px){
+	.cabecera-titulos-v2{
+		top: 60px;
+		width: 110%;
+    	left: -20px;
+	}
 	.leerMas{
-		width: 35%;		
+		width: 120px;
 	}
 	.cuerpo1-titulos-div, h4 {
     	font-size: 85%;
