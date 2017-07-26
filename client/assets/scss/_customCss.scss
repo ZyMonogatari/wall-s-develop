@@ -300,14 +300,22 @@ body{
 }
 
 .cuerpo2-div{
+	background-image: url(/assets/img/bg-medio-antefooter-min.jpg);
+	background-position: center;
+	background-size : cover;
+	background-repeat: no-repeat;
 	position: absolute;
 	top: 15%;
 	width: 100%;
 	height: 80%;
 	z-index: 0;
-	background: white;
 }
-
+.sublined{
+	text-decoration: underline;
+}
+.cuerpo2-titulo{
+	font-size: 100px;
+}
 .cuerpo2-titulos-div{
 	position: absolute; 
 	left: 0;
@@ -571,6 +579,9 @@ body{
 }
 
 @media only screen and (max-width: 414px){
+	.cuerpo2-titulo {
+    	font-size: 50px;
+	}
 	.imageCabecera{
 		transform: scale(0.3, 0.3);
     	-ms-transform: scale(0.3, 0.3);
@@ -695,12 +706,14 @@ body{
 }
 
 @media only screen and (max-width: 375px){
+	.cuerpo2-titulo {
+    	font-size: 40px;
+	}
 	.cabecera-titulos-v2{
 		top: 80px;
 	}
 	.wallsCardLogoDiv{
 		width: 30%;
-		bottom: 48%;
 	}
 	.cuerpo1-titulos-div, h4 {
     	font-size: 90%;

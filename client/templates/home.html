@@ -13,7 +13,7 @@ controller: homeCtrl
 
 <!--Cabecera--> 
 <div ng-if="actualBody == 0" class="cabecera">
-	<div class="video-servicios-div" >
+	<div class="video-servicios-div" ng-if="!mobile">
 		<iframe src="https://www.youtube.com/embed/VSVcZhWV1Rc?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=0dbig-gLoCo" frameborder="0" allowfullscreen class="video-servicios"></iframe>
 		<div style="position: absolute; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8);">
 		</div>    
@@ -141,10 +141,11 @@ controller: homeCtrl
 	<div class="cuerpo2-div" >
 		<img src="./assets/img/wCabecera.png" class="cabecera-logo">
         <div class="cuerpo2-titulos-div">
-        	<h2 class="RobotoCondensed-Bold">"Más que un corte, creamos un Estilo"</h2>
+        	<h2 class="RobotoCondensed-Bold cuerpo2-titulo">"Más que un corte,</h2>
+        	<h2 class="RobotoCondensed-Bold sublined cuerpo2-titulo">creamos un Estilo"</h2>
         </div>
 	</div>
-	<img src="./assets/img/sello-gris.png" class="sello-gris">
+	<!--img src="./assets/img/sello-gris.png" class="sello-gris"-->
 	<img src="./assets/img/border_segado_top-min.png" class="borde-sesgado-bottom">
 </div>
 
