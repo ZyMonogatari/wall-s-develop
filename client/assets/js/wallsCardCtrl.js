@@ -1,6 +1,6 @@
 angular.module('application').controller('wallsCardCtrl',
   ['$scope', '$window', '$state', '$dbApi', 'FoundationApi', function($scope, $window,  $state, $dbApi, FoundationApi){
-  	$scope.screenHeight = (screen.height - 50) + 'px';
+  	$scope.screenHeight = (screen.height - 100) + 'px';
   	console.log($scope.screenHeight);
   	$scope.displaySesionN = 'none';
     angular.element(document.querySelector('#selloBounce2s')).addClass('bounceIn2s');
