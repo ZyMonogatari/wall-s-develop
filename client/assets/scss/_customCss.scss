@@ -6,6 +6,13 @@
 	left: 10%;
 	right: 10%;
 }
+.footer-text{
+	bottom: 0px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
 .iconsDivMovil{
 	display: none;
 }
@@ -62,6 +69,15 @@ body{
 	z-index: 3;
 	top: 1%;
 	left: 30px;
+}
+.socialIconsDivMovil{
+	padding-top: 10px;
+	display: none;
+	width: 45%;
+	position: absolute;
+	right: 0;
+	margin: auto;
+	left: 0;
 }
 .cabecera-titulos-v2{
 	position: absolute;
@@ -137,10 +153,7 @@ body{
 	left: 0;
 	right: 0;
 }
-.text-center{
-	
-	
-}
+
 .cabecera{
 	background-image: url(/assets/img/bg-top.jpg);
 	background-size : cover;
@@ -150,18 +163,20 @@ body{
 	height: 100%;
 }
 .borde-sesgado-top{
-	-ms-transform: rotate(-7deg); 
-    -webkit-transform: rotate(-7deg); 
-    transform: rotate(-7deg);
+	-ms-transform: rotate(-5deg); 
+    -webkit-transform: rotate(-5deg); 
+    transform: rotate(-5deg);
     z-index: 0;
+    width: 100%;
 }
 .borde-sesgado-bottom{
-	-ms-transform: rotate(176deg); /* IE 9 */
-    -webkit-transform: rotate(176deg); /* Chrome, Safari, Opera */
-    transform: rotate(176deg); 
+	-ms-transform: rotate(177deg); /* IE 9 */
+    -webkit-transform: rotate(177deg); /* Chrome, Safari, Opera */
+    transform: rotate(177deg); 
     position: absolute; 
     bottom: -8%;
     z-index: -1;
+    width: 100%; 
 }
 .fondo-fixed{
 	//background-image: url(/assets/img/fondo-fixed.jpg);
@@ -188,7 +203,7 @@ body{
 	top : 80%;  
 	width : 110%;
 	left : -5%; 
-
+	height: 2000px;
 }
 
 .cuerpo2{
@@ -385,17 +400,10 @@ body{
 	.cabecera-titulos-v2{
 		width: 80%;
 	}
-	.socialIconsDiv{
+	/*.socialIconsDiv{
 		left: 150px;
-	}
-	.navBar-movil{
-		display: initial;
-		position: absolute;
-		width: 100%;
-		height: 90px;
-		z-index: 2;
-		top: 5%;
-	}
+	}*/
+	
 	.navBar-movil-titulos{
 		position: absolute;
 		width: 5%;
@@ -424,16 +432,14 @@ body{
 	    width: 150px;
 	}
 	.walls-logo{
-		top: -20%;
+		top: -40%;
 		transform: scale(0.7, 0.7);
     	-ms-transform: scale(0.7, 0.7);
     	-webkit-transform: scale(0.7, 0.7);
 	}
+
 	.cabeceraDiv{
-		display: none;
-	}
-	.navBar{
-		display: none;
+		top: 0%;
 	}
 	.titulos-div-cabecera{
 		top: 15%;
@@ -451,6 +457,7 @@ body{
 	}
 	.cuerpo1{
 		top: 50%;
+		height: 1200px;
 	}
 	.cabecera-logo{
 		transform: scale(0.3, 0.3);
@@ -503,15 +510,35 @@ body{
 	}
 	.iconsDivMovil{
 		display: initial;
-		position: fixed;
+		position: absolute;
 		z-index: 3;
-		top: 1%;
+		top: 10%;
 		width: 30%;
-		right: -8%;
+		right: -5%;
 	}
 }
 
 @media only screen and (max-width: 768px){
+	.navBar{
+		display: none;
+	}
+	.cabeceraDiv{
+		display: none;
+	}
+	.navBar-movil{
+		display: initial;
+		position: absolute;
+		width: 100%;
+		height: 90px;
+		z-index: 2;
+		top: 5%;
+	}
+	.socialIconsDivMovil{
+		display: initial;
+	}
+	.socialIconsDiv{
+		display: none;
+	}
 	.cabecera-titulos-v2{
 		width: 100%;
 		top: 150px;
@@ -534,9 +561,7 @@ body{
 }
 
 @media only screen and (max-width: 580px){
-	.socialIconsDiv{
-		left: 8%;
-	}
+	
 	.video{
 		width: 60%;
 	}
@@ -579,6 +604,9 @@ body{
 }
 
 @media only screen and (max-width: 414px){
+	.socialIconsDivMovil{
+		width: 90%;
+	}
 	.cuerpo2-titulo {
     	font-size: 50px;
 	}
@@ -627,7 +655,7 @@ body{
 		top: -1%;
 	}
 	.walls-logo{
-		top: -10px;
+		top: -5px;
 	}
 	.sesion, h6{
 		font-size: 80%;
@@ -660,7 +688,7 @@ body{
 		font-size: 150%;
 	}
 	.cuerpo1{
-		height: 10%;
+		height: 700px;
 	}
 	.cuerpo1-white-div{
 		top: 8%;
@@ -706,6 +734,9 @@ body{
 }
 
 @media only screen and (max-width: 375px){
+	.cuerpo1{
+		height: 560px;
+	}
 	.cuerpo2-titulo {
     	font-size: 40px;
 	}

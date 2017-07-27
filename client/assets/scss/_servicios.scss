@@ -138,10 +138,11 @@
 	width: 100%;
 }
 .borde-sesgado-servicios{
-	-ms-transform: rotate(-6deg); /* IE 9 */
-    -webkit-transform: rotate(-6deg); /* Chrome, Safari, Opera */
-    transform: rotate(-6deg);
+	-ms-transform: rotate(-5deg); /* IE 9 */
+    -webkit-transform: rotate(-5deg); /* Chrome, Safari, Opera */
+    transform: rotate(-5deg);
     z-index: 0;
+    width: 100%;
     position: absolute;
     top:  -200px;
 }
@@ -277,6 +278,9 @@
 	}
 }
 @media only screen and (max-width: 768px){
+	.footer-servicios-brand{
+		height: 100px;
+	}
 	.cuerpo2-servicios{
 		top: 600px;
 	}

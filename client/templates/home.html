@@ -8,7 +8,7 @@ controller: homeCtrl
 <div ng-include="'/templates/navBarMovil.html'"></div>
 <div ng-include="'/templates/icons.html'" class="grid-block iconsDiv"></div>
 <div ng-include="'/templates/socialIcons.html'" class="grid-block"></div>
-<div ng-include="'/templates/iconsMovil.html'" class="grid-block iconsMovil"></div>
+<!--div ng-include="'/templates/iconsMovil.html'" class="grid-block iconsMovil"></div-->
 
 
 <!--Cabecera--> 
@@ -98,7 +98,7 @@ controller: homeCtrl
 </div>
 
 <!--cuerpo1-->
-<div  ng-style="{'height': body1Height}" class="cuerpo1" id="cuerpo1">
+<div  class="cuerpo1" id="cuerpo1">
 	<img src="./assets/img/border_segado_top-min.png" class="borde-sesgado-top">
 	<div class="cuerpo1-white-div">
 		<img src="./assets/img/bg_cuerpo_1_centro-min.jpg" class="cuerpo1-background">
@@ -193,7 +193,8 @@ controller: homeCtrl
   			<marker position="20.5978203,-100.3616978" title="Wall's Barbershop Queretaro" on-click="goMap('sucursales')"></marker>		
   		</ng-map>
   		<div class="footer-servicios-brand">
-	      <h6 class="text-center whiteFont">©2015 All Rights Reserved  Diseño <a href="http://chicleypegacreativo.com/" target="_blank" style="color: inherit;"><strong>Chicle y Pega Estudio Creativo</strong></a></h6>
+  			<div ng-include="'/templates/socialIconsMovil.html'" class="socialIconsDivMovil"></div>
+  			<h6 class="text-center whiteFont footer-text">©2015 All Rights Reserved  Diseño <a href="http://chicleypegacreativo.com/" target="_blank" style="color: inherit;"><strong>Chicle y Pega Estudio Creativo</strong></a></h6>
 	    </div>
 	</div>
 </div>
