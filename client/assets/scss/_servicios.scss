@@ -298,6 +298,9 @@
 	}
 }
 @media only screen and (max-width: 414px){
+	.cuerpo2-fila{
+		height: 250px;
+	}
 	.columna-top-1{
 		top: 0%;
 		width: 100%;
@@ -341,11 +344,11 @@
 		width: 100%;
 	}
 	.columna-2{
-		top: 1710px;
+		top: 1250px;
 		width: 100%;
 	}
 	.footer-servicios{
-		top: 4120px;
+		top: 3250px;;
 	}
 	.borde-sesgado-servicios{
 		top: -45px;
@@ -372,7 +375,7 @@
 		top: 80%;
 	}
 	.footer-servicios{
-		top: 4020px;
+		top: 3100px;
 	}
 	.footer-servicios-brand{
 		font-size: 80%;

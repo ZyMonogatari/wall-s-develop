@@ -4,6 +4,9 @@
 	background: rgba(255, 255, 255, .7);
 	position: absolute;
 }
+.modal{
+	background: transparent;
+}
 .galeria-overImg:hover {
     opacity: 0;
 }
@@ -12,7 +15,7 @@
 	width: 100%;
 	height: 889px;
 	background-image: url(/assets/img/bg-rostros-min.jpg);
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 }
 .galeria-fondo2{
@@ -85,7 +88,7 @@
 
 .galeria-cuerpo2{
 	position: absolute;
-	height: 600px;
+	height: 1000px;
 	background: white;
 	width: 100%;
 	top: 1100px;
@@ -134,7 +137,7 @@
 	left: 0;
 	right: 0; 
 	margin: auto;
-	top: 580px;
+	top: 1000px;
 }
 
 .galeria-cuerpo2-content-img{
@@ -151,14 +154,14 @@
 }
 
 .galeria-cuerpo2-diagonal{
-	-ms-transform: rotate(15deg); /* IE 9 */
-    -webkit-transform: rotate(15deg); /* Chrome, Safari, Opera */
-    transform: rotate(15deg);
+	-ms-transform: rotate(10deg); /* IE 9 */
+    -webkit-transform: rotate(10deg); /* Chrome, Safari, Opera */
+    transform: rotate(10deg);
     position: absolute;
 	background: white;
 	width: 120%;
 	height: 500px;
-	top: 400px;
+	top: 800px;
 }
 
 .galeria-fondo3{
@@ -196,9 +199,9 @@
 	height: 700px;
 	top: -10%;
 	background:white;
-	-ms-transform: rotate(23deg); /* IE 9 */
-    -webkit-transform: rotate(23deg); /* Chrome, Safari, Opera */
-    transform: rotate(23deg);
+	-ms-transform: rotate(18deg); /* IE 9 */
+    -webkit-transform: rotate(18deg); /* Chrome, Safari, Opera */
+    transform: rotate(18deg);
     z-index: 0;
 }
 
@@ -260,7 +263,18 @@
 	object-fit: contain;
 }
 
+@media only screen and (max-width: 1600px){
+	.galeria-cuerpo2{
+		height: 600px;
+	}
+	.galeria-cuerpo2-diagonal{
+		top: 350px;
+	}
+}
 @media only screen and (max-width: 1400px){
+	.galeria-fondo1{
+		background-size: contain;
+	}
 	.galeria-cuerpo-absolute{
 		top: 580px;
 	}

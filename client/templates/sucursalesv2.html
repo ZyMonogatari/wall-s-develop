@@ -540,28 +540,33 @@ controller: sucursalesCtrl
             <i ng-show="!mobil" class="fa fa-times fa-2x sucursales-mapa-close" aria-hidden="true" ng-click="closeMapMenu()"></i>
             <div></div>
               <div class="sucursal-map-grid">
-                <h2 class="RobotoCondensed-Bold" ng-show="!sucursal">SUCURSALES</h2>
+                <h2 class="RobotoCondensed-Bold sucursales-title" ng-show="!sucursal">SUCURSALES</h2>
                 <div class="sucursales-columna-izquierda" ng-show="!sucursal">
                   <div class="sucursales-menu-item" ng-repeat="(key, sucursal) in sucursalesColumna1" ng-click="selectSucursal(key)">
-                    <div style="position: relative; width: 100%; margin: auto; ">
-                      <h6 class="RobotoCondensed-Bold">{{sucursal.shortName}}</h6>
+                    <div style="position: relative; width: 100%; margin-left: 33px; margin-right: 33px; ">
+                      <h6 class="RobotoCondensed-Bold sucursal-name">{{sucursal.shortName}}</h6>
                     </div>
                     <img src="{{sucursal.img}}" class="sucurasles-menu-item-image">
                   </div>
                 </div>
                 <div class="sucursales-columna-derecha" ng-show="!sucursal">
                   <div class="sucursales-menu-item" ng-repeat="(key, sucursal) in sucursalesColumna2" ng-click="selectSucursal(key)">
-                    <div style="position: relative; width: 100%; margin: auto; ">
-                      <h6 class="RobotoCondensed-Bold">{{sucursal.shortName}}</h6>
+                    <div style="position: relative; width: 100%; margin-left: 33px; margin-right: 33px;; ">
+                      <h6 class="RobotoCondensed-Bold sucursal-name">{{sucursal.shortName}}</h6>
                     </div>
                     <img src="{{sucursal.img}}" class="sucurasles-menu-item-image">
                   </div>
                 </div>
               </div>
               <div ng-show="sucursal" style="position: absolute; width: 100%; height: 100%">
-                <i class="fa fa-arrow-left fa-2x " aria-hidden="true" ng-click="sucursal = false" style="position: relative; left: 20px;"> <h6 class="Lato-Regular">Volver</h6> </i>
+              <div style="margin-top: 5px; margin-left: 10px;" ng-click="sucursal = false">
+                <h5 class="Lato-Regular" ng-click="sucursal = false"> <i class="fa fa-arrow-left fa-1x " aria-hidden="true" ng-click="sucursal = false"></i> Volver</h5>
+               
+
+              </div>
+                
                 <div class="sucursal-titulo"> 
-                  <h3 class="RobotoCondensed-Bold">{{actualSucursal.nombre}}</h3>
+                  <h3 class="RobotoCondensed-Bold sucursal-name-select">{{actualSucursal.nombre}}</h3>
                 </div>
                 <img src="{{actualSucursal.img}}" class="sucursal-img">
                 <div class="sucursal-info">

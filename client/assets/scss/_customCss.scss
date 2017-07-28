@@ -6,6 +6,9 @@
 	left: 10%;
 	right: 10%;
 }
+.socialIcon{
+	margin-left: 10px; margin-right: 10px;
+}
 .footer-text{
 	bottom: 0px;
     position: absolute;
@@ -519,6 +522,7 @@ body{
 }
 
 @media only screen and (max-width: 768px){
+	
 	.navBar{
 		display: none;
 	}
@@ -529,7 +533,7 @@ body{
 		display: initial;
 		position: absolute;
 		width: 100%;
-		height: 90px;
+		height: 80px;
 		z-index: 2;
 		top: 5%;
 	}
@@ -604,8 +608,15 @@ body{
 }
 
 @media only screen and (max-width: 414px){
+	.navBar-movil{
+		height: 50px;
+	}
+	.socialIcon{
+
+		font-size: 25px !important;
+	}
 	.socialIconsDivMovil{
-		width: 90%;
+		width: 65%;
 	}
 	.cuerpo2-titulo {
     	font-size: 50px;
@@ -734,6 +745,13 @@ body{
 }
 
 @media only screen and (max-width: 375px){
+	.socialIconsDivMovil{
+		width: 75%;
+	}
+	.socialIcon{
+		margin-left: 4px;
+    	margin-right: 4px;
+	}
 	.cuerpo1{
 		height: 560px;
 	}

@@ -14,7 +14,12 @@ angular.module('application').controller('sucursalesCtrl',
         $scope.mobil = true;
 
     }
-    else{
+    if(screen.width <= 414){
+        $scope.menuPosition = "10.000000, -98.7000000";
+        $scope.mobil = true;
+
+    }
+    if(screen.width > 768){
         $scope.menuPosition = "32.400000, -96.6000000";
         $scope.mobil = false;
     }
