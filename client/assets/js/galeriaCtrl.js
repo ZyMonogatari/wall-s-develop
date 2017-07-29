@@ -1,6 +1,7 @@
 angular.module('application').controller('galeriaCtrl',
   ['$scope', '$window', 'FoundationApi', '$sce', '$state', function($scope, $window, FoundationApi, $sce, $state){
     document.title = "Galería - Wall´s Barbershop";
+    var galleryIndex;
     $scope.cabecera = {};
     $scope.displaySesionN = 'none';
     $scope.cabecera.source = '/assets/img/wallslogo-negro-min.png';
@@ -29,20 +30,37 @@ angular.module('application').controller('galeriaCtrl',
     $scope.disappearItem = function(item){
       angular.element(document.querySelector('#' + item)).addClass('disappear1S');
     }
+    $scope.fullGallery = [
+      '/assets/img/galeria/1.jpg',
+      '/assets/img/galeria/3.jpg',
+      '/assets/img/galeria/2.jpg',
+      '/assets/img/galeria/9.jpg',
+      '/assets/img/galeria/4.jpg',
+      '/assets/img/galeria/7.jpg',
+      '/assets/img/galeria/6.jpg',
+      '/assets/img/galeria/13.jpg',
+      '/assets/img/galeria/5.jpg',
+      '/assets/img/galeria/8.jpg',
+      '/assets/img/galeria/20.jpg',
+      '/assets/img/galeria/21.jpg', 
+      '/assets/img/galeria/12.jpg',
+      '/assets/img/galeria/24.jpg',
+      '/assets/img/galeria/10.jpg'
+    ];
     $scope.gallery = {
       col1: [
         '/assets/img/galeria/1.jpg',
         '/assets/img/galeria/3.jpg',
         '/assets/img/galeria/2.jpg',
         '/assets/img/galeria/9.jpg',
-        '/assets/img/galeria/4.jpg',
+        '/assets/img/galeria/4.jpg'
       ],
       col2: [
         '/assets/img/galeria/7.jpg',
         '/assets/img/galeria/6.jpg',
         '/assets/img/galeria/13.jpg',
         '/assets/img/galeria/5.jpg',
-        '/assets/img/galeria/8.jpg',
+        '/assets/img/galeria/8.jpg'
       ],
       col3: [
         '/assets/img/galeria/20.jpg',
@@ -54,9 +72,22 @@ angular.module('application').controller('galeriaCtrl',
     };
     $scope.openModal = function(image){
       $scope.actualImage = image;
+      galleryIndex = $scope.fullGallery.indexOf(image);
     }
       
-      
+    $scope.prevImg = function(){
+      if(galleryIndex > 0){
+        galleryIndex--;
+        $scope.actualImage = $scope.fullGallery[galleryIndex];
+      }
+    }
+
+    $scope.nextImg = function(){
+      if(galleryIndex < ($scope.fullGallery.length - 1)){
+        galleryIndex++;
+        $scope.actualImage = $scope.fullGallery[galleryIndex];
+      }
+    }
     $scope.mostrarMenu = function (){
             console.log($scope.displayMenu);
 

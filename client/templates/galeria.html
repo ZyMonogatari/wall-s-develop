@@ -4,8 +4,16 @@ url: /galeria
 controller: galeriaCtrl
 ---
 <div zf-modal="" id="basicModal" >
-<a zf-close="" class="close-button">×</a>
-	<img src="{{actualImage}}">
+<div style="width: 900px; height: 900px;">
+	<a zf-close="" class="close-button">×</a>
+	<div style="position: absolute; width: 80%; left: 0; right: 0; margin: auto; top: 0; bottom: 0;">
+		<img src="{{actualImage}}" style="position: absolute; margin: auto; top: 0; bottom: 0;">
+		<i class="fa fa-arrow-circle-left fa-4x whiteFont" aria-hidden="true" style="position: absolute; left: -12%; top: 45%;" ng-click="prevImg()"></i>
+		<i class="fa fa-arrow-circle-right fa-4x whiteFont" aria-hidden="true" style="position: absolute; right: -12%; top: 45%;" ng-click="nextImg()"></i>
+	</div>
+</div>
+
+	
 </div>
 
 <div ng-include="'/templates/navBar.html'"></div>
