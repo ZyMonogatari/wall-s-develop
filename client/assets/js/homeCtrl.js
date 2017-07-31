@@ -19,9 +19,14 @@ angular.module('application').controller('homeCtrl',
     }
 
     $scope.displaySesionN = 'none';
-    $scope.goMap = function(e, state){
-      $state.go(state).then(function(){
-           window.location.reload(true); 
+
+    $scope.goMap = function(){
+      window.scrollTo(0,0);        
+      $state.go('sucursales').then(function(){
+        var top =  document.getElementById('map').getBoundingClientRect().top
+        console.log(top);
+          window.scrollTo(0, top);
+         
         });
     }
     $scope.go = function(state){
