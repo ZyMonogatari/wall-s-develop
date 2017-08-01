@@ -20,7 +20,7 @@
 	position: absolute;
 	width: 100%;
 	top: 100%;
-	height: 1800px;
+	height: 1600px;
 }
 .sucursales-cuerpo-sello{
 	position: absolute;
@@ -63,7 +63,7 @@
 .sucursales-footer-div{
 	position: absolute;
     width: 100%;
-    height: 700px;
+    height: 500px;
     top: 1200px;
 }
 .sucursal-map-instrucciones{
@@ -180,7 +180,15 @@
 		padding: 10px;
 		width: 550px;
 	}
-
+	.sucursales-footer-div{
+		height: 600px;
+	}
+	.sucursales-cuerpo3-div{
+		height: 600px;
+	}
+	.sucursales-leer-mas{
+		bottom: -5%;
+	}
 }
 @media only screen and (max-width: 414px){
 .sucursal-img{
@@ -234,12 +242,21 @@
 .sucursales-footer-div{
 	position: absolute;
     width: 100%;
-    height: 500px;
+    height: 400px;
     top: 1200px;
 }
 .sucursalesv2-cuerpo-absolute{
 	height: 1600px;
 }
+.sucursales-leer-mas{
+	bottom: 0%;	
+	width: 40%;
+}
+}
+@media only screen and (max-width: 375px){
+	.sucursales-leer-mas{
+		bottom: -15%;
+	}
 }
 @media only screen and (max-width: 320px){
 .sucursales-cuerpo-sello-img{

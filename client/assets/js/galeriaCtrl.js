@@ -11,6 +11,8 @@ angular.module('application').controller('galeriaCtrl',
     $scope.displaySesion = 'none';
     $scope.displayNumber = 'none';
     $scope.iconColor = '#333';
+    $scope.leftArrow = true;
+    $scope.rightArrow = true;
     $scope.go = function(state){
         window.scrollTo(0, 0)
         $state.go(state);
@@ -72,20 +74,36 @@ angular.module('application').controller('galeriaCtrl',
     };
     $scope.openModal = function(image){
       $scope.actualImage = image;
+      $scope.rightArrow = true;
+      $scope.leftArrow = true;
       galleryIndex = $scope.fullGallery.indexOf(image);
+      if(galleryIndex == 0){
+        $scope.leftArrow = false;
+      }
+      if(($scope.fullGallery.length - 1) == galleryIndex){
+        $scope.rightArrow = false;
+      }
     }
       
     $scope.prevImg = function(){
+      $scope.rightArrow = true;
       if(galleryIndex > 0){
         galleryIndex--;
         $scope.actualImage = $scope.fullGallery[galleryIndex];
       }
+      if(galleryIndex == 0){
+        $scope.leftArrow = 0;
+      }
     }
 
     $scope.nextImg = function(){
+      $scope.leftArrow = true;
       if(galleryIndex < ($scope.fullGallery.length - 1)){
         galleryIndex++;
         $scope.actualImage = $scope.fullGallery[galleryIndex];
+      }
+      if(galleryIndex == ($scope.fullGallery.length - 1)){
+        $scope.rightArrow = false;
       }
     }
     $scope.mostrarMenu = function (){
@@ -120,20 +138,17 @@ angular.module('application').controller('galeriaCtrl',
       }
     if((document.getElementById('cuerpo1').getBoundingClientRect().top -50)  <= 0 & (document.getElementById('cuerpo1').getBoundingClientRect().top) >= -1000){
       $scope.actualBody = 2;
-      console.log("pequeño" + " - " + document.getElementById('cuerpo1').getBoundingClientRect().top);
       $scope.$apply();
     } else if((document.getElementById('cuerpo1').getBoundingClientRect().top -50)  >= 0){
       $scope.actualBody = 1;
-      console.log("head")
       $scope.$apply();
     }
     if((document.getElementById('cuerpo2').getBoundingClientRect().top -50)  <= 0){
-      console.log("video")
       $scope.actualBody = 3;
       $scope.$apply();
     }
     for(var i = 0; i < document.getElementsByClassName('galleryBox').length; i++){
-      if((document.getElementsByClassName('galleryBox')[i].getBoundingClientRect().top + 50) <= screen.height){
+      if((document.getElementsByClassName('galleryBox')[i].getBoundingClientRect().top + 50) <= screen.height & screen.width > 768){
           angular.element(document.getElementsByClassName('galleryBox')[i]).addClass('appear');
       }
     }
