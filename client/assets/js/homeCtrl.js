@@ -21,6 +21,7 @@ angular.module('application').controller('homeCtrl',
     $scope.displaySesionN = 'none';
 
     $scope.goMap = function(){
+      console.log("click de sucursal")
       window.scrollTo(0,0);      
       $state.go('sucursales').then(function(){
         $window.location.reload();

@@ -189,8 +189,12 @@
 	.sucursales-leer-mas{
 		bottom: -5%;
 	}
+
 }
 @media only screen and (max-width: 414px){
+.sucursales-mapa-div{
+	height: 670px;
+}
 .sucursal-img{
     top: 120px;
     width: 250px;
@@ -236,22 +240,26 @@
 	position: relative;
 	width: 50%;
 	top: 10px;
-	left: -50px;
+	left: -25px;
 	margin: auto;
 }
 .sucursales-footer-div{
 	position: absolute;
     width: 100%;
     height: 400px;
-    top: 1200px;
+    top: 1070px;
 }
 .sucursalesv2-cuerpo-absolute{
-	height: 1600px;
+	height: 1300px;
 }
 .sucursales-leer-mas{
 	bottom: 0%;	
 	width: 40%;
 }
+.sucursales-cuerpo3-div{
+		top: 00px;
+		height: 350px;
+	}
 }
 @media only screen and (max-width: 375px){
 	.sucursales-leer-mas{

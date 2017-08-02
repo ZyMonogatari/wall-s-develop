@@ -7,15 +7,15 @@
 
 .left-gallery-arrow{
 	position: absolute;
-	left: -12%;
+	left: 0%;
 	top: 45%;
-	opacity: 0.2;
+	opacity: 0.5;
 }
 .right-gallery-arrow{
 	position: absolute;
-	right: -12%;
+	right: 0%;
 	top: 45%;
-	opacity: 0.2;
+	opacity: 0.5;
 }
 .right-gallery-arrow:hover{
 	opacity: 1;
@@ -203,8 +203,8 @@
 }
 
 .galeria-cuerpo3-div{
-	background-image: url(/assets/img/fondo-pie-degradado.png);
-	background-size: contain;
+	//background-image: url(/assets/img/fondo-pie-degradado.png);
+	//background-size: contain;
 	position: absolute;
 	width: 100%;
 	height: 500px;
@@ -513,6 +513,9 @@
 }
 
 @media only screen and (max-width: 414px){
+	.titulos-br{
+		display: none;
+	}
 	.right-gallery-arrow {
 		font-size: 45px;
 	}
@@ -541,7 +544,7 @@
 		top: -100px;
 	}
 	.galeria-cuerpo1-titulos-text{
-		font-size: 13px;
+		font-size: 18px;
 	}
 	.galeria-cuerpo1-titulos{
 		top: 5px;

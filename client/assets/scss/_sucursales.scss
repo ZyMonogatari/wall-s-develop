@@ -94,7 +94,7 @@
 	top: 1400px;
 }
 .sucursales-cuerpo3-div{
-	background-image: url(/assets/img/fondo-pie-degradado.png);
+	//background-image: url(/assets/img/fondo-pie-degradado.png);
 	background-size: contain;
 	position: absolute;
 	width: 100%;
@@ -410,8 +410,6 @@
 	.sucursales-cuerpo3{
 		height: 900px;
 	}
-
-
 }
 @media only screen and (max-width: 360px){
 	.sucursales-div-circular{
