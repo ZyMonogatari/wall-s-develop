@@ -340,11 +340,11 @@ tuor:visited {
 }
 
 .wc-iconos-mis-puntos {
-    position: relative;
+    /* position: relative; */
     font-style: normal;
     font-size: 50px !important;
     /* margin-left: 133px; */
-    top: 10px; 
+    /* top: -160px; */
     color: #FFF;
 }
 .wc-iconos-mis-puntos:before {
@@ -427,6 +427,9 @@ tuor:visited {
     color: #FFFFFF;
     position: relative;
     bottom: 130px;
+}
+.wc-texto-menbrecia-beneficios h3 {
+    font-size: 32px;
 }
 .wc-imagenen-menbrecia-central {
     text-align: center;
@@ -654,7 +657,7 @@ tuor:visited {
 @media (max-width: 425px){ 
 .wc-right_single_feature div {
 	left: 41% !important;
-    margin-top: -24% !important; 
+    margin-top: -30% !important; 
 	 
 }
 .wc-left_single_feature div {
@@ -1105,6 +1108,81 @@ a {
     top: 219px;
     transform: rotate(11deg);
     }
+	
+	
+	
+@media (min-width: 2561px){
+ .wc-sello_imagen{    
+    display: none;    
+    }
+}
+@media (max-width: 2560px){
+ .wc-sello_imagen{    
+    left: 44.5%;    
+    }
+	}
+@media (max-width: 2200px){
+ .wc-sello_imagen{    
+    left: 43.5%;    
+    }
+}
+@media (max-width: 1800px){
+ .wc-sello_imagen{    
+    left: 42.5%;    
+    }
+ }
+@media (max-width: 1600px){
+.wc-sello_imagen{
+    
+    left: 41.5%;
+    
+    }
+	 }
+@media (max-width: 1500px){
+.wc-sello_imagen{
+    
+    left: 40.5%;
+    
+    }
+	 }
+@media (max-width: 1400px){
+.wc-sello_imagen{
+    
+    left: 39.5%;
+    
+    }
+	 }
+	 
+	
+@media (min-width: 992px){   
+	.wc-texto_top_derecha {
+		width: 25%;
+		margin-right: -100px;
+		margin-top: 170px;
+ }
+}
+
+@media (min-width: 1600px){   
+	.wc-texto_top_izquierda {
+	margin-left: 820px !important;
+    
+ }
+}
+@media (max-width: 1199px){   
+	.wc-texto_top_izquierda {
+	margin-left: 616px !important;
+    
+ }
+}
+
+@media (max-width: 1024px){   
+	.wc-texto_top_izquierda {
+	margin-left: 664px !important;
+    
+ }
+}
+	
+	
 	
 @media (min-width: 992px){   
 	.wc-texto_top_derecha {
@@ -1859,6 +1937,12 @@ a {
 	color: white;
 	font-size:16px;
 	cursor: pointer;
+	}
+		
+@media (max-width: 991px){  
+.wc-boton-leer-mas {
+	width: 124px;
+	}
 	}
 .wc-boton-leer-mas a {
 	color: white !important;

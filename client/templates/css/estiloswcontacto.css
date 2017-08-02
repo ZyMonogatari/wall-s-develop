@@ -373,7 +373,7 @@ tuor:visited {
     height: auto;
 }
 .wcont-seccion_abre_franquicia {
-    background: url(../images/fondo-nosotros-cuerpo-dos-min.jpg);
+    background: url(../images/fondo-cuerpo-dos-min.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 	
@@ -1138,7 +1138,26 @@ a {
 	border: 25px solid rgba(255, 255, 255, 0.6);
    
     }
-	
+@media (min-width: 1500px){ 
+	.wcont-sello_imagen{
+		left: 39%;
+		}
+}
+@media (min-width: 1600px){ 
+	.wcont-sello_imagen{
+		left: 40%;
+		}
+}
+@media (min-width: 2000px){ 
+	.wcont-sello_imagen{
+		left: 41%;
+		}
+}
+@media (min-width: 2300px){ 
+	.wcont-sello_imagen{
+		left: 42%;
+		}
+}
 @media (min-width: 992px){   
 	.wcont-texto_top_derecha {
 	width: 30%;
@@ -1169,6 +1188,14 @@ a {
     top: 162px;
     position: absolute;
     width: 40%;
+ }
+}
+@media (min-width: 1500px){   
+	.wcont-texto_top_izquierda {
+	left: 58%;
+    top: 162px;
+    position: absolute;
+    width: 30%;
  }
 }
 @media (max-width: 1249px){   
@@ -1859,6 +1886,17 @@ a {
 @media (max-width: 991px){
 .wcont-columna-ancho {
     width: 100% !important;
+}
+}
+
+
+
+@media (max-width: 768px){
+.wcont-estilo-texto-formulario {
+	writing-mode: inherit;
+    transform: rotate(0deg);
+	padding-top: 50px;
+    padding-bottom: 0px;		
 }
 }
 .wcont-fondo-diagonal-izquierdo-dos{    

@@ -1355,11 +1355,18 @@ a {
     	
 	}
 }
-
 .inner_about_desc {} .single_about_area_dos {
     position: relative;
     padding-bottom: 4px;
     padding-left: 80px;
+}
+
+@media (max-width: 768px) {
+.inner_about_desc {} .single_about_area_dos {    
+    padding-right: 10px;
+    text-align: center;   
+	padding-left: 10px;
+}
 }
 .single_about_area_dos div {
     position: absolute;
@@ -1388,6 +1395,12 @@ a {
     letter-spacing: 1px;
 	padding-top: 20px;
 }
+@media (max-width: 768px) {
+.single_about_area_dos p {  
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+}
 .single_about_area_dos:hover div i {
     color: #333;
 }
@@ -1400,6 +1413,14 @@ a {
     text-align: right;
     margin-top: 50px;
 	padding-left: 40px;
+}
+@media (max-width: 768px) {
+.inner_about_desc {} .single_about_area_tres {
+    
+    padding-right: 10px;
+    text-align: center;   
+	padding-left: 10px;
+}
 }
 .single_about_area_tres div {
     position: absolute;
@@ -1428,6 +1449,11 @@ a {
     padding-bottom: 38px;
     line-height: 24px;
     letter-spacing: 1px;
+}
+@media (max-width: 768px) {
+.single_about_area_tres p {  
+    padding-bottom: 0px;
+    }
 }
 .single_about_area_tres:hover div i {
     color: #333;
@@ -1511,10 +1537,11 @@ a {
 }
 @media (max-width: 991px){
 .fondo-diagonal-izquierdo-dos {
-    margin-top: 1074px;
+	display:none;
+    
 }
 .fondo-diagonal-derecho-dos {
-       margin-top: 1061px !important;
+	display:none;      
 }
 }
 
@@ -1534,8 +1561,11 @@ a {
 .altura_cuerpo-tres {
     padding-bottom: 418px;
 }
-
-
+@media (max-width: 991px){
+	.altura_cuerpo-tres {
+    padding-bottom: 80px;
+}
+}
 @media (min-width: 1200px){ 
 .linea_horizomtal_izqui:after {
     content: url("images/linea-izquierda.png");
@@ -1587,7 +1617,12 @@ a {
     background-color: #fff;;
     display: flex;
 }
-
+@media (max-width: 991px){
+	.fondo_segado_dos{
+		margin: 15px 0 0;
+		height: 0px;
+}
+}
 .fondo_segado_dos:before {
     content: '';
     top: -120px;
@@ -1646,5 +1681,39 @@ a {
     text-align: center;
     font-size: 18px;
 	}
-	
-	
+@media (max-width: 767px) {
+.imagen_texto img{
+        display: none;
+    }
+}
+@media (min-width: 760px) {
+.imagen_texto img {
+	padding-top: 40px;
+    padding-right: 60px;
+	}
+}
+.datos-franquicias {
+		display: none;
+	}
+@media (max-width: 767px) {
+.datos-franquicias{
+    font-size: 72px;
+    font-weight: 900;
+    color: white;
+    background: black;
+    margin: 0 auto;
+    padding: 16px;
+	display: block;
+
+    }
+}
+@media (max-width: 425px) {
+.datos-franquicias{
+    font-size: 52px;   
+    }
+}
+@media (max-width: 300px) {
+.datos-franquicias{
+    font-size: 42px;   
+    }
+}
