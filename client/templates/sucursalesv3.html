@@ -76,10 +76,10 @@ controller: sucursalesCtrlV2
               </div>
             </div>
             <div style="margin-left: 80px; width: 190px; margin-top: -3px">
-              <p class="Lato-Light" style="margin-bottom: 0px">
+              <p class="Lato-Light" style="margin-bottom: 0px" ng-if="selectSucursal.telefono">
                 <i class="fa fa-phone " aria-hidden="true"></i>      {{selectSucursal.telefono}}
               </p>
-              <p class="Lato-Light" style="margin-bottom: 3px">
+              <p class="Lato-Light" style="margin-bottom: 3px" ng-if="selectSucursal.whatsapp">
                 <i class="fa fa-whatsapp " aria-hidden="true"></i>
                 {{selectSucursal.whatsapp}}
               </p>
@@ -99,7 +99,7 @@ controller: sucursalesCtrlV2
             <div style="position: absolute; width: 50px; height: 50px; background: white; right: 60px; bottom: -26.5px; transform: rotate(-45deg); border-left: 3px solid black; border-bottom: 3px solid black; z-index: -1;"></div>
         </div>
         
-        <marker ng-repeat="(key, sucursal) in sucursales" position="{{sucursal.x}} , {{sucursal.y}}" title="{{sucursal.nombre}}"
+        <marker ng-repeat="(key, sucursal) in sucursales" position="{{sucursal.y}},{{sucursal.x}}" title="{{sucursal.nombre}}"
           optimized="false"
           icon="{
             url:'/assets/img/marcaddor-30x30.png'
