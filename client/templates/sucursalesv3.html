@@ -1,0 +1,135 @@
+---
+name: sucursalesv3
+url: /sucursalesv3
+controller: sucursalesCtrlV2
+---
+<div ng-include="'/templates/navBar.html'"></div>
+<div ng-include="'/templates/navBarMovil.html'"></div>
+<div ng-include="'/templates/socialIcons.html'" class="grid-block"></div>
+<div ng-include="'/templates/icons.html'" class="grid-block iconsDiv"></div>
+<div ng-include="'/templates/iconsMovil.html'" class="grid-block iconsMovil"></div>
+
+<div class="sucursales-cabecerav2">
+</div>
+
+<div class="sucursalesv2-cuerpo-absolute">
+  <div class="sucursales-cabecera-titulos-div">
+    <h2 class="whiteFont RobotoCondensed-Bold">Trabajamos desde el 2010, sin parar, con entusiasmo, creatividad y curiosidad, nos enfocamos por la calidad del servicio esencial para ser lideres en este campo</h2>
+  </div>
+  <div class="sucursales-cuerpo-sello">
+    <img src="/assets/img/sello-sucursales-min.png" class="sucursales-cuerpo-sello-img">
+    <div class="sucursales-cuerpo-sello-mascara"></div>
+    <div class="sucursales-cuerpo-sello-titulos-div">
+      <h3 class="whiteFont RobotoCondensed-Bold">
+        NOS PODRÁS ENCONTRAR EN NUESTRAS SIGUIENTES SUCURSALES, 
+      </h3>
+      <h5 class="whiteFont Lato-Italic">
+        donde lograrás vivir toda la experiencia Wall´s Barbershop:
+      </h5>
+    </div>
+  </div>
+
+  <div class="sucursales-mapa-div" id="map">
+    <div map-lazy-load="https://maps.google.com/maps/api/js" 
+      map-lazy-load-params="{{googleMapsUrl}}" >
+
+      <ng-map class = "ng-map"
+        zoom="6"
+        center="{{mapCenter}}"
+        scrollwheel="false"
+        ng-click="hideInfoDiv(false)"
+      
+        map-type-control="false"
+        zoom-control="true"
+        zoom-control-options="{style:'LARGE', position:'LEFT_CENTER'}"
+        scale-control="false"
+        street-view-control="false"
+        styles="[{
+          featureType:'administrative', 
+          elementType: 'labels.text.fill',
+          stylers:[{
+            color:'#76787d'
+          }]},
+          {
+            featureType:'administrative.country',
+            elementType:'labels.text',
+            stylers:[{
+              visibility:'off'
+              },
+            {color:'#767676'}]},{featureType:'administrative.locality', elementType:'labels.text',stylers:[{visibility:'on'},{color:'#42464e'},{lightness:'-23'}]},{featureType:'administrative.locality',elementType:'labels.text.stroke',stylers:[{color:'#ffffff'}]},{featureType:'landscape',elementType:'all',stylers:[{color:'#f7f8f9'}]},{featureType:'poi',elementType:'all',stylers:[{visibility:'off'}]},{featureType:'road',elementType:'all',stylers:[{saturation:-100},{lightness:45}]},{featureType:'road.highway',elementType:'all',stylers:[{visibility:'simplified'}]},{featureType:'road.arterial',elementType:'labels.icon',stylers:[{visibility:'off'}]},{featureType:'transit',elementType:'all',stylers:[{visibility:'off'}]},{featureType:'water',elementType:'all',stylers:[{color:'#acd5cb'},{visibility:'on'},{lightness:'49'}]},{featureType:'water',elementType:'geometry.fill',stylers:[{color:'#3c3f45'},{lightness:49}]}]"
+        >
+        <div  class="fadeIn fadeOut sucursales-v3-infoDiv" ng-show="sucursalInfoDiv">
+            <img src="{{selectSucursal.img}}" class="sucursales-v3-infoImage">
+            <div class="sucursal-v3-title">
+              <h5 class="Lato-Bold"> {{selectSucursal.nombre}} </h5>
+            </div>
+            
+            <div class="sucursal-v3-info">
+              <p class="sucursal-v3-info-text Lato-Light">
+                {{selectSucursal.direccion}}
+              </p>
+            </div>
+
+            <div style="margin-top: -15px; width: 75%; margin-left: 80px;">
+              <div class="tyc">
+                <h6 class="Lato-Bold">RESERVAS</h6>
+              </div>
+            </div>
+            <div style="margin-left: 80px; width: 190px; margin-top: -3px">
+              <p class="Lato-Light" style="margin-bottom: 0px">
+                <i class="fa fa-phone " aria-hidden="true"></i>      {{selectSucursal.telefono}}
+              </p>
+              <p class="Lato-Light" style="margin-bottom: 3px">
+                <i class="fa fa-whatsapp " aria-hidden="true"></i>
+                {{selectSucursal.whatsapp}}
+              </p>
+              
+            </div>
+            <div class="sucursal-social-icons-div">
+              <a href="">
+                <i class="fa fa-facebook-square fa-2x sucursal-v3-social-icon" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-instagram fa-2x sucursal-v3-social-icon" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-twitter-square fa-2x sucursal-v3-social-icon" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div style="position: absolute; width: 50px; height: 50px; background: white; right: 60px; bottom: -26.5px; transform: rotate(-45deg); border-left: 3px solid black; border-bottom: 3px solid black; z-index: -1;"></div>
+        </div>
+        
+        <marker ng-repeat="(key, sucursal) in sucursales" position="{{sucursal.x}} , {{sucursal.y}}" title="{{sucursal.nombre}}"
+          optimized="false"
+          icon="{
+            url:'/assets/img/marcaddor-30x30.png'
+          }" on-click="hideInfoDiv(true, key)"></marker>
+      </ng-map>
+    </div>
+  </div>
+
+  <div class="sucursales-footer-div">
+    <div class="sucursales-cuerpo3-div fondo-degradado">
+        <div class="footer-servicios-titulos">
+          <h1 class="text-center gray-text RobotoCondensed-Bold">¿TE INTERESA ADQUIRIR UNA FRANQUICIA?</h1>
+          <h2 class="text-center gray-text RobotoCondensed-Bold">¡CONTÁCTANOS!</h2>
+          <h3 class="text-center gray-text RobotoCondensed-Bold"> LIC. AARON ALVARADO </h3>
+          <h3 class="text-center gray-text RobotoCondensed-Bold"> TEL: 044 9981 45 96 50 </h3>
+          <h3 class="text-center gray-text RobotoCondensed-Bold"> FRANQUICIAS@YOSOYWALLS.COM </h3>
+          <div class="leer-mas-servicios sucursales-leer-mas" ng-click="go('franquicias')">
+            <h6 class="whiteFont Lato-Regular">
+              <i class="fa fa-rocket whiteFont" aria-hidden="true"></i>
+              Solicitar info.
+            </h6>
+          </div>
+        </div>
+        
+      </div>
+      <div class="footer-servicios-brand">
+      <div ng-include="'/templates/socialIconsMovil.html'" class="socialIconsDivMovil"></div>
+        <h6 class="text-center whiteFont footer-text">©2015 All Rights Reserved  Diseño <a href="http://chicleypegacreativo.com/" target="_blank" style="color: inherit;"><strong>Chicle y Pega Estudio Creativo</strong></a></h6>
+      </div>
+    </div>
+  </div>
+
+</div>
