@@ -6,7 +6,18 @@ angular.module('application').controller('sucursalesCtrlV2',
     $scope.sucursalInfoDiv;
     $scope.selectSucursal;
     $scope.mapCenter = "23.848025, -98.605808";
+    var actualMap;
+    NgMap.getMap().then(function(map) {
+        console.log('map', map);
+        actualMap = map;
+    });
+    $scope.pruebaClick= function(marker, id){
+        console.log(id);
+        actualMap.showInfoWindow('info', id);
+    }
     $scope.hideInfoDiv = function(marker, param, key){
+
+        console.log(marker);
         $scope.sucursalInfoDiv = false;
         if(param){
             $scope.showInfoDiv(key);
@@ -14,9 +25,12 @@ angular.module('application').controller('sucursalesCtrlV2',
     }
     $scope.showInfoDiv =function(key){
         if(key){
+            //console.log('centrando')
             $scope.selectSucursal = $scope.sucursales[key];
-            var x = parseFloat($scope.selectSucursal.x) -1.9;
+            var x = parseFloat($scope.selectSucursal.x) ;
             console.log($scope.selectSucursal.x, x);
+            //$scope.mapCenter = "0,0";
+
             $scope.mapCenter = $scope.selectSucursal.y + "," + x;
         }
         $timeout(function(){

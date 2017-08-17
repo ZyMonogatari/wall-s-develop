@@ -38,7 +38,7 @@ controller: sucursalesCtrlV2
         center="{{mapCenter}}"
         scrollwheel="false"
         ng-click="hideInfoDiv(false)"
-      
+        disableAutoPan="true",
         map-type-control="false"
         zoom-control="true"
         zoom-control-options="{style:'LARGE', position:'LEFT_CENTER'}"
@@ -98,12 +98,11 @@ controller: sucursalesCtrlV2
             </div>
             <div style="position: absolute; width: 50px; height: 50px; background: white; right: 60px; bottom: -26.5px; transform: rotate(-45deg); border-left: 3px solid black; border-bottom: 3px solid black; z-index: -1;"></div>
         </div>
-        
         <marker ng-repeat="(key, sucursal) in sucursales" position="{{sucursal.y}},{{sucursal.x}}" title="{{sucursal.nombre}}"
           optimized="false"
           icon="{
             url:'/assets/img/marcaddor-30x30.png'
-          }" on-click="hideInfoDiv(true, key)"></marker>
+          }" on-click="hideInfoDiv(true, key)" id={{key}}></marker>
       </ng-map>
     </div>
   </div>
