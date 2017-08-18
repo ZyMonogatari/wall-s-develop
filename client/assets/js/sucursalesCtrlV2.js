@@ -54,7 +54,7 @@ angular.module('application').controller('sucursalesCtrlV2',
     $scope.googleMapsUrl="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAHEDIPSO32Z4XxR71iW71oP29-B7Zh4Y";
     $scope.sucursales = {
         bonampak : {
-            nombre: 'WALL´S BARBERSHOP BONAMPAK',
+            nombre: 'WALL\'S BONAMPAK',
             shortName: 'BONAMPAK',
             direccion: 'SM 4 MZA 3 Plaza Atlantis, Av. Bonampak con Av. Kukulcán, Frente a Km 0, Entrada Zona Hotelera, Cancún, Quintana Roo, México.',
             telefono: '(998) 255 5569',
@@ -66,7 +66,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             instagram : 'https://www.instagram.com/wallscancun/'
         },
         torres: {
-            nombre: 'WALL´S LAS TORRES',
+            nombre: 'WALL\'S LAS TORRES',
             shortName: 'TORRES',
             direccion: 'SM 510 MZA 9 LT 10 Y 12 Planta Alta, Plaza Bamboo, Cancún, Quintana Roo, México.',
             telefono: '(998) 251 0726',
@@ -78,7 +78,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             instagram : 'https://www.instagram.com/wallscancun/'
         },
         kabah: {
-            nombre: 'WALL´S BARBERSHOP KABAH',
+            nombre: 'WALL\'S KABAH',
             shortName: 'KABAH',
             direccion: 'SMZ 38 MZ 9 LT 1 al 15 Local #5 Av. Sabah, Plaza Real 10 (frente a UNID) Cancún, Quintana Roo, México.',
             telefono: '(998) 206 8098',
@@ -90,7 +90,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             instagram : 'https://www.instagram.com/wallscancun/'
         },
         chetumal : {
-            nombre: 'WALLS CHETUMAL',
+            nombre: 'WALL\'S CHETUMAL',
             shortName: 'CHETUMAL',
             direccion: 'Bulevar Bahía #301, entre Av. Rafael E. Melgar y Emiliano Zapata, Chetumal.',
             telefono: '(983) 129 2705',
@@ -102,7 +102,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             instagram : 'https://www.instagram.com/wallschetumal/'
         },
         isla: {
-            nombre: 'WALL´S BARBERSHOP ISLA MUJERES',
+            nombre: 'WALL\'S ISLA MUJERES',
             shortName: 'ISLA MUJERES',
             direccion: 'Nicolás Bravo S/N Centro, Isla Mujeres.',
             contacto: 'Tel.  y WhatsApp. ',
@@ -115,7 +115,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             instagram : 'https://www.instagram.com/wallsbarbershop_isla/'
         },
         cozumel: {
-            nombre: 'WALL´S BARBERSHOP COZUMEL',
+            nombre: 'WALL\'S COZUMEL',
             shortName: 'COZUMEL',
             direccion: 'Plaza Leones, 30 Avenida esquina con 1 sur cozumel, Quintana Roo, México.',
             telefono: null,
@@ -127,7 +127,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             instagram : 'https://www.instagram.com/wallsbarbershop_cozumel/'
         },
         playaCentro: {
-            nombre : 'WALL´S BARBERSHOP PLAYA DEL CARMEN CENTRO',
+            nombre : 'WALL\'S PLAYA DEL CARMEN CENTRO',
             shortName: 'PLAYA DEL CARMEN CENTRO',
             direccion: 'SM. 56 MZA. 1 Lote 55, Av. Prolongación, Luis Donaldo Colosio, Fracc. Santa Fé, Playa del Carmen, México.',
             contacto: 'WhatsApp. (984) 187 6258',
@@ -137,7 +137,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             instagram : 'https://www.instagram.com/wallsbarbershop_playa/'
         }, 
         playa: {
-            nombre: 'WALL´S BARBERSHOP PLAYA DEL CARMEN',
+            nombre: 'WALL\'S PLAYA DEL CARMEN',
             shortName: 'PLAYA DEL CARMEN',
             direccion: '15 Avenida norte, entre calle 8 y calle 10, Colonia centro, plaza pelícanos, Playa del Carmen, Quintana Roo, México.',
             telefono: '(984) 803 3742',
@@ -149,7 +149,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             instagram : 'https://www.instagram.com/wallsbarbershop_playa/'
         },
         meridaPlazaArena: {
-            nombre: 'WALL´S MERIDA PLAZA ARENA',
+            nombre: 'WALL\'S MERIDA PLAZA ARENA',
             shortName: 'PLAZA ARENA',
             direccion: 'Av. Cámara de comercio #3276 por 50 y 52 Local 2 Benito Juarez Norte',
             contacto: 'WhatsApp. 998 293 4349',
@@ -159,7 +159,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             instagram : 'https://www.instagram.com/wallsmerida/'
         },
         meridaGalerias: {
-            nombre: 'WALL´S GALERIAS MERIDA',
+            nombre: 'WALL\'S GALERIAS MERIDA',
             shortName: 'GALERIAS',
             direccion: 'Calle 3 #300 entre 24 y 60 Av. Revolución, Plaza Galerías Mérida, Yucatán, México.',
             contacto: 'WhatsApp. 998 293 4627',
@@ -169,7 +169,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             instagram : 'https://www.instagram.com/wallsmerida/'
         },
         meridaUptown: {
-            nombre: 'WALL´S BARBERSHOP MERIDA UPTOWN',
+            nombre: 'WALL\'S MERIDA UPTOWN',
             shortName: 'UPTOWN',
             direccion: 'Centro comercial Uptown Mérida, Calle 17 # 104 -A por calle 10 y calle 32-A Col. Vista alegre',
             contacto: 'WhatsApp. 999 304 7933',
@@ -179,7 +179,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             instagram : 'https://www.instagram.com/wallsmerida/'
         },
         campeche: {
-            nombre: 'WALLS CAMPECHE',
+            nombre: 'WALL\'S CAMPECHE',
             shortName: 'CAMPECHE',
             direccion: 'Av. López Portillo #28, Plaza Kaniste Local 1, San Francisco, Campeche.',
             contacto: 'Tel. (981) 812 7975 y WhatsApp. (981) 107 2609',
@@ -189,10 +189,11 @@ angular.module('application').controller('sucursalesCtrlV2',
             instagram : 'https://www.instagram.com/wallsbarbershop_campeche/'
         },
         veracruz: {
-            nombre : 'WALL´S BARBERSHOP BOCA DEL RIO',
+            nombre : 'WALL\'S BOCA DEL RIO',
             shortName: 'VERACRUZ BOCA DEL RIO',
             direccion: 'Paseo costa verde #583 interior 107 Plaza Marlyn, fraccionamiento costa verde esquina jacarandás.',
-            contacto: 'Tel. 688 4491  y WhatsApp. 229 110 47 41',
+            telefono: '688 4491',
+            whatsapp: '229 110 47 41',
             y: '19.166767',
             x: '-96.117888',
             img: '/assets/img/sucursales/Boca.jpg',
@@ -200,7 +201,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             instagram : 'https://www.instagram.com/wallsbarbershop_boca/'
         },
         aguasCalientes: {
-            nombre: 'WALL´S BARBERSHOP AGUASCALIENTES',
+            nombre: 'WALL\'S AGUASCALIENTES',
             shortName: 'AGUASCALIENTES',
             direccion: 'Plaza Santa Fe, local 38, Av. Universidad #811, Bosques del prado sur, Aguascalientes, México.',
             telefono: '449 288 1015',
@@ -212,7 +213,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             instagram : 'https://www.instagram.com/wallsbarbershop_ags/'
         },
         tuxtla: {
-            nombre: 'WALL´S BARBERSHOP TUXTLA GTZ',
+            nombre: 'WALL\'S TUXTLA GTZ',
             shortName: 'TUXTLA GTZ',
             direccion: 'Boulevard Doctor Belisario Domínguez, Plaza Santa Elena Tuxtla, Gtz, Chiapas, México.',
             contacto: 'Tel. (961) 121 4081 y WhatsApp. (961) 243 1583 ',
@@ -222,7 +223,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             instagram : 'https://www.instagram.com/wallsbarbershop_tuxtlagtz/'
         },
         queretaro: {
-            nombre: 'WALL´S BARBERSHOP QUERETARO',
+            nombre: 'WALL\'S QUERETARO',
             shortName: 'QUERETARO',
             direccion: 'Calle Camino Real de Carretas #139, Lomas de Carreta, Querétaro, México.',
             contacto: 'Tel. (442) 403 2574 y WhatsApp. (442) 466 2384',
@@ -232,7 +233,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             instagram : 'https://www.instagram.com/wallsbarbershop_qro/'     
         },
         edoMx: {
-            nombre: 'WALL´S BARBERSHOP SATÉLITE',
+            nombre: 'WALL\'S SATÉLITE',
             shortName: 'SATÉLITE',
             direccion: 'Calle Manuel E Izaguirre #4 Local C. Ciudad Satélite Naucalpan de Juárez, Estado de México.',
             contacto: 'Tel. 2155 4934',
@@ -242,7 +243,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             instagram : 'https://www.instagram.com/wallsbarbershop_satelite/?hl=es'
         },
         cdMx: {
-            nombre: 'WALL´S BARBERSHOP LA ROMA',
+            nombre: 'WALL\'S LA ROMA',
             shortName: 'LA ROMA',
             direccion: 'Calle Cozumel esquina con Puebla, Colonia La Roma, Ciudad de México.',
             telefono: '7045 7224',
@@ -254,7 +255,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             instagram : 'https://www.instagram.com/wallsbarbershop_laroma/'
         },
         guadalajara: {
-                nombre: 'WALL´S BARBERSHOP GUADALAJARA',
+                nombre: 'WALL\'S GUADALAJARA',
                 shortName: 'GUADALAJARA',
                 direccion: 'Av. Aviación 3000, San Juan de Ocotán, 45019 Zapopan, Jal.Guadalajara (México)',
                 contacto: 'Tel. (044) 332 066 34 88',

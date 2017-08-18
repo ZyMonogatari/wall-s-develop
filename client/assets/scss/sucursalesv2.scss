@@ -20,56 +20,67 @@
 	    padding: 0;
 	    background: #fff;
 	    border-radius: 0.7em;
-	    font-size: 1.2em;
+	    font-size: 0.9em;
 	    color: black;
 	    border-left: 0.5em solid white;
 	    border-right: 0.5em solid white;
 	    position: relative;
 	    z-index: 2;
-	    font-family: 'cronommregular' !important;
 	  }
 
 .sucursales-v3-infoDiv{
 	position: absolute;
 	top: 140px;
-	height: 170px; 
+	//height: 150px; 
 	left: 29%; 
-	right: 0; 
 	//margin: auto; 
-	width: 350px; 
+	width: 280px; 
 	background: white; 
 	z-index: 1; 
-	border: 3px solid black;	
+	border: 3px solid black;
+	padding: 0 0 0 5.4%;
+
 }
 .sucursales-v3-infoImage{
 	position: absolute; 
-	width: 170px; 
-	height: 170px; 
+	width: 148px;
+    height: 148px; 
 	border-radius: 120px; 
 	top: -3px; 
-	left: -98px;
+	left: -85px;
 	border: 3px solid black;
 }
+.sucursales-contact-icons{
+	font-size: 20px;
+	position: relative;
+	top: 3px;
+}
 .sucursal-v3-title{
-	margin-left: 80px;
 	text-align: center;
+	min-height: 15px;
+}
+.sucursal-v3-title-text{
+	font-size: 16px;
+	line-height: .8;
 }
 .sucursal-v3-info{
-	margin-left: 80px; 
-	width: 250px;
+	min-height: 30px;
+	text-align: center;
 }
 .sucursal-v3-info-text{
 	font-size:10px;
+	line-height: 1;
 }
-.sucursal-social-icons-div{
-	position: absolute; 
-	bottom: 0px;  
-	right: 0px; 
-	margin: 5px;
+.sucursal-social-icons-div{ 
+	margin-top: 15px;
+	vertical-align: top;
+	display: inline-block;
+	margin-left: 10px;
 }
 .sucursal-v3-social-icon{
 	color: black; 
-	margin: 5px;
+	margin-bottom: 10px;
+	font-size: 23px;
 }
 .sucursales-cabecerav2{
 	position: fixed;

@@ -5,9 +5,7 @@ controller: sucursalesCtrlV2
 ---
 <div ng-include="'/templates/navBar.html'"></div>
 <div ng-include="'/templates/navBarMovil.html'"></div>
-<div ng-include="'/templates/socialIcons.html'" class="grid-block"></div>
-<div ng-include="'/templates/icons.html'" class="grid-block iconsDiv"></div>
-<div ng-include="'/templates/iconsMovil.html'" class="grid-block iconsMovil"></div>
+
 
 <div class="sucursales-cabecerav2">
 </div>
@@ -61,7 +59,7 @@ controller: sucursalesCtrlV2
         <div  class="fadeIn fadeOut sucursales-v3-infoDiv" ng-show="sucursalInfoDiv">
             <img src="{{selectSucursal.img}}" class="sucursales-v3-infoImage">
             <div class="sucursal-v3-title">
-              <h5 class="Lato-Bold"> {{selectSucursal.nombre}} </h5>
+              <h4 class="Lato-Bold sucursal-v3-title-text"> {{selectSucursal.nombre}} </h4>
             </div>
             
             <div class="sucursal-v3-info">
@@ -70,22 +68,25 @@ controller: sucursalesCtrlV2
               </p>
             </div>
 
-            <div style="margin-top: -15px; width: 75%; margin-left: 80px;">
+            <div style="margin-top: -15px;">
               <div class="tyc">
                 <h6 class="Lato-Bold">RESERVAS</h6>
               </div>
             </div>
-            <div style="margin-left: 80px; width: 190px; margin-top: -3px">
-              <p class="Lato-Light" style="margin-bottom: 0px" ng-if="selectSucursal.telefono">
-                <i class="fa fa-phone " aria-hidden="true"></i>      {{selectSucursal.telefono}}
-              </p>
-              <p class="Lato-Light" style="margin-bottom: 3px" ng-if="selectSucursal.whatsapp">
-                <i class="fa fa-whatsapp " aria-hidden="true"></i>
-                {{selectSucursal.whatsapp}}
-              </p>
+
+            
+            <div style="min-height: 60px;">
+              <div style=" display: inline-block;" >
+                <p class="Lato-Light" style="margin-bottom: 5px; font-size: 12px;" ng-if="selectSucursal.telefono">
+                  <i class="fa fa-phone sucursales-contact-icons" aria-hidden="true"></i>      {{selectSucursal.telefono}}
+                </p>
+                <p class="Lato-Light" style="margin-bottom: 5px; font-size: 12px;" ng-if="selectSucursal.whatsapp">
+                  <i class="fa fa-whatsapp sucursales-contact-icons" aria-hidden="true"></i>
+                  {{selectSucursal.whatsapp}}
+                </p>
+              </div>
               
-            </div>
-            <div class="sucursal-social-icons-div">
+              <div class="sucursal-social-icons-div">
               <a href="">
                 <i class="fa fa-facebook-square fa-2x sucursal-v3-social-icon" aria-hidden="true"></i>
               </a>
@@ -95,8 +96,10 @@ controller: sucursalesCtrlV2
               <a href="">
                 <i class="fa fa-twitter-square fa-2x sucursal-v3-social-icon" aria-hidden="true"></i>
               </a>
+              </div>
             </div>
-            <div style="position: absolute; width: 50px; height: 50px; background: white; right: 60px; bottom: -26.5px; transform: rotate(-45deg); border-left: 3px solid black; border-bottom: 3px solid black; z-index: -1;"></div>
+            
+            <div style="position: absolute; width: 25px; height: 25px; background: white; right: 60px; bottom: -15px; transform: rotate(-45deg); border-left: 3px solid black; border-bottom: 3px solid black; z-index: -1;"></div>
         </div>
         <marker ng-repeat="(key, sucursal) in sucursales" position="{{sucursal.y}},{{sucursal.x}}" title="{{sucursal.nombre}}"
           optimized="false"
@@ -126,6 +129,7 @@ controller: sucursalesCtrlV2
       </div>
       <div class="footer-servicios-brand">
       <div ng-include="'/templates/socialIconsMovil.html'" class="socialIconsDivMovil"></div>
+      <div ng-include="'/templates/socialIcons.html'" class="grid-block"></div></div>
         <h6 class="text-center whiteFont footer-text">©2015 All Rights Reserved  Diseño <a href="http://chicleypegacreativo.com/" target="_blank" style="color: inherit;"><strong>Chicle y Pega Estudio Creativo</strong></a></h6>
       </div>
     </div>
