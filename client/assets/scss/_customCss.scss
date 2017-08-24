@@ -523,7 +523,12 @@ body{
 }
 
 @media only screen and (max-width: 768px){
-	
+	.cuerpo3{
+		height: 10%;
+	}
+	.borde-sesgado-bottom-black{
+		display: none;
+	}
 	.navBar{
 		display: none;
 	}
@@ -701,7 +706,7 @@ body{
 	}
 	 .leerMasFooter{
 	 	width: 25%;
-	 	bottom: 50%;
+	 	bottom: 65%;
 	 }
 	 .iconsDiv{
 	 	width: 35%;
@@ -802,7 +807,6 @@ body{
 		transform: scale(0.7, 0.7);
     	-ms-transform: scale(0.7, 0.7);
     	-webkit-transform: scale(0.7, 0.7);
-    	bottom: 50%;
 	}
 	.iconsDiv{
 		transform: scale(0.7, 0.7);
@@ -814,6 +818,12 @@ body{
 	}
 	.sesion, h6{
 		font-size: 70%;
+	}
+}
+
+@media only screen and (max-width: 360px){
+	.leerMasFooter {
+	    bottom: 58%;
 	}
 }
 @media only screen and (max-width: 320px){
@@ -843,9 +853,7 @@ body{
 	.cuerpo3 {
     	top: 400%;
 	}
-	.leerMasFooter {
-	    bottom: 50%;
-	}
+	
 	.angleDiv{
 		transform: scale(0.8, 0.8);
     	-ms-transform: scale(0.8, 0.8);

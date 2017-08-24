@@ -5,19 +5,20 @@ angular.module('application').controller('sucursalesCtrlV2',
     $scope.displaySesionN = 'none';
     $scope.sucursalInfoDiv;
     $scope.selectSucursal;
+    $scope.mapSucursalDiv = '180px';
     $scope.mapCenter = "23.848025, -98.605808";
-    var actualMap;
-    NgMap.getMap().then(function(map) {
-        console.log('map', map);
-        actualMap = map;
-    });
-    $scope.pruebaClick= function(marker, id){
-        console.log(id);
-        actualMap.showInfoWindow('info', id);
+    $scope.telefonoMarginTop = null;
+    $scope.whatsappMarginTop = null;
+
+    $scope.selectSucursal = function(key){
+        if(!$scope.sucursales[key].select){
+            $scope.sucursales[key].select = true;
+        }
+        else{
+            $scope.sucursales[key].select = false;
+        }
     }
     $scope.hideInfoDiv = function(marker, param, key){
-
-        console.log(marker);
         $scope.sucursalInfoDiv = false;
         if(param){
             $scope.showInfoDiv(key);
@@ -27,6 +28,18 @@ angular.module('application').controller('sucursalesCtrlV2',
         if(key){
             //console.log('centrando')
             $scope.selectSucursal = $scope.sucursales[key];
+            if(!$scope.selectSucursal.whatsapp){
+                $scope.telefonoMarginTop = '7px'
+            }
+            else{
+                $scope.telefonoMarginTop = null;
+            }
+            if(!$scope.selectSucursal.telefono){
+                $scope.whatsappMarginTop = '7px'
+            }
+            else{
+                $scope.whatsappMarginTop = null;
+            }
             var x = parseFloat($scope.selectSucursal.x) ;
             console.log($scope.selectSucursal.x, x);
             //$scope.mapCenter = "0,0";
@@ -63,7 +76,9 @@ angular.module('application').controller('sucursalesCtrlV2',
             x:'-86.821732',
             img: '/assets/img/sucursales/Bonampak.jpg',
             fb: 'https://www.facebook.com/Walls-Barbershop-Cancun-334978173601237/', 
-            instagram : 'https://www.instagram.com/wallscancun/'
+            instagram : 'https://www.instagram.com/wallscancun/',
+            twitter: null, 
+            select: false
         },
         torres: {
             nombre: 'WALL\'S LAS TORRES',
@@ -75,7 +90,9 @@ angular.module('application').controller('sucursalesCtrlV2',
             x: '-86.750601',
             img: '/assets/img/sucursales/LasTorres.jpg',
             fb: 'https://www.facebook.com/Walls-Barbershop-Cancun-334978173601237/', 
-            instagram : 'https://www.instagram.com/wallscancun/'
+            instagram : 'https://www.instagram.com/wallscancun/',
+            twitter: null,
+            select: false
         },
         kabah: {
             nombre: 'WALL\'S KABAH',
@@ -87,7 +104,9 @@ angular.module('application').controller('sucursalesCtrlV2',
             x:'-86.847092',
             img: '/assets/img/sucursales/Kabah.jpg',
             fb: 'https://www.facebook.com/Walls-Barbershop-Cancun-334978173601237/', 
-            instagram : 'https://www.instagram.com/wallscancun/'
+            instagram : 'https://www.instagram.com/wallscancun/',
+            twitter: null,
+            select: false
         },
         chetumal : {
             nombre: 'WALL\'S CHETUMAL',
@@ -99,7 +118,9 @@ angular.module('application').controller('sucursalesCtrlV2',
             x:'-88.281526',
             img: '/assets/img/sucursales/Chetumal.jpg',
             fb: 'https://www.facebook.com/wallschetumal/', 
-            instagram : 'https://www.instagram.com/wallschetumal/'
+            instagram : 'https://www.instagram.com/wallschetumal/',
+            twitter: null,
+            select: false
         },
         isla: {
             nombre: 'WALL\'S ISLA MUJERES',
@@ -112,7 +133,9 @@ angular.module('application').controller('sucursalesCtrlV2',
             x: '-86.749551',
             img: '/assets/img/sucursales/Isla.jpg',
             fb: 'https://www.facebook.com/wallsbarbershopisla/', 
-            instagram : 'https://www.instagram.com/wallsbarbershop_isla/'
+            instagram : 'https://www.instagram.com/wallsbarbershop_isla/',
+            twitter: null,
+            select: false
         },
         cozumel: {
             nombre: 'WALL\'S COZUMEL',
@@ -124,17 +147,22 @@ angular.module('application').controller('sucursalesCtrlV2',
             x:'-86.945043',
             img: '/assets/img/sucursales/Cozumel.jpg',
             fb: 'https://www.facebook.com/wallsbarbershopczm/', 
-            instagram : 'https://www.instagram.com/wallsbarbershop_cozumel/'
+            instagram : 'https://www.instagram.com/wallsbarbershop_cozumel/',
+            twitter: null,
+            select: false
         },
         playaCentro: {
             nombre : 'WALL\'S PLAYA DEL CARMEN CENTRO',
             shortName: 'PLAYA DEL CARMEN CENTRO',
             direccion: 'SM. 56 MZA. 1 Lote 55, Av. Prolongación, Luis Donaldo Colosio, Fracc. Santa Fé, Playa del Carmen, México.',
-            contacto: 'WhatsApp. (984) 187 6258',
+            telefono: null,
+            whatsapp: '(984) 187 6258',
             position: '25.000000, -85.0000000',
             img: '/assets/img/sucursales/playacentro.jpg',
             fb: 'https://www.facebook.com/wallsplayacolosio/?ref=br_rs', 
-            instagram : 'https://www.instagram.com/wallsbarbershop_playa/'
+            instagram : 'https://www.instagram.com/wallsbarbershop_playa/',
+            twitter: null,
+            select: false
         }, 
         playa: {
             nombre: 'WALL\'S PLAYA DEL CARMEN',
@@ -146,47 +174,60 @@ angular.module('application').controller('sucursalesCtrlV2',
             x: '-87.074087',
             img: '/assets/img/sucursales/playa.png',
             fb: 'https://www.facebook.com/wallsbarbershopplayadelcarmen/', 
-            instagram : 'https://www.instagram.com/wallsbarbershop_playa/'
+            instagram : 'https://www.instagram.com/wallsbarbershop_playa/',
+            twitter: null,
+            select: false
         },
         meridaPlazaArena: {
             nombre: 'WALL\'S MERIDA PLAZA ARENA',
             shortName: 'PLAZA ARENA',
             direccion: 'Av. Cámara de comercio #3276 por 50 y 52 Local 2 Benito Juarez Norte',
-            contacto: 'WhatsApp. 998 293 4349',
+            telefono: null, 
+            whatsapp: '998 293 4349',
             position: '25.000000, -85.0000000',
             img: '/assets/img/sucursales/Arena.jpg',
             fb: 'https://www.facebook.com/wallsmerida/', 
-            instagram : 'https://www.instagram.com/wallsmerida/'
+            instagram : 'https://www.instagram.com/wallsmerida/',
+            twitter: null,
+            select: false
         },
         meridaGalerias: {
             nombre: 'WALL\'S GALERIAS MERIDA',
             shortName: 'GALERIAS',
             direccion: 'Calle 3 #300 entre 24 y 60 Av. Revolución, Plaza Galerías Mérida, Yucatán, México.',
-            contacto: 'WhatsApp. 998 293 4627',
+            telefono: null,
+            whatsapp: '998 293 4627',
             position: '16.800000, -85.0000000',
             img: '/assets/img/sucursales/Galerias.jpg',
             fb: 'https://www.facebook.com/wallsmerida/', 
-            instagram : 'https://www.instagram.com/wallsmerida/'
+            instagram : 'https://www.instagram.com/wallsmerida/',
+            twitter: null,
+            select: false
         },
         meridaUptown: {
             nombre: 'WALL\'S MERIDA UPTOWN',
             shortName: 'UPTOWN',
             direccion: 'Centro comercial Uptown Mérida, Calle 17 # 104 -A por calle 10 y calle 32-A Col. Vista alegre',
-            contacto: 'WhatsApp. 999 304 7933',
+            whatsapp: '999 304 7933',
             position: '8.000000, -85.0000000',
             img: '/assets/img/sucursales/Uptown.jpg',
             fb: 'https://www.facebook.com/wallsmerida/', 
-            instagram : 'https://www.instagram.com/wallsmerida/'
+            instagram : 'https://www.instagram.com/wallsmerida/',
+            twitter: null,
+            select: false
         },
         campeche: {
             nombre: 'WALL\'S CAMPECHE',
             shortName: 'CAMPECHE',
             direccion: 'Av. López Portillo #28, Plaza Kaniste Local 1, San Francisco, Campeche.',
-            contacto: 'Tel. (981) 812 7975 y WhatsApp. (981) 107 2609',
+            telefono: '(981) 812 7975',
+            whatsapp: '(981) 107 2609',
             position: '16.800000, -85.0000000',
             img: '/assets/img/sucursales/Campeche.jpg',
             fb: 'https://www.facebook.com/wallsbarbershopcamp/', 
-            instagram : 'https://www.instagram.com/wallsbarbershop_campeche/'
+            instagram : 'https://www.instagram.com/wallsbarbershop_campeche/',
+            twitter: null,
+            select: false
         },
         veracruz: {
             nombre : 'WALL\'S BOCA DEL RIO',
@@ -198,7 +239,10 @@ angular.module('application').controller('sucursalesCtrlV2',
             x: '-96.117888',
             img: '/assets/img/sucursales/Boca.jpg',
             fb: 'https://www.facebook.com/wallsbarbershopbocadelrio/', 
-            instagram : 'https://www.instagram.com/wallsbarbershop_boca/'
+            instagram : 'https://www.instagram.com/wallsbarbershop_boca/',
+            twitter: null,
+            select: false, 
+            mapsUrl: "https://www.google.com/maps/place/Wall's+Barbershop/@19.1667629,-96.1184343,19z/data=!3m1!4b1!4m13!1m7!3m6!1s0x0:0x0!2zMTnCsDEwJzAwLjQiTiA5NsKwMDcnMDQuNCJX!3b1!8m2!3d19.166767!4d-96.117888!3m4!1s0x85c34125ac7deeab:0x39bafc08d7ef2bc9!8m2!3d19.1667616!4d-96.1178871?hl=es"
         },
         aguasCalientes: {
             nombre: 'WALL\'S AGUASCALIENTES',
@@ -210,60 +254,76 @@ angular.module('application').controller('sucursalesCtrlV2',
             x: '-102.311137',
             img: '/assets/img/sucursales/Aguascalienstes.jpg',
             fb: 'https://www.facebook.com/wallsbarbershopags/', 
-            instagram : 'https://www.instagram.com/wallsbarbershop_ags/'
+            instagram : 'https://www.instagram.com/wallsbarbershop_ags/',
+            twitter: null,
+            select: false,
+            mapsUrl: "https://www.google.com/maps/place/Walls+Barbershop+Aguascalientes/@21.9109955,-102.3122313,18z/data=!4m13!1m7!3m6!1s0x0:0x0!2zMjHCsDU0JzM5LjYiTiAxMDLCsDE4JzQwLjEiVw!3b1!8m2!3d21.910993!4d-102.311137!3m4!1s0x8429eefcbae022f1:0x2993e4055fae25b1!8m2!3d21.910991!4d-102.311138?hl=es"
         },
         tuxtla: {
             nombre: 'WALL\'S TUXTLA GTZ',
             shortName: 'TUXTLA GTZ',
             direccion: 'Boulevard Doctor Belisario Domínguez, Plaza Santa Elena Tuxtla, Gtz, Chiapas, México.',
-            contacto: 'Tel. (961) 121 4081 y WhatsApp. (961) 243 1583 ',
+            telefono: '(961) 121 4081',
+            whatsapp: '(961) 243 1583',
             position: '16.800000, -85.0000000',
             img: '/assets/img/sucursales/walls-tuxtla.png',
             fb: 'https://www.facebook.com/wallstuxtlagtz/', 
-            instagram : 'https://www.instagram.com/wallsbarbershop_tuxtlagtz/'
+            instagram : 'https://www.instagram.com/wallsbarbershop_tuxtlagtz/',
+            twitter: null,
+            select: false
         },
         queretaro: {
             nombre: 'WALL\'S QUERETARO',
             shortName: 'QUERETARO',
             direccion: 'Calle Camino Real de Carretas #139, Lomas de Carreta, Querétaro, México.',
-            contacto: 'Tel. (442) 403 2574 y WhatsApp. (442) 466 2384',
+            telefono: '(442) 403 2574',
+            whatsapp: '(442) 466 2384',
             position: '16.800000, -85.0000000',
             img: '/assets/img/sucursales/Queretaro.jpg',
             fb: 'https://www.facebook.com/wallsbarbershopmilenio3/', 
-            instagram : 'https://www.instagram.com/wallsbarbershop_qro/'     
+            instagram : 'https://www.instagram.com/wallsbarbershop_qro/',
+            twitter: null,
+            select: false  
         },
         edoMx: {
             nombre: 'WALL\'S SATÉLITE',
             shortName: 'SATÉLITE',
             direccion: 'Calle Manuel E Izaguirre #4 Local C. Ciudad Satélite Naucalpan de Juárez, Estado de México.',
-            contacto: 'Tel. 2155 4934',
+            telefono: '2155 4934',
             position: '25.000000, -85.0000000',
             img: '/assets/img/sucursales/Satelite.jpg',
             fb: 'https://www.facebook.com/wallsbarbershopsatelite/', 
-            instagram : 'https://www.instagram.com/wallsbarbershop_satelite/?hl=es'
+            instagram : 'https://www.instagram.com/wallsbarbershop_satelite/?hl=es',
+            twitter: null,
+            select: false
         },
         cdMx: {
             nombre: 'WALL\'S LA ROMA',
             shortName: 'LA ROMA',
             direccion: 'Calle Cozumel esquina con Puebla, Colonia La Roma, Ciudad de México.',
             telefono: '7045 7224',
-            whatsapp: '(045) 998 293 4626',
+            whatsapp: '998 293 4626',
             y: '19.420320',
             x: '-99.171246',
             img: '/assets/img/sucursales/LaRoma.jpg',
             fb: 'https://www.facebook.com/wallsbarbershoplaroma/', 
-            instagram : 'https://www.instagram.com/wallsbarbershop_laroma/'
+            instagram : 'https://www.instagram.com/wallsbarbershop_laroma/',
+            twitter: null,
+            select: false,
+            mapsUrl: "https://www.google.com/maps/place/Wall's+Barbershop+-+La+Roma/@19.4204178,-99.1712646,17z/data=!4m5!3m4!1s0x85d1ff489acefedb:0xf0b09206c511c898!8m2!3d19.4203243!4d-99.1712487?hl=es"
         },
         guadalajara: {
-                nombre: 'WALL\'S GUADALAJARA',
-                shortName: 'GUADALAJARA',
-                direccion: 'Av. Aviación 3000, San Juan de Ocotán, 45019 Zapopan, Jal.Guadalajara (México)',
-                contacto: 'Tel. (044) 332 066 34 88',
-                position: '16.800000, -85.0000000',
-                img: '/assets/img/sucursales/Guadalajara.jpg',
-                fb: 'https://www.facebook.com/wallsbarbershopgdl/', 
-                instagram : 'https://www.instagram.com/wallsbarbershop_gdl/'
-            }
+            nombre: 'WALL\'S GUADALAJARA',
+            shortName: 'GUADALAJARA',
+            direccion: 'Av. Aviación 3000, San Juan de Ocotán, 45019 Zapopan, Jal.Guadalajara (México)',
+            telefono: '(044) 332 066 34 88',
+            position: '16.800000, -85.0000000',
+            img: '/assets/img/sucursales/Guadalajara.jpg',
+            fb: 'https://www.facebook.com/wallsbarbershopgdl/', 
+            instagram : 'https://www.instagram.com/wallsbarbershop_gdl/',
+            twitter: null,
+            select: false
+        }
     };
 
     $scope.mostrarMenu = function (){
