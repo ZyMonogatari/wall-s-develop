@@ -74,7 +74,8 @@
         <marker ng-repeat="(key, sucursal) in sucursales" position="{{sucursal.y}},{{sucursal.x}}" title="{{sucursal.nombre}}"
           optimized="false"
           icon="{
-            url:'/assets/img/marcaddor-30x30.png'
+            url:'/assets/img/pin-sucursales.png',
+            scaledSize:[25,35]
           }" on-click="hideInfoDiv(true, key)" id={{key}}></marker>
       </ng-map>
     </div>

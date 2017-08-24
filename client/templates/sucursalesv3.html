@@ -1,6 +1,6 @@
 ---
-name: sucursalesv3
-url: /sucursalesv3
+name: sucursales
+url: /sucursales
 controller: sucursalesCtrlV2
 ---
 <div ng-include="'/templates/navBar.html'"></div>
@@ -33,7 +33,7 @@ controller: sucursalesCtrlV2
       <div class="sucursales-mobile-title-container" ng-repeat="(key, sucursal) in sucursales">
         <div ng-click="selectSucursal(key)">
           <div class="sucursales-mobile-image">
-            <img src="/assets/img/sucursales/wallslogobonampak.png">
+            <img src="{{sucursal.imgMobile}}">
           </div>
           <div class="sucursales-mobile-title-div">
             <h3 class="Lato-Bold">  {{sucursal.shortName}}</h3>
@@ -52,7 +52,7 @@ controller: sucursalesCtrlV2
             <div class="sucursales-mobile-info-comollegar-container">
               <a href="{{sucursal.mapsUrl}}" target="_blank" style="color: black">
                 <div class="sucursales-mobile-info-comollegar">
-                  <p class="Lato-Bold">¿como llegar?</p>
+                  <p class="Lato-Light">¿como llegar?</p>
                 </div>
               </a>
             </div>
