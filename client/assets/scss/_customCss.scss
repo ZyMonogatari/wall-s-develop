@@ -6,6 +6,15 @@
 	left: 10%;
 	right: 10%;
 }
+.home-sucursales-title{
+	position: absolute; 
+	height: 100px; 
+	width: 100%; 
+	background: black; 
+	z-index: 1; 
+	top: 100px; 
+	text-align: center;
+}
 .socialIcon{
 	margin-left: 10px; margin-right: 10px;
 }
@@ -220,7 +229,7 @@ body{
 	height: 100%;
 	position: absolute; 
 	width : 100%;
-	top: 680%;
+	top: 690%;
 }
 
 .titulos-div-cabecera{
@@ -378,7 +387,7 @@ body{
 		top: 480%;
 	}
 	.cuerpo3{
-		top: 700%;
+		top: 730%;
 	}
 	.video{
 		top: 20%;
@@ -523,6 +532,9 @@ body{
 }
 
 @media only screen and (max-width: 768px){
+	.home-sucursales-title{
+		display: none;
+	}
 	.cuerpo3{
 		height: 10%;
 	}

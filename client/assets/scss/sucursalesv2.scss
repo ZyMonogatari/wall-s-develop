@@ -41,6 +41,7 @@
 	margin: 5% 10px; 
 	display: inline-block;
 	vertical-align: middle;
+
 }
 .sucursales-mobile-info-div p{
 	margin: 0;
@@ -104,21 +105,20 @@
 	  }
 
 .sucursales-v3-infoDiv{
-	position: absolute;
-	left: 33.5%;
 	width: 280px; 
 	background: white; 
 	z-index: 1; 
 	border: 3px solid black;
-	padding: 0 0 0 5.4%;
+	padding: 0 10px 0 24%;
+	height: 164px;
 
 }
 .sucursales-v3-infoImage{
 	position: absolute; 
 	width: 164px;
-    height: 164px; 
+    height: 165px; 
 	border-radius: 120px; 
-	top: -4px; 
+	top: -0.5px; 
 	left: -98px;
 	border: 3px solid black;
 }
@@ -129,7 +129,6 @@
 }
 .sucursal-v3-title{
 	text-align: center;
-	min-height: 33px;
 	margin-top: 10px;
 }
 .sucursal-v3-title-text{

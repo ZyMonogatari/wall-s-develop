@@ -10,7 +10,7 @@ controller: homeCtrl
 
 
 <!--Cabecera--> 
-<div ng-if="actualBody == 0" class="cabecera">
+<div ng-show="actualBody == 0" class="cabecera">
 	<div class="video-servicios-div" ng-if="!mobile">
 		<iframe src="https://www.youtube.com/embed/VSVcZhWV1Rc?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=0dbig-gLoCo" frameborder="0" allowfullscreen class="video-servicios"></iframe>
 		<div style="position: absolute; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8);">
@@ -78,7 +78,7 @@ controller: homeCtrl
 
 
 <!--fondo-footer-->
-<div ng-if="actualBody == 2" class="fondo-footer" >
+<div ng-show="actualBody == 2" class="fondo-footer" >
 
 	<div class="titulos-div-footer">
 		<h1 class="text-center whiteFont RobotoCondensed-Bold"> ¿TE INTERESA ADQUIRIR UNA FRANQUICIA? </h1>
@@ -150,6 +150,9 @@ controller: homeCtrl
 <!--cuerpo3-->
 
 <div class="cuerpo3">
+		<div class="home-sucursales-title">
+			<h2 class="Lato-Bold whiteFont">Sucursales</h2>
+		</div>
 		<img src="./assets/img/border_sesgado_bottom_black-min.png" class="borde-sesgado-bottom-black">
     	<div ng-include="'/templates/map.html'">
     		

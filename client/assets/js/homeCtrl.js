@@ -405,7 +405,7 @@ angular.module('application').controller('homeCtrl',
         $scope.cabecera.position = 'absolute';
         angular.element(document.querySelector('#cabeceraDiv')).addClass('from-white');
         angular.element(document.querySelector('#cabeceraDivMovil')).addClass('from-white');
-        $scope.cabecera.top = '5%';
+        $scope.cabecera.top = '3%';
         $scope.logoTransform = 'scale(1, 1)';
         $scope.cabecera.fontColor = 'white';
         $scope.iconColor = 'white';
