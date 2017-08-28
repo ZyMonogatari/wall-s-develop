@@ -159,7 +159,12 @@ p {
     .wcont-home_text{
         text-align: center;
     }
-
+    .wcont-estilo-texto-formulario {
+        font-size: 30px;
+    }
+    .wcont-boton-leer-mas{
+        margin-top: 10px;
+    }
 }
 .wcont-home_text h1 {
     color: #fff;
@@ -373,7 +378,7 @@ tuor:visited {
     height: auto;
 }
 .wcont-seccion_abre_franquicia {
-    background: url(../images/fondo-nosotros-cuerpo-dos-min.jpg);
+    background: url(../images/fondo-cuerpo-dos-min.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 	
@@ -573,7 +578,7 @@ tuor:visited {
     width: 100%;
 }
 .wcont-right_single_feature {
-    padding-left: 190px;
+    padding: 0 20%;
     margin-bottom: 65px;
     margin-top: 35px;
 }
@@ -1127,7 +1132,7 @@ a {
     margin: 0 auto;
     position: absolute;
     left: 37.7%;
-    top: 126px;
+    top: 30%;
     border-radius: 50%;    
     background: url(../images/fondo-top-contacto-color-min.jpg);
     background-size: cover;
@@ -1138,11 +1143,30 @@ a {
 	border: 25px solid rgba(255, 255, 255, 0.6);
    
     }
-	
+@media (min-width: 1500px){ 
+	.wcont-sello_imagen{
+		left: 39%;
+		}
+}
+@media (min-width: 1600px){ 
+	.wcont-sello_imagen{
+		left: 40%;
+		}
+}
+@media (min-width: 2000px){ 
+	.wcont-sello_imagen{
+		left: 41%;
+		}
+}
+@media (min-width: 2300px){ 
+	.wcont-sello_imagen{
+		left: 42%;
+		}
+}
 @media (min-width: 992px){   
 	.wcont-texto_top_derecha {
 	width: 30%;
-    top: 178px;
+    top: 40%;
     position: absolute;
     left: 60px;
 	z-index:2;
@@ -1169,6 +1193,14 @@ a {
     top: 162px;
     position: absolute;
     width: 40%;
+ }
+}
+@media (min-width: 1500px){   
+	.wcont-texto_top_izquierda {
+	left: 58%;
+    top: 162px;
+    position: absolute;
+    width: 30%;
  }
 }
 @media (max-width: 1249px){   
@@ -1861,6 +1893,18 @@ a {
     width: 100% !important;
 }
 }
+
+
+
+@media (max-width: 768px){
+.wcont-estilo-texto-formulario {
+	writing-mode: inherit;
+    transform: rotate(0deg);
+	padding-top: 50px;
+    padding-bottom: 0px;
+    font-size: 35px;		
+}
+}
 .wcont-fondo-diagonal-izquierdo-dos{    
 	position: absolute;
     background: rgb(240, 240, 240);
@@ -1940,13 +1984,12 @@ a {
 	font-size:16px;
 	cursor: pointer;
 	margin-bottom: 130px;
-    margin-top: 96px;
 	}
 @media (max-width: 991px){  
 .wcont-boton-leer-mas {
 	width: 124px;
 	}
-	}
+}
 /*@media (max-width: 655px){  
 .wcont-boton-leer-mas {
 	width: 18%;
