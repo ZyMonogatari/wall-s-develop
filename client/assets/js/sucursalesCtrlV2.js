@@ -2,6 +2,14 @@ angular.module('application').controller('sucursalesCtrlV2',
   ['$scope', '$window', 'NgMap', '$interval', '$timeout', '$state', function($scope, $window, NgMap, $interval, $timeout, $state){
     document.title = "Sucursales- Wall´s Barbershop";
     $scope.cabecera = {};
+    $scope.cabecera.source = '/assets/img/logo.png';
+    $scope.cabecera.position = 'absolute';
+    $scope.logoTransform = '';
+    $scope.displaySesion = 'none';
+    $scope.displayNumber = 'none';
+    $scope.cabecera.fontColor = 'white';
+    $scope.iconColor = 'white';
+    
     $scope.displaySesionN = 'none';
     $scope.sucursalInfoDiv;
     $scope.selectSucursal;

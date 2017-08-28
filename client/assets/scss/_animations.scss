@@ -137,8 +137,22 @@
     -webkit-animation-fill-mode: forwards;
      animation-fill-mode:forwards;
 }
+.slide-left-to-right2s{
+  -webkit-animation-name: slide-left-to-right; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: slide-left-to-right;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+     animation-fill-mode:forwards;
+}
+.slide-right-to-left2s{
+  -webkit-animation-name: slide-right-to-left; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: slide-right-to-left;
+    animation-duration: 2s;
+    animation-fill-mode:forwards;
 
-
+}
 
 .slide-right-to-left{
 	-webkit-animation-name: slide-right-to-left; /* Safari 4.0 - 8.0 */

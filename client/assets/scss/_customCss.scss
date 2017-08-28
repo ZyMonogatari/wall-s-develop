@@ -1,3 +1,10 @@
+.wallscardImg{
+	margin: 0 0 10% 0;
+}
+.home-borde-div{
+	width: 107%;
+	margin: 0 0 0 -5%
+}
 .navBar{
 	position: absolute;
 	top: 50%;
@@ -7,12 +14,10 @@
 	right: 10%;
 }
 .home-sucursales-title{
-	position: absolute; 
+	position: relative; 
 	height: 100px; 
 	width: 100%; 
 	background: black; 
-	z-index: 1; 
-	top: 100px; 
 	text-align: center;
 }
 .socialIcon{
@@ -62,6 +67,11 @@ body{
 	top: -30%;
 
 }
+.home-cuerpo-absolute{
+	position: absolute; 
+	top: 80%; 
+	width: 100%
+}
 .sesion{
 	left: 20%;
 }
@@ -79,7 +89,7 @@ body{
 .socialIconsDiv{
 	z-index: 3;
 	margin-top: 5px;
-	left: 8%;
+	left: 9%;
 }
 .socialIconsDivMovil{
 	padding-top: 10px;
@@ -147,22 +157,26 @@ body{
 }
 
 .wallsCardLogoDiv{
-	position: absolute;
-	bottom:50%;
-	width: 20%;
-	height: 5%;
-	margin: auto;
-	left: 0;
-	right: 0;
+	//position: absolute;
+	//bottom:50%;
+	//width: 20%;
+	//height: 5%;
+	//margin: auto;
+	//left: 0;
+	//sright: 0;
+	padding: 0 33.3%;
+	margin: 5% 0;
 }
 .wallsCardDiv{
-	position: absolute;
-	bottom: 15%;
+	position: relative;
+	padding: 0 33.3%;
+	margin: 0 0 5%;
+	/*bottom: 15%;
 	width: 20%;
 	height: auto;
 	margin: auto;
 	left: 0;
-	right: 0;
+	right: 0;*/
 }
 
 .cabecera{
@@ -174,19 +188,13 @@ body{
 	height: 100%;
 }
 .borde-sesgado-top{
-	-ms-transform: rotate(-5deg); 
-    -webkit-transform: rotate(-5deg); 
-    transform: rotate(-5deg);
     z-index: 0;
     width: 100%;
 }
 .borde-sesgado-bottom{
-	-ms-transform: rotate(177deg); /* IE 9 */
-    -webkit-transform: rotate(177deg); /* Chrome, Safari, Opera */
-    transform: rotate(177deg); 
-    position: absolute; 
-    bottom: 6%;
-    z-index: -1;
+	-ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg); 
     width: 100%; 
 }
 .fondo-fixed{
@@ -210,26 +218,24 @@ body{
 }
 
 .cuerpo1{
-	position: absolute;
-	top : 80%;  
-	width : 110%;
-	left : -5%; 
-	height: 2000px;
+	position: relative; 
+	width: 100%;
 }
 
 .cuerpo2{
-	height: 130%;
-	position: absolute;
-	width : 110%; 
-	left : -5%;
-	top: 450%;
+	//height: 130%;
+	position: relative;
+	width : 100%; 
+	margin: 50% 0 0 0;
+	//left : -5%;
+	//top: 400%;
 }
 
 .cuerpo3{
-	height: 100%;
-	position: absolute; 
+	position: relative; 
 	width : 100%;
-	top: 690%;
+	margin: 60% 0 0;
+	height: 700px;
 }
 
 .titulos-div-cabecera{
@@ -290,53 +296,50 @@ body{
 }
 
 .cuerpo1-white-div{
-	position: absolute;
-	top: 9%;
+	//position: absolute;
+	//top: 9%;
 	width: 100%;
 	height: 80%;
 	background: white; 
+	background-image: url(/assets/img/bg_cuerpo_1_centro-min.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin: -5px 0 -5px 0; 
 }
 .borde-sesgado-bottom2{
-	bottom: -6%;
+	bottom: -15%;
 }
 .cuerpo1-background{
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	margin: auto;
+	//position: absolute;
+	//top: 0;
+	//bottom: 0;
+	//margin: auto;
 	width: 100%;
 }
 
 .cabecera-logo{
-	transform: scale(0.4, 0.4);
-    -ms-transform: scale(0.4, 0.4);
-    -webkit-transform: scale(0.4, 0.4);
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    top: 5%;
+	transform: scale(0.9, 0.9);
+    -ms-transform: scale(0.9, 0.9);
+    -webkit-transform: scale(0.9, 0.9);
 }
 
 .cuerpo1-titulos-div{
-	position: absolute; 
-	left: 0; 
-	right: 0; 
-	margin: auto; 
+	
 	text-align: center; 
-	top: 20%;
+	
 }
 
 .cuerpo2-div{
+	background: white; 
 	background-image: url(/assets/img/bg-medio-antefooter-min.jpg);
 	background-position: center;
 	background-size : cover;
 	background-repeat: no-repeat;
-	position: absolute;
-	top: 15%;
-	width: 100%;
-	height: 80%;
-	z-index: 0;
+	position: relative;
+	padding: 10% 0;
+	overflow: auto;
+	margin: -5px 0px; 
 }
 .sublined{
 	text-decoration: underline;
@@ -345,12 +348,8 @@ body{
 	font-size: 100px;
 }
 .cuerpo2-titulos-div{
-	position: absolute; 
-	left: 0;
-	right: 0; 
-	margin: auto; 
+	position: relative; 
 	text-align: center; 
-	top: 40%;
 }
 
 .sello-gris{
@@ -369,12 +368,23 @@ body{
 }
 
 .borde-sesgado-bottom-black{
-	position: absolute;
-	top: 0;
-	z-index: 1
+	position: relative;
+	z-index: 1;
+	width: 100%;
 }
-
-
+.home-map-container{
+	margin: -6% 0 0 0;
+    position: relative;
+    width: 100%;
+    height: 90%;
+}
+.home-footer-brand{
+	position: relative;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background: #454545;
+}
 
 @media only screen and (max-width: 1400px){
 	.cabecera-titulos-v2{
@@ -383,12 +393,12 @@ body{
 	.leerMas{
 		top: 280px;
 	}
-	.cuerpo2{
+	/*.cuerpo2{
 		top: 480%;
 	}
 	.cuerpo3{
 		top: 730%;
-	}
+	}*/
 	.video{
 		top: 20%;
 	}
@@ -413,10 +423,7 @@ body{
 	.cabecera-titulos-v2{
 		width: 80%;
 	}
-	/*.socialIconsDiv{
-		left: 150px;
-	}*/
-	
+
 	.navBar-movil-titulos{
 		position: absolute;
 		width: 5%;
@@ -468,7 +475,7 @@ body{
     	-webkit-transform: scale(0.7, 0.7);
     	left: -10%;
 	}
-	.cuerpo1{
+	/*.cuerpo1{
 		top: 50%;
 		height: 1200px;
 	}
@@ -484,15 +491,15 @@ body{
     	right: 10%;
 	}
 	.wallsCardLogoDiv{
-		bottom: 50%;
-	}
+		bottom: 46%;
+	}*/
 	.fondo-fixed{
 		background-size : contain;
 	}
 	#titulos-div-fondo-fixed{
 		bottom: 40%;
 	}
-	.cuerpo2{
+	/*.cuerpo2{
 		top: 230%;
 		height: 90%;
 		width: 110%;
@@ -500,7 +507,7 @@ body{
 	.cuerpo2-div{
 		top: 10%;
 		height: 90%;
-	}
+	}*/
 	.fondo-footer{
 		top: 15%;
 		background-size: contain;
@@ -512,9 +519,9 @@ body{
 		bottom: 60%;
 		width: 15%;
 	}
-	.cuerpo3{
+	/*.cuerpo3{
 		top: 420%;
-	}
+	}*/
 	.cabecera{
 		background-size: contain;
 	}
@@ -532,10 +539,20 @@ body{
 }
 
 @media only screen and (max-width: 768px){
+	.home-cuerpo-absolute{
+		top: 60%;
+	}
+	.cuerpo2{
+		margin: 70% 0 0 0;
+	}
+	.home-footer-brand{
+		height: 100px;
+	}
 	.home-sucursales-title{
 		display: none;
 	}
 	.cuerpo3{
+		margin: 120% 0 0;
 		height: 10%;
 	}
 	.borde-sesgado-bottom-black{
@@ -569,11 +586,11 @@ body{
 	    top: 10% !important;
 	    height: 25%;
 	}
-	.wallsCardDiv{
+	/*.wallsCardDiv{
 		bottom: 35%;
     	width: 30%;
     	height: 50px;
-	}
+	}*/
 	.titulos-div-cabecera{
 		width: 85%;
 	}
@@ -583,7 +600,12 @@ body{
 }
 
 @media only screen and (max-width: 580px){
-	
+	.home-cuerpo-absolute{
+		top: 50%;
+	}
+	.cuerpo2{
+		margin: 120% 0 0 0;
+	}
 	.video{
 		width: 60%;
 	}
@@ -602,7 +624,7 @@ body{
 	.angleDiv{
 		bottom: 57%;
 	}
-	 .cuerpo1{
+	/* .cuerpo1{
 	 	top: 40%;
 	 }
 	 .wallsCardDiv{
@@ -610,7 +632,7 @@ body{
 	 }
 	 .wallsCardLogoDiv{
 	 	bottom: 40%;
-	 }
+	 }*/
 	 .firma{
 	 	bottom: -60%;
 	 }
@@ -652,9 +674,9 @@ body{
 	.socialIconsDivMovil{
 		width: 65%;
 	}
-	.cuerpo2-titulo {
+	/*.cuerpo2-titulo {
     	font-size: 50px;
-	}
+	}*/
 	.imageCabecera{
 		transform: scale(0.3, 0.3);
     	-ms-transform: scale(0.3, 0.3);
@@ -683,10 +705,10 @@ body{
     	-ms-transform: scale(0.5, 0.5);
 		-webkit-transform: scale(0.5, 0.5);
 	}
-	.wallsCardDiv{
+	/*.wallsCardDiv{
 		width: 20%;
     	height: auto;
-	}
+	}*/
 	.iconsDivMovil{
 		right: 0%;
 		transform: scale(0.5, 0.5);
@@ -726,7 +748,7 @@ body{
 	 .white-sello{
 	 	left: -28%;
 	 }
-	.cuerpo1-titulos-div, h4{
+	/*.cuerpo1-titulos-div, h4{
 		font-size: 100%;
 	}
 	.walls-titulo{
@@ -745,14 +767,14 @@ body{
 	.cuerpo2-div, h1{
 		top: 8%;
 		font-size: 150%;
-	}
+	}*/
 	.titulos-div-footer, h1, h2, h3{
 		top: 15%;
     	font-size: 100%;
-	}
+	}/*
 	.cuerpo3{
 		top: 400%;
-	}
+	}*/
 	.firma{
 		bottom: -10%;
 	}
@@ -760,9 +782,9 @@ body{
 		bottom: 40%;
 		width: 70%;
 	}
-	.cuerpo2{
+	/*.cuerpo2{
 		top: 210%;
-	}
+	}*/
 	.angleDiv{
 		width: 8%;
 	}
@@ -780,6 +802,15 @@ body{
 }
 
 @media only screen and (max-width: 375px){
+	.cuerpo1-titulos-div{
+		margin: 0 6px;
+	}
+	.walls-titulo{
+		font-size: 35px;
+	}
+	.cuerpo2-titulo{
+		font-size: 35px;
+	}
 	.socialIconsDivMovil{
 		width: 75%;
 	}
@@ -787,15 +818,15 @@ body{
 		margin-left: 4px;
     	margin-right: 4px;
 	}
-	.cuerpo1{
+	/*.cuerpo1{
 		height: 560px;
 	}
 	.cuerpo2-titulo {
     	font-size: 40px;
-	}
+	}*/
 	.cabecera-titulos-v2{
 		top: 80px;
-	}
+	}/*
 	.wallsCardLogoDiv{
 		width: 30%;
 	}
@@ -804,16 +835,16 @@ body{
 	}
 	.cuerpo2-div, h1 {
     	font-size: 130%;
-	}
+	}*/
 	.sello-gris{
 		transform: scale(0.5, 0.5);
 	    -ms-transform: scale(0.5, 0.5);
 	    -webkit-transform: scale(0.5, 0.5);
 	    right: -25%;
 	}
-	.cuerpo3{
+	/*.cuerpo3{
 		top: 380%;
-	}
+	}*/
 	.leerMasFooter {
 	    width: 35%;
 		transform: scale(0.7, 0.7);
@@ -847,25 +878,25 @@ body{
 	.leerMas{
 		width: 120px;
 	}
-	.cuerpo1-titulos-div, h4 {
+	/*.cuerpo1-titulos-div, h4 {
     	font-size: 85%;
 	}
 	.membresia-text{
 		font-size: 90%;
-	}
+	}*/
 	#titulos-div-fondo-fixed {
     	width: 60%;
 	}
 	.firma {
     	bottom: -100%;
 	}
-	.cuerpo2 {
+	/*.cuerpo2 {
     	top: 230%;
 	}
 	.cuerpo3 {
     	top: 400%;
 	}
-	
+	*/
 	.angleDiv{
 		transform: scale(0.8, 0.8);
     	-ms-transform: scale(0.8, 0.8);
@@ -913,9 +944,9 @@ body{
 	body{
 		min-height: 180%;
 	}
-	.cuerpo2{
+	/*.cuerpo2{
 		top: 260%;
-	}
+	}*/
 	.titulos-div-fondo-fixed{
 		top:55%;
 	}

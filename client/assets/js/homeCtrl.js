@@ -387,7 +387,7 @@ angular.module('application').controller('homeCtrl',
     }*/
 
    $window.onscroll = function(event){
-    
+    console.log(document.getElementById('cuerpo2').getBoundingClientRect().top);
     if(document.getElementById('cabeceraDiv').getBoundingClientRect().top <= 0 & window.scrollY >= 50){
           $scope.cabecera.position = 'fixed';
           $scope.cabecera.top = '0px';
@@ -412,14 +412,21 @@ angular.module('application').controller('homeCtrl',
         $scope.cabecera.source = '/assets/img/logo.png';
         $scope.$apply();
       }
-    if(window.scrollY >= (body1Height/2)){
+    if((document.getElementById('cuerpo1').getBoundingClientRect().top) <= -100){
       $scope.actualBody = 1;
       $scope.$apply();
-    } else if(window.scrollY <= (body1Height/2)){
+    } else if((document.getElementById('cuerpo1').getBoundingClientRect().top) >=0){
       $scope.actualBody = 0;
       $scope.$apply();
     }
-    if(window.scrollY >= cuerpo2top){
+    if((document.getElementById('cuerpo2').getBoundingClientRect().top) <= -100){
+      $scope.actualBody =2;
+      $scope.$apply();
+    } else if((document.getElementById('cuerpo2').getBoundingClientRect().top) <= -50 ){
+      $scope.actualBody = 1;
+      $scope.$apply();
+    }
+    /*if(window.scrollY >= cuerpo2top){
       $scope.actualBody = 2;
       console.log('cuerpo2');
       $scope.$apply();
@@ -427,6 +434,6 @@ angular.module('application').controller('homeCtrl',
     else if(window.scrollY <= (cuerpo2top) & window.scrollY >= (body1Height/2) ){
       $scope.actualBody = 1;
       $scope.$apply();
-    }
+    }*/
    }
 }]);

@@ -41,34 +41,34 @@ angular.module('application').controller('serviciosCtrl',
     	console.log(document.getElementById('cuerpo-absolute').getBoundingClientRect().bottom + " - " + document.getElementById('cuerpo-absolute').getBoundingClientRect().top);
     	//console.log(document.getElementById('cuerpo1-servicios').getBoundingClientRect());
     	if((document.getElementById('foto-fila-1').getBoundingClientRect().bottom - 700) <= screen.height){
-    		angular.element(document.querySelector('#foto-fila-1')).addClass('slide-left-to-right');
+    		angular.element(document.querySelector('#foto-fila-1')).addClass('slide-left-to-right2s');
     	}
     	if((document.getElementById('texto-fila-1').getBoundingClientRect().bottom - 700) <= screen.height){
-    		angular.element(document.querySelector('#texto-fila-1')).addClass('slide-right-to-left');
+    		angular.element(document.querySelector('#texto-fila-1')).addClass('slide-right-to-left2s');
     	}
     	if((document.getElementById('foto-fila-2').getBoundingClientRect().bottom - 700) <= screen.height){
-    		angular.element(document.querySelector('#foto-fila-2')).addClass('slide-right-to-left');
+    		angular.element(document.querySelector('#foto-fila-2')).addClass('slide-right-to-left2s');
     	}
     	if((document.getElementById('texto-fila-2').getBoundingClientRect().bottom - 700) <= screen.height){
-    		angular.element(document.querySelector('#texto-fila-2')).addClass('slide-left-to-right');
+    		angular.element(document.querySelector('#texto-fila-2')).addClass('slide-left-to-right2s');
     	}
     	if((document.getElementById('foto-fila-3').getBoundingClientRect().bottom - 700) <= screen.height){
-    		angular.element(document.querySelector('#foto-fila-3')).addClass('slide-left-to-right');
+    		angular.element(document.querySelector('#foto-fila-3')).addClass('slide-left-to-right2s');
     	}
     	if((document.getElementById('texto-fila-3').getBoundingClientRect().bottom - 700) <= screen.height){
-    		angular.element(document.querySelector('#texto-fila-3')).addClass('slide-right-to-left');
+    		angular.element(document.querySelector('#texto-fila-3')).addClass('slide-right-to-left2s');
     	}
     	if((document.getElementById('foto-fila-4').getBoundingClientRect().bottom - 700) <= screen.height){
-    		angular.element(document.querySelector('#foto-fila-4')).addClass('slide-right-to-left');
+    		angular.element(document.querySelector('#foto-fila-4')).addClass('slide-right-to-left2s');
     	}
     	if((document.getElementById('texto-fila-4').getBoundingClientRect().bottom - 700) <= screen.height){
-    		angular.element(document.querySelector('#texto-fila-4')).addClass('slide-left-to-right');
+    		angular.element(document.querySelector('#texto-fila-4')).addClass('slide-left-to-right2s');
     	}
     	if((document.getElementById('foto-fila-5').getBoundingClientRect().bottom - 700) <= screen.height){
-    		angular.element(document.querySelector('#foto-fila-5')).addClass('slide-left-to-right');
+    		angular.element(document.querySelector('#foto-fila-5')).addClass('slide-left-to-right2s');
     	}
     	if((document.getElementById('texto-fila-5').getBoundingClientRect().bottom - 700) <= screen.height){
-    		angular.element(document.querySelector('#texto-fila-5')).addClass('slide-right-to-left');
+    		angular.element(document.querySelector('#texto-fila-5')).addClass('slide-right-to-left2s');
     	}
     	if((document.getElementById('borde').getBoundingClientRect().top) <= 0){
     		if(!cuerpoAbsoluteTop){
