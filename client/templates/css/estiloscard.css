@@ -343,7 +343,7 @@ tuor:visited {
 .wc-iconos-mis-puntos {
     /* position: relative; */
     font-style: normal;
-    font-size: 50px !important;
+    font-size: 65px !important;
     /* margin-left: 133px; */
     /* top: -160px; */
     color: #FFF;
@@ -443,6 +443,7 @@ tuor:visited {
 .wc-membrecia_inner {
     padding-top: 30px;
     padding-bottom: 70px;
+    background: gray;
 }
 .wc-membrecia_iphone {
 	margin-top: 45px;
@@ -1061,10 +1062,10 @@ a {
     position: absolute;
     background: #fff;
     width: 100%;
-    height: 390px;
+    height: 35%;
     top: 0px;
-    transform: rotate(-70deg);
-    right: -68px;
+    transform: rotate(-90deg);
+    right: 0%;
     border-top: 30px double #9E9E9E;
     border-bottom: 30px double #9E9E9E;
 
@@ -1105,55 +1106,43 @@ a {
     width: 300px !important;
     margin: 0 auto;
     position: absolute;
-    left: 39.5%;
-    top: 219px;
-    transform: rotate(11deg);
-    }
-	
-	
-	
-@media (min-width: 2561px){
- .wc-sello_imagen{    
-    display: none;    
-    }
-}
-@media (max-width: 2560px){
- .wc-sello_imagen{    
-    left: 44.5%;    
-    }
-	}
-@media (max-width: 2200px){
- .wc-sello_imagen{    
-    left: 43.5%;    
-    }
-}
-@media (max-width: 1800px){
- .wc-sello_imagen{    
-    left: 42.5%;    
-    }
- }
-@media (max-width: 1600px){
-.wc-sello_imagen{
-    
     left: 41.5%;
-    
+    top: 25%;
+    transform: rotate(0deg);
     }
-	 }
-@media (max-width: 1500px){
-.wc-sello_imagen{
-    
-    left: 40.5%;
-    
-    }
-	 }
+	
+	
+	
+
 @media (max-width: 1400px){
-.wc-sello_imagen{
-    
-    left: 39.5%;
-    
+    .wc-sello_imagen{
+        left: 39.5%;
     }
-	 }
-	 
+    .wc-sello_imagen {
+        width: 22% !important;
+        margin: 0 auto;
+        position: absolute;
+        left: 39%;
+        top: 22%;
+        transform: rotate(0deg);
+    }
+}
+@media (max-width: 1200px){
+    #HOME{
+        height: 600px;
+    }
+    .wc-sello_imagen {
+        width: 30% !important;
+        margin: 0 auto;
+        position: absolute;
+        left: 35%;
+        top: 20%;
+        transform: rotate(0deg);
+    }
+    .wc-right_no_padding{
+        margin-top: 18%;
+    }
+}
 	
 @media (min-width: 992px){   
 	.wc-texto_top_derecha {
@@ -2406,6 +2395,7 @@ tuor:visited {
 .wc-membrecia_inner {
     padding-top: 30px;
     padding-bottom: 70px;
+    background: gray;
 }
 .wc-membrecia_iphone {
 	margin-top: 45px;
