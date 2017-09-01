@@ -1,0 +1,65 @@
+.mexicano-background{
+	background-image: url(/assets/img/bg-mexicano-que-se-respeta.jpg);
+    background-size: cover;
+    background-repeat: repeat-y;
+    width: 100%;
+    position: absolute;
+    padding: 10% 0 0 0;
+}
+.mexicano-formulario-container{
+	width: 40%;
+	position: relative;
+	display: inline-block;
+	//margin: 0 20%;
+}
+.mexicano-descripcion-container{
+	width: 100%;
+	text-align: center;
+	padding: 0 20%;
+}
+.mexicano-descripcion-container p{
+	color: #590202;
+	font-size: 20px;
+	font-family: Oswald-Regular;
+	margin-bottom: 0;
+}
+.mexicano-titulo-container{
+	width: 100%;
+	text-align: center;
+	margin: 0 0 8%;
+}
+.mexicano-titulo-container p{
+	color: #590202;
+	font-size: 40px;
+	font-family: Oswald-Regular;
+}
+.mexicano-formulario-header{
+	background: #590202;
+	border-radius: 10px;
+	padding: 0 33%;
+}
+.mexicano-formulario-header img{
+	margin: -30% 0;
+}
+.mexicano-form{
+	background: rgba(255, 255, 255, 0.4);
+	width: 45%;
+	display: block;
+    margin: 0 auto;
+    border-radius: 10px 10px 0 0;
+}
+.mexicano-form-fields{
+	padding: 11% 5% 0;
+}
+.mexicano-download-button{
+	background: #590202;
+	width: 100%;
+    border: none;
+    color: white;
+    font-size: 30px;
+}
+@media only screen and (max-width: 1700px){
+	.mexicano-form{
+		width: 60%;
+	}
+}

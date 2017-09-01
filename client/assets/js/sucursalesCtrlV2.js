@@ -19,6 +19,9 @@ angular.module('application').controller('sucursalesCtrlV2',
     $scope.whatsappMarginTop = null;
 
     $scope.selectSucursal = function(key){
+        for (var k in $scope.sucursales) {
+            $scope.sucursales[k].select = false;
+        }
         if(!$scope.sucursales[key].select){
             $scope.sucursales[key].select = true;
         }
@@ -86,7 +89,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             imgMobile: '/assets/img/sucursales/BonampackMobile.png', 
             fb: 'https://www.facebook.com/Walls-Barbershop-Cancun-334978173601237/', 
             instagram : 'https://www.instagram.com/wallscancun/',
-            twitter: null, 
+            twitter: 'https://twitter.com/WallsBarbershop', 
             select: false
         },
         torres: {
@@ -101,7 +104,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             imgMobile: '/assets/img/sucursales/TorresMobile.png',
             fb: 'https://www.facebook.com/Walls-Barbershop-Cancun-334978173601237/', 
             instagram : 'https://www.instagram.com/wallscancun/',
-            twitter: null,
+            twitter: 'https://twitter.com/WallsBarbershop',
             select: false
         },
         /*kabah: {
@@ -130,7 +133,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             imgMobile: '/assets/img/sucursales/ChetumalMobil.png',
             fb: 'https://www.facebook.com/wallschetumal/', 
             instagram : 'https://www.instagram.com/wallschetumal/',
-            twitter: null,
+            twitter: 'https://twitter.com/WallsBarbershop',
             select: false
         },
         isla: {
@@ -146,7 +149,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             imgMobile: '/assets/img/sucursales/IslaMobile.png',
             fb: 'https://www.facebook.com/wallsbarbershopisla/', 
             instagram : 'https://www.instagram.com/wallsbarbershop_isla/',
-            twitter: null,
+            twitter: 'https://twitter.com/WallsBarbershop',
             select: false
         },
         cozumel: {
@@ -161,7 +164,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             imgMobile: '/assets/img/sucursales/CozumelMobil.png',
             fb: 'https://www.facebook.com/wallsbarbershopczm/', 
             instagram : 'https://www.instagram.com/wallsbarbershop_cozumel/',
-            twitter: null,
+            twitter: 'https://twitter.com/WallsBarbershop',
             select: false
         },
         playaCentro: {
@@ -175,7 +178,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             imgMobile: '/assets/img/sucursales/PlayaCentroMobile.png',
             fb: 'https://www.facebook.com/wallsplayacolosio/?ref=br_rs', 
             instagram : 'https://www.instagram.com/wallsbarbershop_playa/',
-            twitter: null,
+            twitter: 'https://twitter.com/WallsBarbershop',
             select: false
         }, 
         playa: {
@@ -190,7 +193,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             imgMobile: '/assets/img/sucursales/PlayaMobil.png',
             fb: 'https://www.facebook.com/wallsbarbershopplayadelcarmen/', 
             instagram : 'https://www.instagram.com/wallsbarbershop_playa/',
-            twitter: null,
+            twitter: 'https://twitter.com/WallsBarbershop',
             select: false
         },
         meridaPlazaArena: {
@@ -204,7 +207,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             imgMobile: '/assets/img/sucursales/ArenaMobile.png',
             fb: 'https://www.facebook.com/wallsmerida/', 
             instagram : 'https://www.instagram.com/wallsmerida/',
-            twitter: null,
+            twitter: 'https://twitter.com/WallsBarbershop',
             select: false
         },
         meridaGalerias: {
@@ -218,7 +221,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             imgMobile: '/assets/img/sucursales/GaleriasMobile.png',
             fb: 'https://www.facebook.com/wallsmerida/', 
             instagram : 'https://www.instagram.com/wallsmerida/',
-            twitter: null,
+            twitter: 'https://twitter.com/WallsBarbershop',
             select: false
         },
         meridaUptown: {
@@ -231,7 +234,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             imgMobile: '/assets/img/sucursales/UptownMobil.png',
             fb: 'https://www.facebook.com/wallsmerida/', 
             instagram : 'https://www.instagram.com/wallsmerida/',
-            twitter: null,
+            twitter: 'https://twitter.com/WallsBarbershop',
             select: false
         },
         campeche: {
@@ -245,7 +248,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             imgMobile: '/assets/img/sucursales/CampecheMobile.png',
             fb: 'https://www.facebook.com/wallsbarbershopcamp/', 
             instagram : 'https://www.instagram.com/wallsbarbershop_campeche/',
-            twitter: null,
+            twitter: 'https://twitter.com/WallsBarbershop',
             select: false
         },
         veracruz: {
@@ -260,7 +263,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             imgMobile: '/assets/img/sucursales/BocaMobile.png',
             fb: 'https://www.facebook.com/wallsbarbershopbocadelrio/', 
             instagram : 'https://www.instagram.com/wallsbarbershop_boca/',
-            twitter: null,
+            twitter: 'https://twitter.com/WallsBarbershop',
             select: false, 
             mapsUrl: "https://www.google.com/maps/place/Wall's+Barbershop/@19.1667629,-96.1184343,19z/data=!3m1!4b1!4m13!1m7!3m6!1s0x0:0x0!2zMTnCsDEwJzAwLjQiTiA5NsKwMDcnMDQuNCJX!3b1!8m2!3d19.166767!4d-96.117888!3m4!1s0x85c34125ac7deeab:0x39bafc08d7ef2bc9!8m2!3d19.1667616!4d-96.1178871?hl=es"
         },
@@ -276,7 +279,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             imgMobile: '/assets/img/sucursales/AguascalientesMobil.png',
             fb: 'https://www.facebook.com/wallsbarbershopags/', 
             instagram : 'https://www.instagram.com/wallsbarbershop_ags/',
-            twitter: null,
+            twitter: 'https://twitter.com/WallsBarbershop',
             select: false,
             mapsUrl: "https://www.google.com/maps/place/Walls+Barbershop+Aguascalientes/@21.9109955,-102.3122313,18z/data=!4m13!1m7!3m6!1s0x0:0x0!2zMjHCsDU0JzM5LjYiTiAxMDLCsDE4JzQwLjEiVw!3b1!8m2!3d21.910993!4d-102.311137!3m4!1s0x8429eefcbae022f1:0x2993e4055fae25b1!8m2!3d21.910991!4d-102.311138?hl=es"
         },
@@ -291,7 +294,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             imgMobile: '/assets/img/sucursales/TuxtlaMobile.png',
             fb: 'https://www.facebook.com/wallstuxtlagtz/', 
             instagram : 'https://www.instagram.com/wallsbarbershop_tuxtlagtz/',
-            twitter: null,
+            twitter: 'https://twitter.com/WallsBarbershop',
             select: false
         },
         queretaro: {
@@ -305,7 +308,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             imgMobile: '/assets/img/sucursales/QueretaroMobil.png',
             fb: 'https://www.facebook.com/wallsbarbershopmilenio3/', 
             instagram : 'https://www.instagram.com/wallsbarbershop_qro/',
-            twitter: null,
+            twitter: 'https://twitter.com/WallsBarbershop',
             select: false  
         },
         edoMx: {
@@ -318,7 +321,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             imgMobile: '/assets/img/sucursales/SateliteMobil.png',
             fb: 'https://www.facebook.com/wallsbarbershopsatelite/', 
             instagram : 'https://www.instagram.com/wallsbarbershop_satelite/?hl=es',
-            twitter: null,
+            twitter: 'https://twitter.com/WallsBarbershop',
             select: false
         },
         cdMx: {
@@ -333,7 +336,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             imgMobile: '/assets/img/sucursales/RomaMobile.png',
             fb: 'https://www.facebook.com/wallsbarbershoplaroma/', 
             instagram : 'https://www.instagram.com/wallsbarbershop_laroma/',
-            twitter: null,
+            twitter: 'https://twitter.com/WallsBarbershop',
             select: false,
             mapsUrl: "https://www.google.com/maps/place/Wall's+Barbershop+-+La+Roma/@19.4204178,-99.1712646,17z/data=!4m5!3m4!1s0x85d1ff489acefedb:0xf0b09206c511c898!8m2!3d19.4203243!4d-99.1712487?hl=es"
         },
@@ -347,7 +350,7 @@ angular.module('application').controller('sucursalesCtrlV2',
             imgMobile: '/assets/img/sucursales/GuadalajaraMobile.png',
             fb: 'https://www.facebook.com/wallsbarbershopgdl/', 
             instagram : 'https://www.instagram.com/wallsbarbershop_gdl/',
-            twitter: null,
+            twitter: 'https://twitter.com/WallsBarbershop',
             select: false
         }
     };
@@ -363,7 +366,7 @@ angular.module('application').controller('sucursalesCtrlV2',
     
     
     $window.onscroll = function(event){
-        if(document.getElementById('cabeceraDiv').getBoundingClientRect().top <= 0 & window.scrollY >= 50){
+        if(document.getElementById('cabecera-walls-logo').getBoundingClientRect().top <= 0){
           $scope.cabecera.position = 'fixed';
           $scope.cabecera.top = '0px';
           $scope.logoTransform = 'scale(0.8, 0.8)';
@@ -377,11 +380,11 @@ angular.module('application').controller('sucursalesCtrlV2',
 
           $scope.$apply();
         }
-        if(window.scrollY <= 50){
+        if(window.scrollY <= 5){
           $scope.cabecera.position = 'absolute';
             angular.element(document.querySelector('#cabeceraDiv')).addClass('from-white');
             angular.element(document.querySelector('#cabeceraDivMovil')).addClass('from-white');
-          $scope.cabecera.top = '5%';
+          $scope.cabecera.top = '3%';
           $scope.logoTransform = 'scale(1, 1)';
           $scope.cabecera.fontColor = 'white';
           $scope.iconColor = 'white';

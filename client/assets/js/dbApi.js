@@ -1,6 +1,6 @@
 angular.module('application')
 .factory('$dbApi', function($http){
-    var baseUrl = 'http://www.mr-barbas.com/php/';
+    var baseUrl = 'http://www.wallsbarbershop.com.mx/php/';
 
     var post = function(url, body){
       body = body || {};

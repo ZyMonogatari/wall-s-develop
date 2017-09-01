@@ -198,29 +198,26 @@
 	position: absolute;
 	top: 3200px;
 	width: 100%;
-	height: 600px;
-
 }
 
 .galeria-cuerpo3-div{
 	//background-image: url(/assets/img/fondo-pie-degradado.png);
 	//background-size: contain;
-	position: absolute;
+	position: relative;
 	width: 100%;
-	height: 500px;
-	top: 100px; 
+	overflow: auto;
 }
 
 .sucursales-cuerpo3-div-diagonal{
 	position: absolute; 
 	width: 120%;
 	left: -20%;
-	height: 170px;
-	top: 0%;
+	height: 33%;
+	top: -20%;
 	background:white;
-	-ms-transform: rotate(5deg); /* IE 9 */
-    -webkit-transform: rotate(5deg); /* Chrome, Safari, Opera */
-    transform: rotate(5deg);
+	-ms-transform: rotate(4deg); /* IE 9 */
+    -webkit-transform: rotate(4deg); /* Chrome, Safari, Opera */
+    transform: rotate(4deg);
     z-index: 0;
 }
 
@@ -626,7 +623,6 @@
 	}
 	.galeria-cuerpo3{
 		top: 1400px;
-		height: 400px;
 	}
 	/*.sucursales-cuerpo3-div-diagonal{
 		width: 140%;
@@ -636,9 +632,6 @@
 	}*/
 	.galeria-fondo2-titulos-text{
 		font-size: 8px;
-	}
-	.galeria-cuerpo3-div{
-		height: 300px;
 	}
 	.leer-mas-galerias {
     	bottom: -10%;

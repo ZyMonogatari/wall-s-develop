@@ -138,13 +138,8 @@
 	width: 100%;
 }
 .borde-sesgado-servicios{
-	-ms-transform: rotate(-3deg); /* IE 9 */
-    -webkit-transform: rotate(-3deg); /* Chrome, Safari, Opera */
-    transform: rotate(-3deg);
     z-index: 0;
     width: 100%;
-    position: absolute;
-    top:  -155px;
 }
 .cuerpo2-titulos{
 	position: absolute;
@@ -180,17 +175,26 @@
 	position: absolute;
 	top: 3700px;
 	width: 110%;
-	height: 95%;
 	left: -5%;	
 }
 
 .footer-servicios-div{
 	//background-image: url(/assets/img/fondo-pie-degradado.png);
 	//background-size: contain;
-	position: absolute;
+	position: relative;
 	width: 100%;
-	height: 80%;
-	top: 20%; 
+	overflow: auto;
+    margin: -5px 0 0 0;
+}
+.titulos-div-footer-sucursales{
+	position: relative; 
+	margin: 0 0 3% 0;
+}
+.titulos-div-footer-sucursales div p{
+	font-size: 40px;
+	text-align: center;
+	font-family: RobotoCondensed-Bold;
+	color: #7B7B7B;
 }
 .footer-servicios-titulos{
 	position: absolute;
@@ -202,8 +206,7 @@
 	height: 60%;
 }
 .footer-servicios-brand{
-	position: absolute;
-	bottom: 0;
+	position: relative;
 	height: 50px;
 	width: 100%;
 	background: #454545;
@@ -277,6 +280,10 @@
 	}
 }
 @media only screen and (max-width: 768px){
+	.cuerpo2-titulos{
+		margin: 20% 10%;
+		position: relative;
+	}
 	.footer-servicios-brand{
 		height: 100px;
 	}
@@ -348,7 +355,9 @@
 	}
 	.footer-servicios{
 		top: 3020px;
-		height: 70%;
+	}
+	.titulos-div-footer-sucursales div p{
+		font-size: 20px;
 	}
 	.borde-sesgado-servicios{
 		top: -35px;
@@ -369,9 +378,7 @@
 	.leer-mas-servicios{
 		bottom: 0%;
 	}
-	.footer-servicios{
-		top: 3000px;
-	}
+	
 }
 
 @media only screen and (max-width: 320px){
@@ -388,8 +395,7 @@
 		top: 80%;
 	}
 	.footer-servicios{
-		top: 2850px;
-		height: 80%;
+		top: 2900px;
 	}
 	.footer-servicios-brand{
 		font-size: 80%;
