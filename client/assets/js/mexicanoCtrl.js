@@ -6,6 +6,7 @@ angular.module('application').controller('mexicanoCtrl',
     $scope.cabecera.fontColor = 'black';
     $scope.iconColor = 'white';
     $scope.user;
+    $scope.terms = false;
     $scope.login = function() {
       console.log('loggeando');
       Facebook.login(function(response) {
@@ -17,8 +18,21 @@ angular.module('application').controller('mexicanoCtrl',
         $scope.user = response;
       });
     };
+    $scope.displayTerms = function(){
+        console.log('enter')
 
+      if(!$scope.terms){
+        angular.element(document.querySelector('#terms-div')).removeClass('slide-down');
+        angular.element(document.querySelector('#terms-div')).addClass('slide-up');
+        $scope.terms = true;
+      }else{
+        angular.element(document.querySelector('#terms-div')).removeClass('slide-up');
+        angular.element(document.querySelector('#terms-div')).addClass('slide-down');
+        $scope.terms = false;
+      }
+    }
 
+    
 
     $window.onscroll = function(event){
     if(document.getElementById('cabecera-walls-logo').getBoundingClientRect().top <= 0){

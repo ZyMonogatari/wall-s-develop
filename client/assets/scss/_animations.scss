@@ -127,7 +127,44 @@
     transform: translateX(0);
   }
 }
+@-webkit-keyframes slide-up {
+     from{height: 10%}
+    to{height: 50%;}
+}
 
+/* Standard syntax */
+@keyframes slide-up {
+    from{height: 10%}
+    to{height: 50%;}
+}
+
+@-webkit-keyframes slide-down {
+     from{height: 50%}
+    to{height: 5%;}
+}
+
+/* Standard syntax */
+@keyframes slide-down {
+    from{height: 50%}
+    to{height: 5%;}
+}
+.slide-up{
+  -webkit-animation-name: slide-up; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    animation-name: slide-up;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+     animation-fill-mode:forwards;
+}
+
+.slide-down{
+  -webkit-animation-name: slide-down; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    animation-name: slide-down;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+     animation-fill-mode:forwards;
+}
 
 .slide-left-to-right{
 	-webkit-animation-name: slide-left-to-right; /* Safari 4.0 - 8.0 */

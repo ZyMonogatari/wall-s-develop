@@ -978,23 +978,7 @@ body{
 	}
 }
 
-@media (max-width : 1200px) and (orientation: landscape){
-	.cabecera{
-		min-height: 1024px; 
-		background-size: contain;
-	}
-	.fondo-fixed{
-		min-height: 1024px; 
-		background-size: contain;
-	}
-	.fondo-footer{
-		min-height: 1024px; 
-		background-size: contain;
-	}
-	body{
-		min-height: 1024px;
-	}
-}
+
 @media (max-width : 736px) and (orientation: landscape){
 	.cabecera{
 		min-height: 740px; 
@@ -1007,9 +991,6 @@ body{
 	.fondo-footer{
 		min-height: 720px; 
 		background-size: contain;
-	}
-	body{
-		min-height: 180%;
 	}
 	/*.cuerpo2{
 		top: 260%;

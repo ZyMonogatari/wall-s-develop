@@ -425,7 +425,7 @@ controller: wallsCardCtrl
         </select>
                     
                             
-                            <input required id="no_tarjeta" pattern="\S{8}" onkeydown="return validarNumeros(event)" maxlength="8" name="info[num_tarjeta]" class="form-control" placeholder="Nº de tarjeta" ng-model="regist.card">
+                            <input required id="no_tarjeta" pattern="^(0|[1-9][0-9]*)$ \S{8}" onkeydown="return validarNumeros(event)" maxlength="8" name="info[num_tarjeta]" class="form-control" placeholder="Nº de tarjeta" ng-model="regist.card">
                         
 						<input required type="password" title="Debe tener al menos 6 caracteres"  pattern=".{6,}" id="contra1" name="info[password]" class="form-control" placeholder="Crea tu contraseña" ng-model="regist.password">
                         

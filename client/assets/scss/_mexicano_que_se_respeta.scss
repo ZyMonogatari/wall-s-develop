@@ -1,15 +1,23 @@
 .mexicano-background{
-	background-image: url(/assets/img/bg-mexicano-que-se-respeta.jpg);
+	background-image: url(/assets/img/fondo-mexicano-que-se-respeta.png);
     background-size: cover;
-    background-repeat: repeat-y;
     width: 100%;
-    position: absolute;
     padding: 10% 0 0 0;
+    position: absolute;
+    background-color: white;
+}
+.mexicano-logo-div{
+	width: 60%;
+	position: absolute;
+	top: 5%;
+	right: 0;
+	z-index: 1
 }
 .mexicano-formulario-container{
 	width: 40%;
 	position: relative;
 	display: inline-block;
+	margin: 0 0 7%;
 	//margin: 0 20%;
 }
 .mexicano-descripcion-container{
@@ -28,6 +36,19 @@
 	text-align: center;
 	margin: 0 0 8%;
 }
+.mexicano-toro-div{
+	position: absolute; 
+	bottom: 5%; 
+	right: 20%;
+	width: 40%;
+}
+.mexicano-persona-div{
+	position: absolute; 
+	bottom: 5%; 
+	right: 0%;
+	width: 50%;
+	text-align: right;
+}
 .mexicano-titulo-container p{
 	color: #590202;
 	font-size: 40px;
@@ -40,6 +61,8 @@
 }
 .mexicano-formulario-header img{
 	margin: -30% 0;
+	border-radius: 50%;
+	border: 5px solid #590202;
 }
 .mexicano-form{
 	background: rgba(255, 255, 255, 0.4);
@@ -58,8 +81,76 @@
     color: white;
     font-size: 30px;
 }
+.terms-footer{
+	background: #590202; 
+	width: 100%; 
+	text-align: center; 
+	position: absolute; 
+	bottom: 0; 
+	padding: 0 10%; 
+	height: 5%
+}
+.terms-footer p{
+	font-size: 25px; 
+	margin: 0;
+}
 @media only screen and (max-width: 1700px){
 	.mexicano-form{
-		width: 60%;
+		width: 70%;
+	}
+}
+@media only screen and (max-width: 1200px){
+	.mexicano-background{
+		padding: 15% 0 0;
+	}
+}
+
+@media only screen and (max-width: 1100px){
+	/*.mexicano-persona-div{
+		display: none;
+	}*/
+	.mexicano-form {
+	    width: 80%;
+	}
+}
+
+@media only screen and (max-width: 768px){
+	.mexicano-persona-div{
+		display: none;
+	}
+	.mexicano-form {
+	    width: 90%;
+	}
+	.mexicano-formulario-container{
+		margin: 0% 25% 15%;
+		width: 50%;
+	}
+	.mexicano-toro-div{
+		right: 0;
+	}
+	.mexicano-logo-div{
+		position: relative;
+    	width: auto;
+	}
+}
+@media only screen and (max-width: 414px){
+	.mexicano-formulario-container{
+		margin: 0% 5% 25%;
+    	width: 90%;
+	}
+	.mexicano-toro-div{
+		width: 150%;
+		right: -80%;
+	}
+}
+@media only screen and (max-width: 360px){
+	.mexicano-download-button{
+		font-size: 20px;
+	}
+}
+@media only screen and (max-width: 320px){
+	.terms-footer p{
+		font-size: 20px; 
+		margin: 0;
 	}
 }
