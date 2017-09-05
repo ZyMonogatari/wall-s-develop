@@ -1,25 +1,39 @@
 angular.module('application').controller('mexicanoCtrl',
-  ['$scope', '$window', '$state', 'Facebook', function($scope, $window,$state, Facebook){
+  ['$scope', '$window', '$state', 'Facebook', '$dbApi', '$messageApi', function($scope, $window,$state, Facebook, $dbApi, $messageApi){
     $scope.cabecera = {};
     $scope.cabecera.source = '/assets/img/wallslogo-negro-min.png';
     $scope.cabecera.position = 'absolute';
     $scope.cabecera.fontColor = 'black';
     $scope.iconColor = 'white';
-    $scope.user;
+    $scope.concursante;
+    $scope.dataReceived;
+    $scope.registed;
     $scope.terms = false;
+    $scope.mostrarMenu = function (){
+        if($scope.displayMenu == 'initial'){
+            $scope.displayMenu = 'none';
+        }
+        else{
+            $scope.displayMenu = 'initial';
+        }
+    }
+    $scope.go = function(state){
+        window.scrollTo(0, 0);
+        $state.go(state);
+    }
     $scope.login = function() {
-      console.log('loggeando');
       Facebook.login(function(response) {
         me();
       });
     };
     var me = function() {
       Facebook.api('/me?fields=id,name,email,age_range' , function(response) {
-        $scope.user = response;
+        $scope.concursante.name = response.name;
+        $scope.concursante.email = response.email;
+        $scope.concursante.age = response.age_range.min;
       });
     };
     $scope.displayTerms = function(){
-        console.log('enter')
 
       if(!$scope.terms){
         angular.element(document.querySelector('#terms-div')).removeClass('slide-down');
@@ -32,7 +46,23 @@ angular.module('application').controller('mexicanoCtrl',
       }
     }
 
-    
+    $scope.sendData = function(){
+      $scope.dataReceived = true;
+      $dbApi.insertConcursantesMexicano($scope.concursante).then(function(response){
+        console.log(response.data);
+        if(response.data == 'exito'){
+          $scope.registed = true;
+        }
+        else{
+          $scope.registed = false;
+        }
+      });
+
+    }
+
+    $scope.sendToMail = function(){
+      $messageApi.sendEmailMexicano($scope.concursante.email);
+    }
 
     $window.onscroll = function(event){
     if(document.getElementById('cabecera-walls-logo').getBoundingClientRect().top <= 0){

@@ -1,0 +1,31 @@
+
+.cabecera-anim-1, 
+.cabecera-anim-2{
+  animation-duration: 20s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.cabecera-anim-1{
+  animation-name: cabecera-anim-1;
+  animation-duration: 42s;
+}
+
+.cabecera-anim-2{
+  animation-name: cabecera-anim-2;
+  animation-duration: 42s;
+
+}
+
+@keyframes cabecera-anim-1 {
+  0% { right: -100%;}
+  5.0%,50% { right: 0%;}
+  55.0%, 100% { right: 110%;}
+}
+//2.38
+//11.9
+@keyframes cabecera-anim-2 {
+  0%, 50% { right: -100%;}
+  55%, 95% { right: 0%;}
+  100%, { right: 110%;}
+}

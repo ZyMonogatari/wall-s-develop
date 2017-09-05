@@ -17,6 +17,12 @@ angular.module('application')
       },
       getClientData : function(clientData){
         return get('getClientInfo.php?cardMail=' + clientData.cardMail + '&password=' + clientData.password);
+      },
+      insertConcursantesMexicano : function(concursante){
+        return get('InsertConcursantesMexicanoQueSeRespeta.php?name=' + concursante.name + 
+          '&age=' + concursante.age + '&phone=' + concursante.phone + '&email=' 
+          + concursante.email + '&ciudad=' + concursante.ciudad + '&medio=' 
+          +concursante.medio + '&sucursal=' + concursante.sucursal);
       }
     }
   });

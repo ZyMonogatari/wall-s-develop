@@ -1,0 +1,124 @@
+.mexicano-header-cabecera{
+	background-image: url(/assets/img/fondo-mexicano-que-se-respeta.png);
+    background-size: cover;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+}
+.mexicano-header-images{
+	width: 50%;
+	background-image: url(/assets/img/fondo-toro-flip.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center bottom;
+	display: inline-block;
+}
+.mexicano-header-persona{
+	width: 50%;
+}
+.mexicano-header-textos{
+	display: inline-block;
+	width: 45%;
+	vertical-align: top;
+    padding: 10% 0 0;
+}
+.mexicano-header-title p{
+	color: #590202;
+	font-size: 60px;
+    font-family: RobotoCondensed-Bold;
+
+}
+.mexicano-header-description p{
+	color: #590202;
+	font-size: 40px;
+	text-align: left;
+    font-family: RobotoCondensed-Bold;
+
+}
+.mexicano-header-button{
+	background: #590202;
+	width: 40%;
+	display: inline-block;
+	border-radius: 10px;
+	text-align: center;
+	cursor: pointer;
+}
+.mexicano-header-button:hover{
+	background: #040300;
+}
+.mexicano-header-button p{
+	color: white;
+	font-size: 25px;
+    font-family: RobotoCondensed-Bold;
+    margin: 5%;
+}
+@media only screen and (max-width: 1500px){
+	.mexicano-header-title p{
+		font-size: 50px;
+	}
+	.mexicano-header-description p{
+		font-size: 30px;
+	}
+	.mexicano-header-button p{
+		font-size: 20px;
+	}
+}
+@media only screen and (max-width: 1000px){
+	.mexicano-header-title p{
+		font-size: 40px;
+	}
+	.mexicano-header-description p{
+		font-size: 20px;
+	}
+}
+@media only screen and (max-width: 768px){
+	.mexicano-header-cabecera{
+		padding: 20% 0 0;
+	}
+	.mexicano-header-button p{
+		font-size: 15px;
+	}
+}
+@media only screen and (max-width: 414px){
+	.mexicano-header-textos{
+		padding: 3% 0 0;
+	}
+	.mexicano-header-title p{
+		font-size: 20px;
+		margin: 0;
+	}
+	.mexicano-header-description p{
+		font-size: 15px;
+		margin: 0;
+	}
+	.mexicano-header-button{
+		width: 60%;
+		border-radius: 7px;
+	}
+	.mexicano-header-button p{
+		font-size: 13px;
+	}
+}
+@media only screen and (max-width: 360px){
+	.mexicano-header-title p{
+		font-size: 18px;
+		margin: 0;
+	}
+	.mexicano-header-description p{
+		font-size: 13px;
+		margin: 0;
+	}
+	.mexicano-header-button p{
+		font-size: 10px;
+	}
+}
+@media only screen and (max-width: 320px){
+	.mexicano-header-title p{
+		font-size: 16px;
+		margin: 0;
+	}
+	.mexicano-header-description p{
+		font-size: 12px;
+		margin: 0;
+	}
+}

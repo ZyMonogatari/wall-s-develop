@@ -128,25 +128,25 @@
   }
 }
 @-webkit-keyframes slide-up {
-     from{height: 10%}
-    to{height: 50%;}
+     from{max-height: 4%}
+    to{max-height: 100%}
 }
 
 /* Standard syntax */
 @keyframes slide-up {
-    from{height: 10%}
-    to{height: 50%;}
+    from{max-height: 4%}
+    to{max-height: 100%}
 }
 
 @-webkit-keyframes slide-down {
-     from{height: 50%}
-    to{height: 5%;}
+     from{max-height: 100%}
+    to{max-height: 4%;}
 }
 
 /* Standard syntax */
 @keyframes slide-down {
-    from{height: 50%}
-    to{height: 5%;}
+    from{max-height: 100%}
+    to{max-height: 4%;}
 }
 .slide-up{
   -webkit-animation-name: slide-up; /* Safari 4.0 - 8.0 */

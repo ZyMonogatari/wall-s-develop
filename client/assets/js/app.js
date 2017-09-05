@@ -30,7 +30,7 @@
             url: "/wblog",
             //templateUrl: 'wblog/index.php'
             controller: 'blogCtrl'
-        })  
+        })
     $locationProvider.html5Mode({
       enabled: true,
       requireBase: false
