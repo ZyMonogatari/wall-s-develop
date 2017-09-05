@@ -13,12 +13,12 @@ controller: mexicanoCtrl
 			<p>¡FELICIDADES!</p>
 		</div>
 		<div class="mexicano-congrats-description">
-			<p>YA PUEDES HACER VALIDO TU CUPÓN Y YA ESTAS PARTICIPANDO EN NUESTRA RIFA</p>
+			<p>YA PUEDES HACER VALIDO TU CUPÓN Y <br> YA ESTAS PARTICIPANDO EN NUESTRA RIFA</p>
 		</div>
-		<div class="mexicano-cupon">
+		<!--<div class="mexicano-cupon">
 			<img src="assets/img/CupónRifa.png">
-		</div >
-		<div>
+		</div >-->
+		<div class="cajas">
 			<div class="mexicano-send-email" ng-click="sendToMail()">
 				<p>ENVIAR A MI CORREO</p>
 			</div>
@@ -149,15 +149,22 @@ controller: mexicanoCtrl
 	
 	<div class="terms-footer" id="terms-div" ng-click="displayTerms()">
 		<div>
-			<p class="whiteFont" >Términos y condiciones 
+			<p class="whiteFont-title" >TÉRMINOS Y CONDICIONES 
 			<i class="fa fa-angle-up" aria-hidden="true" ng-show="!terms"></i>
 			<i class="fa fa-angle-down" aria-hidden="true" ng-show="terms"></i>
 			</p>
 		</div>
 		<div class="mexicano-terms">
-			<p class="whiteFont" >
-				 Cupón válido hasta el 31 de septiembre del 2017. No aplica en sucursales de Playa del carmen. Válido mostrando este cupón en tu celular al momento de pagar. El cupón es válido 1 por correo durante el tiempo que duré la promoción. Cupón válido únicamente en corte de cabello. Cualquier otro servicio adicional se cobrará a precio regular. No acumulable con otras promociones, descuentos ni programas de lealtad. Su venta está prohibida. * Aplica únicamente en las sucursales de Isla Mujeres, Cozumel, Tuxtla, Boca del Rio, La Roma, Satélite, Guadalajara, Campeche, Querétaro, Cancún, Mérida, Chetumal y Aguascalientes. 
-				 <br>
+			<p class="terminos" >
+				 Cupón válido hasta el 31 de septiembre del 2017. <br> 
+				 No aplica en sucursal de Playa del carmen. <br>
+				 Válido mostrando este cupón en tu celular al momento de pagar. <br>
+				 El cupón es válido 1 por correo durante el tiempo que duré la promoción. <br>
+				 Cupón válido únicamente en corte de cabello. <br>
+				 Cualquier otro servicio adicional se cobrará a precio regular. <br>
+				 No acumulable con otras promociones, descuentos ni programas de lealtad. <br>
+				 Su venta está prohibida. * Aplica únicamente en las sucursales de Isla Mujeres, Cozumel, Tuxtla, Boca del Rio, La Roma, Satélite, Guadalajara, Campeche, Querétaro, Cancún, Mérida, Chetumal y Aguascalientes. 
+				 <br><br>           
 				 Se rifará un kit con los siguientes productos: "2 Ceras Red One, 1 Blackmagic, 1 Triple Action Gde, 1 Mr. Barbas Tónico, 1 Playera Elegance, 1 Aceite Barba Almendra, 1 Walls Card, 2 Peines Mr. Barbas, 1 Llavero y 1 Gorra". Participarán todos lo cupones descargados del 1 al 31 de septiembre del 2017. El ganador se dará a conocer el Sábado 7 de octubre del 2017 en una transmisión en vivo en la página de Facebook.
 			</p>
 		</div>

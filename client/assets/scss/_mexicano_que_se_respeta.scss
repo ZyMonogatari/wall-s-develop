@@ -1,16 +1,17 @@
 .mexicano-modal{
-	background: rgba(0%, 0%, 0%, 0.5); 
-	width: 100%; 
-	top: 0;
-	bottom: 0; 
-	position: fixed;
-	z-index: 2;
-	padding: 0 5%;
+	background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 10;
+    padding: 0 5%;
 }
 .close-modal{
-	position: absolute; 
-	left: 0; 
-	color: white;
+	position: absolute;
+    right: -27px;
+    color: white;
+    top: -32px;
 }
 .mexicano-cupon{
 	width: 20%;
@@ -20,6 +21,17 @@
 .mexicano-cupon img{
 
 }
+.whiteFont-title{
+    color: white;
+    font-weight: bold;
+    font-size: 20px !important;
+    margin: 5px 0 0 !important;
+}
+	.terminos{
+		color: white;
+		font-weight: 300;
+		font-size: 15px!important;
+	}
 .mexicano-send-email{
 	background: #590202;
     display: inline-block;
@@ -31,32 +43,43 @@
 	margin: 0;
 }
 #mexicano-congrats-div{
-	margin: 8% 0 0 0;
-	text-align: center;
+	margin: 18% 25%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 #mexicano-used-mail{
-	margin: 15% 0 0 0;
-	text-align: center;
+	margin: 18% 25%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 .mexicano-used-title p{
-	font-size: 80px;
-	color: white;
-	text-align: center;
+	font-size: 50px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
 }
 .mexicano-used-description p{
-	font-size: 40px;
-	color: white;
-	text-align: center;
+	font-size: 20px;
+    color: white;
+    text-align: center;
+    margin: 0 10%;
+    padding: 0 0 10px;
 }
+	.cajas{
+		padding: 0 0 10px;
+	}
 .mexicano-congrats-titulo p{
-	font-size: 80px;
-	color: white;
-	text-align: center;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
 }
 .mexicano-congrats-description p{
-	font-size: 40px;
-	color: white;
-	text-align: center;
+	font-size: 29px;
+    color: white;
+    text-align: center;
 }
 .mexicano-background{
 	background-image: url(/assets/img/fondo-mexicano-que-se-respeta.png);
@@ -136,10 +159,12 @@
 }
 .mexicano-download-button{
 	background: #590202;
-	width: 100%;
+    width: 100%;
     border: none;
     color: white;
-    font-size: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 7px 0;
 }
 .mexicano-download-button:hover{
 	background: #040300;
@@ -159,7 +184,8 @@
 	margin: 0;
 }
 .mexicano-terms{
-	margin: 3% 0 5%;
+    margin: 1% 10% 1%;
+
 }
 @media only screen and (max-width: 1700px){
 	.mexicano-form{
