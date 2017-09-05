@@ -9,6 +9,7 @@ angular.module('application').controller('mexicanoCtrl',
     $scope.dataReceived;
     $scope.registed;
     $scope.terms = false;
+    $scope.concursante = {};
     $scope.mostrarMenu = function (){
         if($scope.displayMenu == 'initial'){
             $scope.displayMenu = 'none';
@@ -16,6 +17,10 @@ angular.module('application').controller('mexicanoCtrl',
         else{
             $scope.displayMenu = 'initial';
         }
+    }
+    $scope.closeModal = function(){
+      $scope.concursante = {};
+      $scope.dataReceived = false;
     }
     $scope.go = function(state){
         window.scrollTo(0, 0);
@@ -29,8 +34,15 @@ angular.module('application').controller('mexicanoCtrl',
     var me = function() {
       Facebook.api('/me?fields=id,name,email,age_range' , function(response) {
         $scope.concursante.name = response.name;
-        $scope.concursante.email = response.email;
+        $scope.concursante.email = response.email.trim();
         $scope.concursante.age = response.age_range.min;
+        $dbApi.checkEmail($scope.concursante.email).then(function(emailResponse){
+         console.log(emailResponse);
+          if(emailResponse.data =='error'){
+              $scope.dataReceived = true;
+              $scope.registed = false;
+          }
+        });
       });
     };
     $scope.displayTerms = function(){

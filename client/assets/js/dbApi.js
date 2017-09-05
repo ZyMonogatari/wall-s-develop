@@ -23,6 +23,9 @@ angular.module('application')
           '&age=' + concursante.age + '&phone=' + concursante.phone + '&email=' 
           + concursante.email + '&ciudad=' + concursante.ciudad + '&medio=' 
           +concursante.medio + '&sucursal=' + concursante.sucursal);
+      },
+      checkEmail : function(email){
+        return get('emailCheckerMexicano.php?email=' + email);
       }
     }
   });

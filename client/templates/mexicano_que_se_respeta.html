@@ -1,14 +1,14 @@
 ---
 name: mexicano_que_se_respeta
-url: /mexicano_que_se_respeta
+url: /Mexicano-en-walls
 controller: mexicanoCtrl
 ---
 
 <div ng-include="'/templates/navBar.html'"></div>
 <div ng-include="'/templates/navBarMovil.html'"></div>
 <div class="mexicano-modal" ng-show="dataReceived" >
-	<div id="mexicano-congrats-div" ng-show="registed" ng-click="">
-		<i class="fa fa-times-circle fa-4x close-modal" aria-hidden="true" ng-click="dataReceived = false"></i>
+	<div id="mexicano-congrats-div" ng-show="registed">
+		<i class="fa fa-times-circle fa-4x close-modal" aria-hidden="true" ng-click="closeModal()"></i>
 		<div class="mexicano-congrats-titulo">
 			<p>¡FELICIDADES!</p>
 		</div>
@@ -32,7 +32,7 @@ controller: mexicanoCtrl
 		
 	</div>
 	<div id="mexicano-used-mail" ng-show="!registed">
-		<i class="fa fa-times-circle fa-4x close-modal" aria-hidden="true" ng-click="dataReceived = false"></i>
+		<i class="fa fa-times-circle fa-4x close-modal" aria-hidden="true" ng-click="closeModal()"></i>
 		<div class="mexicano-used-title">
 			<p>
 				LO SENTIMOS MUCHO
@@ -70,11 +70,15 @@ controller: mexicanoCtrl
 			<form ng-submit="sendData()">
 				<div class="mexicano-form-fields" >
 					<div>
-						<input type="text" placeholder="Nombre completo:" required ng-model="concursante.name">
+						<input type="text" placeholder="Nombre completo:" required ng-model="concursante.name" oninvalid="this.setCustomValidity('Inresa tu nombre completo')" oninput="setCustomValidity('')">
 						<input type="number" placeholder="Edad:" max="100" ng-model="concursante.age">
 						<input type="email" placeholder="Correo:" required ng-model="concursante.email">
-						<input type="text" placeholder="Celular:" ng-model="concursante.phone">
-						<select name="" id="" required ng-model="concursante.ciudad">
+						
+						<input type="text" placeholder="Celular:" ng-model="concursante.phone" pattern="^(0|[1-9][0-9]*)$"
+						 title="Debe tener al menos 10 digitos"  maxlength="10" minlength="10">
+
+						<select name="" id="" required ng-model="concursante.ciudad"  oninvalid="this.setCustomValidity('Selecciona tu estado')"
+    						oninput="setCustomValidity('')">
 							<option value="" selected disabled hidden>Estado de origen</option>
 							<option value="Aguascalientes" >Aguascalientes</option>
         	            	<option value="Baja California" >Baja California</option>
@@ -109,7 +113,8 @@ controller: mexicanoCtrl
         	            	<option value="Yucatan" >Yucatan</option>
         	            	<option value="Zacatecas" >Zacatecas</option>
 						</select>
-						<select name="" id="" required ng-model="concursante.sucursal">
+						<select name="" id="" required ng-model="concursante.sucursal" oninvalid="this.setCustomValidity('Selecciona tu sucursal')"
+    						oninput="setCustomValidity('')">
 							<option value="" selected disabled hidden>Sucursal a la que asistirás</option>
 							<option value="" selected disabled hidden>
 							<option value="Isla Mujeres">Isla Mujeres</option>
@@ -137,7 +142,8 @@ controller: mexicanoCtrl
 							<option value="Web">Web</option>
 						</select>
 
-						<input type="checkbox" required=""> Acépto los terminos y condiciones<br> <br>
+						<input type="checkbox" required="" oninvalid="this.setCustomValidity('Acepta nuestros terminos y condiciones')"
+    						oninput="setCustomValidity('')"> Acépto los terminos y condiciones<br> <br>
 						<a class="expand button" ng-click="login()"> <i class="fa fa-facebook-official" aria-hidden="true" ></i> Login with Facebook</a>
 					</div>
 				</div>

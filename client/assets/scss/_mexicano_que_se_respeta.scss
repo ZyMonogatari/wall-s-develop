@@ -264,15 +264,23 @@
 		width: 150%;
 		right: -80%;
 	}
-	.terms-footer p {
-	    font-size: 15px;
+	.terms-footer{
+		padding: 0 5%;
+	}
+	.whiteFont-title{
+		margin: 5% 0 5% !important;
+		font-size: 18px !important;
+	}
+	.mexicano-terms p {
+	    font-size: 10px !important;
 	}
 	.mexicano-terms {
-	    margin: 10% 0 5%;
+	    margin: 0% 0 5%;
 	}
 	.mexicano-send-email{
 		margin: 5%;
 	}
+	
 }
 @media only screen and (max-width: 360px){
 	.mexicano-congrats-titulo p{
