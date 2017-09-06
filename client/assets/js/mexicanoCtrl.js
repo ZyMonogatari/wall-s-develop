@@ -8,7 +8,7 @@ angular.module('application').controller('mexicanoCtrl',
     $scope.concursante;
     $scope.dataReceived;
     $scope.registed;
-    $scope.terms = false;
+    $scope.terms;
     $scope.concursante = {};
     $scope.mostrarMenu = function (){
         if($scope.displayMenu == 'initial'){

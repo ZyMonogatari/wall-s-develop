@@ -240,9 +240,19 @@
 	}
 }
 @media only screen and (max-width: 414px){
-	.close-modal{
-		top: 5%;
-		font-size: 30px;
+	#mexicano-congrats-div {
+	    margin: 50% 0;
+	}
+		.close-modal{
+			top: -5%;
+		    font-size: 30px;
+		    right: -12px;
+		}
+			.mexicano-send-email p{
+				font-size: 0.7rem;
+			}
+	#mexicano-used-mail {
+    	margin: 59% 0;
 	}
 	.mexicano-used-title p{
 		font-size: 50px;
@@ -251,7 +261,7 @@
 		font-size: 30px;
 	}
 	.mexicano-congrats-titulo p{
-		font-size: 50px;
+		font-size: 30px;
 	}
 	.mexicano-congrats-description p{
 		font-size: 20px;
@@ -284,18 +294,21 @@
 }
 @media only screen and (max-width: 360px){
 	.mexicano-congrats-titulo p{
-		font-size: 40px;
+		font-size: 30px;
 		margin: 0;
 	}
 	.mexicano-congrats-description p{
-		font-size: 20px;
+		font-size: 13px;
 		margin: 0;
 	}
 	.mexicano-used-title p{
-		font-size: 40px;
+		font-size: 30px;
+	    line-height: 1;
+	    padding: 10px 0 0 0;
 	}
 	.mexicano-used-description p{
-		font-size: 20px;
+		font-size: 13px;
+		margin: 0;
 	}
 	.mexicano-download-button{
 		font-size: 20px;
