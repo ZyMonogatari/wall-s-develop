@@ -1,3 +1,4 @@
+
 .top{
 	position: fixed;
 	width: 100%;
@@ -45,57 +46,55 @@
 	right: 0;
 	top: 50%;
 }
-
+.servicios-titulos{
+	font-size: 25px;
+    margin: 0;
+    line-height: 1;
+}
 .cuerpo-absolute{
 	position: absolute;
 	top: 90%;
 	width: 100%;
 	height: 1710px;
 }
+.filosofia{
+	font-size: 40px;
+	margin: 0;
+	font-weight: bold;
+}
 .cuerpo1-servicios{
-	position: absolute;
+	position: relative;
 	width: 100%;
-	height: 600px;
-	top: 90%;
+	margin: 40% 0 0;
 
 }
 .cuerpo1-servicios-div{
-	position: absolute;
+	position: relative;
 	width: 100%;
-	height: 500px;
-	top: 20%;
 	background: #1C1C1C;
-}
-.cuerpo1-servicios-content{
-	position: absolute;
-	left: 5%;
-	width: 80%;
-	height: 474px;
+	padding: 2% 5%;
 }
 .text-left{
 	text-align: right;
 }
 .cuerpo1-servicios-titulos{
-	position: absolute;
-	left: 8%;
-	width: 70%;
-	height: 40%;
-	bottom: 0;
-	top: 0;
-	margin: auto;
+	position: relative;
+	display: inline-block;
+	width: 69%;
+	vertical-align: middle;
 }
 .cuerpo1-servicios-image{
-	position: absolute;
-	left: 80%;
+	position: relative;
+	display: inline-block;
+	width: 30%;
+    text-align: center;
 }
 .gray-text{
 	color: #7B7B7B;
 }
 .cuerpo2-servicios{
-	position: absolute;
-	top: 600px;
+	position: relative;
 	width: 100%;
-	height: 1710px;
 	background: #1C1C1C;
 }
 .cuerpo2-fila{
@@ -106,15 +105,64 @@
 }
 
 .cuerpo2-columna{
+	width: 100%;
+	position: relative;
+	display: inline-block;
+}
+.servicios-columna{
+	display: inline-block;
 	width: 50%;
-	height: 100%;
+	vertical-align: top;
+}
+.servicios-columna-reponsive{
+	display: none;
+}
+.servicios-columna-texto{
+	display: inline-block;
+	width: 50%;
+	vertical-align: top;
 	position: absolute;
+	height: 100%;
+}
+.servicios-columna-foto{
+	display: inline-block;
+	width: 50%;
+	vertical-align: top;
+	margin: 0 0 0 50%;
+}
+.servicios-container{
+	position: relative;
 }
 .columna-right{
-	right: 0%;
+	width: 50%;
+	height: 100%;
+	display: inline-block;
+	background: #F2F2F2;
+	text-align: center;
+	vertical-align: top;
+	padding: 20% 2%;
 }
 .columna-left{
-	left: 0%;
+	width: 50%;
+	height: 100%;
+	display: inline-block;
+	background: #FEFEFE;
+	text-align: center;
+	vertical-align: top;
+	padding: 20% 2%;
+}
+
+.servicios-columna-titulo{
+	font-family: RobotoCondensed-Bold;
+	font-size: 1.4375rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 1;
+}
+.servicios-columna-parrafo{
+	font-family: Lato-Regular;
+	font-size: 1rem;
+	line-height: 1;
 }
 .columna-2{
 	right: 0%;
@@ -133,8 +181,6 @@
 	background: white;
 }
 .borde-sesgado-gris{
-	position: absolute;
-	top: -250px;
 	width: 100%;
 }
 .borde-sesgado-servicios{
@@ -172,10 +218,10 @@
 }
 
 .footer-servicios{
-	position: absolute;
-	top: 3700px;
+	position: relative;
 	width: 110%;
 	left: -5%;	
+	margin: 50% 0 0;
 }
 
 .footer-servicios-div{
@@ -229,29 +275,45 @@
 .leer-mas-servicios:hover{
 	background: #7A7A7A;
 }
-@media only screen and (max-width: 1280px){
-	.cuerpo2-servicios{
-		top: 650px;
+@media only screen and (max-width: 1300px){
+	.cuerpo1-servicios {
+		margin: 50% 0 0;
 	}
-	.cuerpo1-servicios{
-		top: 90%;
+}
+@media only screen and (max-width: 1100px){
+	.cuerpo1-servicios {
+		margin: 60% 0 0;
 	}
-	.borde-sesgado-gris{
-		top: -200px;
+}
+@media only screen and (max-width: 768px){
+	.servicios-columna-parrafo{
+		font-size: 15px;
 	}
-	.cuerpo-absolute{
-		top: 70%;
+	.servicios-columna-titulo{
+		font-size: 20px;
+		margin: 5% 0;
+	}
+	.footer-servicios{
+		background: white;
+		padding: 3% 0 0;
 	}
 	.borde-sesgado-servicios{
-		top: -130px;
+		display: none;
 	}
-
-}
-
-@media only screen and (max-width: 1024px){
-	.borde-sesgado-gris{
-		top: -150px;
+	.video-servicios-div{
+		display: none;
 	}
+	.cuerpo1-servicios {
+    
+    	margin: 126% 0 0;
+	}
+	.footer-servicios{
+		margin: 0;
+	}
+	.columna-left, .columna-right{
+		padding: 10% 2%;
+	}
+	
 	.columna-top-1{
 		top: 0%;
 		width: 100%;
@@ -275,42 +337,26 @@
 	.titulo-columna-top{
 		top: 35%;
 	}
-	.leer-mas-servicios{
-		width: 30%;
-	}
+	
 }
-@media only screen and (max-width: 768px){
-	.cuerpo2-titulos{
-		margin: 20% 10%;
-		position: relative;
-	}
-	.footer-servicios-brand{
-		height: 100px;
-	}
-	.cuerpo2-servicios{
-		top: 600px;
-	}
-	.borde-sesgado-gris{
-		top: -100px;
-	}
-	.cuerpo1-servicios{
-		top: 90%;
-	}
-	.cuerpo-absolute{
-		top: 90%;
-	}
-	.borde-sesgado-servicios{
-		top: -80px;
-	}
-}
+
 @media only screen and (max-width: 414px){
-	.cuerpo2-fila{
-		height: 220px;
+	.titulos-div-footer-sucursales div p {
+	    font-size: 20px;
+	}
+	.cuerpo1-servicios {
+	    margin: 166% 0 0;
+	}
+	.columna-top-1, .columna-top-2, .columna-top-3{
+		p{
+			font-size: 15px;
+		}
 	}
 	.columna-top-1{
 		top: 0%;
 		width: 100%;
 		height: 33.3%;
+		
 	}
 	.columna-top-2{
 		top: 33.3%;
@@ -322,55 +368,37 @@
 		width: 100%;
 		height: 33.3%;
 	}
-	.borde-sesgado-gris{
-		top: -60px;
-	}
-	.cuerpo1-servicios-titulos{
-		font-size: 70%;
-	}
-	.cuerpo1-servicios-content{
-		height: auto;
-	}
-	.cuerpo1-servicios-div{
-		height: 200px;	
-	}
-	.invitation{
-		font-size: 80%;
-	}
-	.cuerpo-absolute{
-		top: 42%;
-	}
-	.cuerpo2-servicios{
-		height: 1400px;
-	}
-	.cuerpo1-servicios{
-		top: 85%;
-	}
-	.columna-1{
-		width: 100%;
-	}
-	.columna-2{
-		top: 1100px;
-		width: 100%;
-	}
-	.footer-servicios{
-		top: 3020px;
-	}
-	.titulos-div-footer-sucursales div p{
+	.servicios-titulos{
 		font-size: 20px;
 	}
-	.borde-sesgado-servicios{
-		top: -35px;
+	.filosofia{
+		font-size: 15px;
 	}
-	.video-servicios-div{
+	.cuerpo1-servicios-div{
+		padding: 2%;
+	}
+	.cuerpo1-servicios-image{
+		width: 20%;
+	}
+	.servicios-columna{
+		width: 100%;
+	}
+	.servicios-columna-texto{
+		width: 100%;
+		position: relative;
+		height: 30vh;
+	}
+	.servicios-columna-foto{
+		width: 100%;
+		margin: 0;
+	}
+	.servicios-columna-foto{
 		display: none;
 	}
-	.leer-mas-servicios{
-		width: 30%;
-		bottom: 20%;
+	.servicios-columna-reponsive{
+		display: inherit;
 	}
 }
-
 @media only screen and (max-width: 375px){
 	.footer-servicios-titulos {
 		top: 30px;
@@ -378,8 +406,20 @@
 	.leer-mas-servicios{
 		bottom: 0%;
 	}
-	
+	.columna-top-1, .columna-top-2, .columna-top-3{
+		p{
+			font-size: 11px;
+		}
+	}
+	.servicios-columna-texto{
+		width: 100%;
+		position: relative;
+		height: 45vh;
+	}
 }
+/*
+
+
 
 @media only screen and (max-width: 320px){
 	.cuerpo2-servicios{
@@ -401,3 +441,4 @@
 		font-size: 80%;
 	}
 }
+*/

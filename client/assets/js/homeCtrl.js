@@ -100,8 +100,7 @@ angular.module('application').controller('homeCtrl',
     $scope.cabecera = {};
     $scope.cabecera.source = '/assets/img/logo.png';
     $scope.cabecera.position = 'absolute';
-    $scope.cabecera.fontColor = 'white';
-    $scope.iconColor = 'white';
+    
     $scope.sucursales = $sharedData.getSucursales();
     
    
@@ -162,10 +161,10 @@ angular.module('application').controller('homeCtrl',
           $scope.cabecera.fontColor = 'black';
           $scope.iconColor = '#333';
           $scope.cabecera.source = '/assets/img/wallslogo-negro-min.png';
-            angular.element(document.querySelector('#cabeceraDiv')).addClass('to-white');
-            angular.element(document.querySelector('#cabeceraDiv')).removeClass('from-white');
-            angular.element(document.querySelector('#cabeceraDivMovil')).addClass('to-white');
-            angular.element(document.querySelector('#cabeceraDivMovil')).removeClass('from-white');
+          angular.element(document.querySelector('#cabeceraDiv')).addClass('to-white');
+          angular.element(document.querySelector('#cabeceraDiv')).removeClass('from-white');
+          angular.element(document.querySelector('#cabeceraDivMovil')).addClass('to-white');
+          angular.element(document.querySelector('#cabeceraDivMovil')).removeClass('from-white');
           $scope.$apply();
         }
     if(window.scrollY <= 5){

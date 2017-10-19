@@ -1,13 +1,16 @@
 angular.module('application').controller('wallsCardCtrl',
-  ['$scope', '$window', '$state', '$dbApi', 'FoundationApi', function($scope, $window,  $state, $dbApi, FoundationApi){
+  ['$scope', '$window', '$state', '$dbApi', 'FoundationApi', '$messageApi', function($scope, $window,  $state, $dbApi, FoundationApi, $messageApi){
   	$scope.screenHeight = '720px';
   	console.log($scope.screenHeight);
   	$scope.displaySesionN = 'none';
     angular.element(document.querySelector('#selloBounce2s')).addClass('bounceIn2s');
     angular.element(document.querySelector('#fadeInLeftIcon2s')).addClass('fadeInLeft2s');
     angular.element(document.querySelector('#fadeInRight2sIcon')).addClass('fadeInRight2s');
-	
+	$scope.step1 = true;
 	$scope.cabecera = {};
+    $scope.passMissMatch;
+    $scope.codeMissMatch;
+    $scope.passwordRecovery = {};
     /*
     $scope.cabecera.position = 'absolute';
     $scope.cabecera.fontColor = 'black';
@@ -38,14 +41,57 @@ angular.module('application').controller('wallsCardCtrl',
             $scope.displayMenu = 'initial';
         }
     }
-    $scope.appearItem = function(item){
-      angular.element(document.querySelector('#' + item)).removeClass('disappear1S');
-      angular.element(document.querySelector('#' + item)).addClass('appear1S');
+    $scope.sendPasswordCode = function(){
+    	$scope.passwordSpinner = true;
+    	$scope.step1 = false;
+    	$messageApi.sendPasswordCode($scope.clientData.cardMail).then(function(response){
+    		$scope.passwordSpinner = false;
+    		console.log(response);
+    		if(response.data != 'error'){
+    			$scope.passwordRecovery.code = response.data.code;
+                $scope.passwordRecovery.card = response.data.num;
+                $scope.passwordRecovery.email = response.data.email;
+    			$scope.step2 = true;
+    		}
+    		else{
+    			$scope.step3 = true;
+    		}
+    	});
     }
-    $scope.disappearItem = function(item){
-      angular.element(document.querySelector('#' + item)).addClass('disappear1S');
+    $scope.passwordCompare = function(){
+
+    	if($scope.passwordRecovery.pass != $scope.passwordRecovery.pass2){
+            $scope.passwordRepit = 'red 2px solid';    
+            $scope.passMissMatch = true;    
+        }
+        else{
+            $scope.passwordRepit = '';
+            $scope.passMissMatch = false;    
+        }
     }
 
+    $scope.changePassword = function(){
+        if($scope.passwordRecovery.code != $scope.passwordRecovery.userCode){
+            $scope.recoveryCode = 'red 2px solid';
+            $scope.codeMissMatch = true;
+        }
+        else{
+            $scope.recoveryCode = '';
+            $scope.codeMissMatch = true;
+        }
+        if($scope.passwordRecovery.pass == $scope.passwordRecovery.pass2 & $scope.passwordRecovery.code == $scope.passwordRecovery.userCode){
+            $dbApi.updatePass($scope.passwordRecovery);
+            $scope.closeRecoveryPass();
+            FoundationApi.publish('main-notifications', { title: 'Cambiado', content: 'contraseña cambiada correctamente', color: '#7A7A7A', image: './assets/img/icono-navajas-walls-min.png', autoclose : '3000'});
+        }
+    }
+    $scope.closeRecoveryPass = function(){
+        $scope.passwordRecovery = {};
+        $scope.step1 = true;
+        $scope.step2 = false;
+        $scope.step3 = false;
+        FoundationApi.publish('password-recovery-modal', 'close');
+    }
     $scope.scrollToRegist = function(){
         var elementTop = document.getElementById('bounceInForm1s').getBoundingClientRect().top - 200;
         window.scrollTo(0, elementTop);
@@ -63,9 +109,17 @@ angular.module('application').controller('wallsCardCtrl',
 	$scope.clientInfo;
 	$scope.loadSucursal = function(){
 		switch($scope.regist.state){
+			case '1':
+				$scope.sucursales = [{nombre : 'WALL´S BARBERSHOP AGUASCALIENTES',
+										id: '24'}];
+				break;
 			case '14':
 				$scope.sucursales = [{nombre : 'WALL´S BARBERSHOP GUADALAJARA',
 										id: '23'}];
+				break;
+			case '15':
+				$scope.sucursales = [{nombre : 'WALL´S BARBERSHOP SATELITE',
+										id: '25'}];
 				break;
 			case '22':
 				$scope.sucursales = [{nombre : 'WALL´S BARBERSHOP QUERETARO' , id : '20'}];
@@ -95,11 +149,12 @@ angular.module('application').controller('wallsCardCtrl',
 	}
 	$scope.sendRegist = function(){
 		$dbApi.registUser($scope.regist).then(function(response){
-			console.log(response.data);
 			if(response.data == 'exito'){
-				FoundationApi.publish('main-notifications', { title: '¡Registrado!', content: 'Registrado correctamente', color: '#7A7A7A', image: './assets/img/icono-navajas-walls-min.png' });
+				FoundationApi.publish('main-notifications', { title: '¡Registrado!', content: 'Registrado correctamente', color: '#7A7A7A', image: './assets/img/icono-navajas-walls-min.png', autoclose : '3000'});
+				$scope.regist = {};
+				$scope.scrollToPoints();
 			}else{
-				FoundationApi.publish('main-notifications', { title: 'Error', content: 'cuenta ya registrada', color: '#7A7A7A', image: './assets/img/icono-navajas-walls-min.png' });
+				FoundationApi.publish('main-notifications', { title: 'Error', content: 'cuenta ya registrada', color: '#7A7A7A', image: './assets/img/icono-navajas-walls-min.png', autoclose : '3000'});
 			}
 		});
 	}
@@ -109,11 +164,9 @@ angular.module('application').controller('wallsCardCtrl',
 		FoundationApi.publish('pointsModal', 'open');
 		$dbApi.getClientData($scope.clientData).then(function(clientData){
 			if(clientData.data){
-				console.log("data")
 				$scope.clientInfo = clientData.data;
 			}
 			else{
-				console.log("error");
 				$scope.clientInfoError = true;
 			}
 			

@@ -1,0 +1,321 @@
+.contacto-top{
+	background: url(/assets/img/fondo-top-contacto-color-min.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-position: 50% 0px;
+    background-attachment: fixed;
+    overflow: auto;
+    overflow-x: hidden;
+    position: relative;
+    .titulo-left{
+        width: 50%;
+        position: relative;
+        float: left;
+        display: inline-block;
+        .contacto-top-texto-left{
+            width: 70%;
+            display: inline-block;
+            text-align: right;
+            margin: 40% 0%;
+            position: relative;
+            p{
+                text-transform: uppercase;
+                font-size: 95px;
+                font-weight: 700;
+                margin: 0;
+                color: #333;
+                line-height: 87px;
+                font-style: italic;
+                text-shadow: 2px 2px 3px rgba(51, 51, 51, 0.35);
+                margin: 0 5% 0%;
+                font-family: RobotoCondensed-Bold;
+            }
+        }
+    }
+    .overlay-left{
+    	width: 50%;
+    	background: rgba(255, 255, 255, .8);
+    	position: absolute;
+        float: left;
+        height: 100%;
+
+    	
+    }
+    .overlay-right{
+    	position: absolute;
+    	width: 50%;
+        right: 0%;
+    	background: rgba(84, 84, 84, .8);
+        height: 100%;
+    	
+    }
+    .titulo-right{
+        position: relative;
+        width: 50%;
+        display: inline-block;
+        .contacto-top-texto-right{
+            width: 70%;
+            display: inline-block;
+            margin: 40% 30%;
+            position: relative;
+
+            p{
+                text-transform: uppercase;
+                font-size: 95px;
+                font-weight: 700;
+                margin: 0 0% 0 5%;
+                color: #fff;
+                line-height: 87px;
+                font-style: italic;
+                text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.35);
+                font-family: RobotoCondensed-Bold;
+            }
+        }
+    }
+    .contacto-top-content{
+    	position: absolute;
+        top: 0;
+    	width: 100%;
+    	margin: 15% 0 0;
+    	.contacto-top-circle{
+    		width: 350px;
+    		height: 350px;
+    		border-radius: 50%;
+		    background: url(/assets/img/fondo-top-contacto-color-min.jpg);
+		    background-size: cover;
+		    background-repeat: no-repeat;
+		    background-color: black;
+		    background-position: 50% 0px;
+		    background-attachment: fixed;
+		    border: 25px solid rgba(255, 255, 255, 0.6);
+		    margin: auto;
+		    right: 0;
+		    left: 0;
+		    position: absolute
+    	}
+    	
+    }
+}
+
+.contacto-contactanos{
+    position: relative;
+    width: 100%;
+    background: black;
+    .contacto-contactanos-left{
+        background: #333333;
+        padding: 3% 0;
+        position: absolute;
+        width: 30%;
+        display: inline-block;
+        height: 100%;
+        h1{
+            text-align: center;
+            font-size: 70px;
+            text-transform: uppercase;
+            font-family: Oswald;
+            color: #7A7A7A;
+            padding: 30px;
+            line-height: 69px;
+            font-weight: 900;
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            margin: 0 auto;
+        }
+    }
+    .contacto-contactanos-right{
+        width: 69%;
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        padding: 5% 5% 0;
+        margin: 0 0 0 30%;
+        .contactanos-titulo{
+            h2{
+                text-transform: uppercase;
+                text-align: center;
+                position: relative;
+                color: #7a7a7a;
+                font-size: 30px;
+                font-weight: 400;
+                padding-top: 50px;
+                padding-bottom: 55px;
+                display: inline-flex;
+                width: 100%;
+                font-family: RobotoCondensed-Bold;
+            }
+            h2:before {
+                content: "";
+                margin: 20px 20px 20px 0px;
+                top: 0;
+                left: 0;
+                width: 34%;
+                height: 4px;
+                position: relative;
+                background-color: #7a7a7a;
+                transition: all 0.3s ease-out 0s;
+                display: block;
+                border-radius: 5px;
+            }
+            h2:after {
+                content: "";
+                margin: 20px 0px 20px 20px;
+                top: 0;
+                left: 0;
+                width: 34%;
+                height: 4px;
+                position: relative;
+                background-color: #7a7a7a;
+                transition: all 0.3s ease-out 0s;
+                display: block;
+                border-radius: 5px
+            } 
+        }
+        .contactanos-texto{
+            margin: 0 15%;
+            p{
+                color: #B7B7B7;
+                text-align: center;
+                font-size: 18px;
+            }
+        }
+        .contactanos-icons{
+            padding: 10% 0 10%;
+            ul {
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+            ul li {
+                list-style: none;
+                display: inline;
+                padding-left: 10px
+            }
+            ul li a {
+                text-decoration: none;
+                display: inline-block;
+                text-align: center;
+                border: 1px solid #9d9d9d;
+                border-radius: 50%;
+                width: 45px;
+                height: 45px;
+                line-height: 44px;
+                color: #9d9d9d;
+                -webkit-transition: all 1s;
+                -moz-transition: all 1s;
+                -o-transition: all 1s;
+                transition: all 1s;
+            }
+            ul li a i {
+                font-size: 20px;
+            }
+            ul li a:hover {
+                background: #7a7a7a;
+                border: 1px solid #7a7a7a;
+                color: #fff
+            }
+        }
+    }
+}
+
+.contacto-info{
+    position: relative;
+    background: black !important;
+    padding: 5% 0 0;
+    p{
+        margin: 0 auto;
+        color: #7a7a7a;
+        text-align: center;
+        font-size: 18px;
+    }
+    .franquicias-info-text{
+        margin: 0 0 3%;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .overlay-left{
+        width: 100% !important;
+        background: rgba(255, 255, 255, .8);
+        position: absolute;
+        height: 100%; 
+    }
+    .overlay-right{
+        display: none !important;
+    }
+    .contacto-top-content{
+        display: none;
+    }
+    .titulo-left{
+        width: 100% !important;
+        text-align: center;
+        .contacto-top-texto-left{
+            width: 80% !important;
+            text-align: center !important;
+            margin: 15% 0 5% !important;
+        }
+    }
+    .titulo-right{
+        width: 100% !important;
+        text-align: center;
+        .contacto-top-texto-right{
+            width: 80% !important;
+            text-align: center !important;
+            margin: 0% 0 15% !important;
+        }
+    }
+}
+@media only screen and (max-width: 790px){
+    .contacto-top-texto-left, .contacto-top-texto-right{
+        p{
+            font-size: 70px !important;
+        }
+    }
+}
+@media only screen and (max-width: 414px){
+    .contacto-top-texto-left p{
+        font-size: 65px !important;
+    }
+    .contacto-top-texto-left{
+        width: 100% !important;
+    }
+    .contacto-top-texto-right{
+        width: 100% !important;
+    }
+    .contacto-top-texto-right p{
+        font-size: 65px !important;
+    }
+    .contacto-contactanos-left{
+        position: relative !important;
+        background: black !important;
+        width: 100% !important;
+        padding: 3% 0;
+        h1{
+            webkit-writing-mode: inherit !important;
+            -ms-writing-mode: inherit !important;
+            writing-mode: inherit !important;
+            transform: rotate(0deg) !important;
+            font-size: 35px !important;
+            padding: 0 !important;
+        }
+    } 
+    .contacto-contactanos-right{
+        margin: 0 !important;
+        width: 100% !important;
+        padding: 0% 5% !important;
+        .contactanos-titulo h2 {
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
+
+        }
+    }
+
+}
+
+@media only screen and (max-width: 790px){
+    .contacto-top-texto-left, .contacto-top-texto-right{
+        p{
+            font-size: 55px !important;
+        }
+    }
+}

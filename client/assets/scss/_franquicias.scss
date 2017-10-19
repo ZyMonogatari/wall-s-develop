@@ -1,0 +1,723 @@
+
+///--TOP--//
+.franquicias-top{
+	background: url(/assets/img/fondo-top-fraq-min.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-position: 50% 0px;
+    background-attachment: fixed;
+    overflow: auto;
+    position: relative;
+    .overlay{
+		background-color: rgba(255, 255, 255, .15);
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 0;
+	}
+}
+
+.franquicias-top-content{
+	width: 80%;
+	height:80%;
+	margin: 10%;
+	position: relative;
+	z-index: 1;
+}
+.franquicias-top-left-title{
+	position: absolute;
+	left: 0%;
+	top: 0;
+	margin: 15% 5%;
+
+	p{
+	    font-size: 25px;
+	    font-weight: 700;
+	    color: #FFF;	
+	    font-family: RobotoCondensed-Bold;
+	}
+}
+
+.franquicias-top-content-center{
+	width: 80%;
+	display: inline-block;
+	margin: 0% 10%;
+	text-align: center;
+	img{
+		width: 75%;
+	}	
+}
+
+.franquicias-top-boton{
+	a{
+		background: rgba(255,255,255,0.75);
+	    border: 1px solid #929292;
+	    color: #333;
+	    border-radius: 0px;
+	    padding: 8px 35px;
+	    text-transform: uppercase;
+	    -webkit-transition: all 1s;
+	    -moz-transition: all 1s;
+	    -o-transition: all 1s;
+	    transition: all 1s;
+	    font-size: 20px;
+	    display: inline-block;
+	    margin-bottom: 0;
+	    text-align: center;
+	    vertical-align: middle;
+	    cursor: pointer;
+	    letter-spacing: 1px;
+	    font-weight: 500;
+	    text-decoration: none;
+	}
+	a:hover{
+		background: #777;
+	    color: #fff;
+	    border: 1px solid #333;
+	}
+	a::before {
+	    content: "\F103";
+		font-family: fontAwesome;
+	    font-size: 30px;
+	    vertical-align: middle;
+	    padding-right: 25px;
+	    text-decoration: none;
+	    line-height: 22px;
+	}
+}
+.franquicias-top-parrafo{
+	margin: 0 0 5%;
+	h2{
+		text-align: center;
+	    color: white;
+	    padding-top: 26px;
+	    font-size: 20px;
+	    line-height: 24px;
+	}
+}
+.franquicias-top-right-title{
+	position: absolute;
+	right: 0%;
+	top: 0;
+	margin: 15% 5%;
+	.franquicias-top-boton{
+		display: none;
+	}
+	.franquicias-top-parrafo{
+		display: none;
+	}
+	p{
+		font-size: 25px;
+	    font-weight: 700;
+	    color: #FFF;	
+	    font-family: RobotoCondensed-Bold;	
+	}
+}
+
+//--FIN DEL TOP--//
+
+//--NOSOTROS--//
+.titulo-dos{
+	width: 49%;
+	display: inline-block;
+	vertical-align: top;
+	z-index: 1;
+	position: relative;
+	.sello{
+		margin: -20% 0% 0% -1%;
+	}
+	.titulo{
+		margin: 12% 0 0 -15%;
+	}
+}
+.caracteristicas{
+	width: 50%;
+	display: inline-block;
+	margin: 3% 0;
+	z-index: 1;
+	position: relative;
+	.iconos-div{
+		margin: 2% 0 0;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.textos-caracteristicas{
+		display: inline-block;
+		width: 70%;
+		padding: 0 0 0 2%;
+	}
+	.titulos-caracteristicas{
+		display: inline-block;
+		//margin: 0 0 0 17%;
+		h3{
+			margin: 0;
+			font-size: 36px;
+			font-weight: 800;
+   			color: #FFF;
+   			font-family: RobotoCondensed-Bold;
+		}
+	}
+	.parrafos-caracteristicas{
+		p{
+			color: #efefef;
+    		font-size: 15px;
+    		font-family: Lato-regular;
+    	}
+	}
+}
+.franquicias-nosotros{
+	width: 100%;
+	position: relative;
+	.fondo_segado_uno{
+	    margin: 4px 0 0;
+	    padding: 0px;
+	    background-color: #1C1C1C;;
+	    display: flex;
+	}
+
+	.fondo_segado_uno:before {
+	    content: '';
+	    top: -4%;
+	    left: 0;
+	    width: 100%;
+	    height: 4%;
+	    z-index: 2;
+	    position: absolute;
+		background:url('/assets/img/fondo-sesgado-v2.png') no-repeat bottom center;
+	    -moz-background-size:100% 139px;
+	    background-size:100% 139px;
+	}
+	.content{
+		background: #1C1C1C;
+		position: relative;
+		.triangulos{
+			z-index: 0;
+			width: 100%;
+			height: 100%;
+			.triangulo-derecha{
+				position: absolute;
+				right: 0;
+				bottom: 0px;
+			}
+			.triangulo-izquierda{
+				position: absolute;
+				left: 0;
+				bottom: 0px;
+			}
+		}
+		
+		.franquicias-nosotros-titulos{
+			width: 60%;
+			margin: 0% 20%;
+			position: relative;
+			h1{
+				text-transform: uppercase;
+			    text-align: center;
+			    position: relative;
+			    color: #fff;
+			    font-size: 30px;
+			    font-weight: 400;
+				padding-top: 50px;
+			    padding-bottom: 15px;
+				display: inline-flex;
+				width:100%;
+				font-family: RobotoCondensed-Bold;
+			}
+			h1:before {
+				content: "";
+				margin: 20px 20px 20px 0px;
+			    top: 0;
+			    left: 0;
+			    width: 26.2%;
+			    height: 4px;
+			    position: relative;
+			    background-color: #fff;
+			    transition: all 0.3s ease-out 0s;
+			    display: block;
+				border-radius: 5px;
+			}
+			h1:after {
+				content: "";
+			    margin: 20px 0px 20px 20px;
+			    top: 0;
+			    left: 0;
+			  	width: 26.2%;
+			    height: 4px;
+			    position: relative;
+			    background-color: #fff;
+			    transition: all 0.3s ease-out 0s;
+			    display: block;
+				border-radius: 5px
+			}
+			p{
+				margin: 0 auto;
+			    color: #efefef;
+			    text-align: center;
+			    font-size: 18px;
+			}
+		}
+	}
+	
+}
+//--FIN DE NOSOTROS--//
+
+//--SECCION 3--//
+.franquicias-seccion3{
+	position: relative;
+	background: url(/assets/img/fondo-cuerpo-dos-min.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    .seccion3-overlay{
+    	position: absolute;
+    	background: rgba(0, 0, 0, .45);
+    	width: 100%;
+    	height: 100%;
+    }
+    .seccion3-content{
+    	padding: 10% 15%;
+    	position: relative;
+    	.seccion3-parrafo{
+    		padding: 0 10%;
+    	}
+			h3 {
+				text-transform: uppercase;
+			    text-align: center;
+			    position: relative;
+			    color: #fff;
+			    font-size: 30px;
+			    font-weight: 400;
+				padding-top: 20px;
+			    padding-bottom: 20px;
+				display: inline-flex;
+				width:100%;
+				font-family: RobotoCondensed-Bold;
+			}
+			h3:before {
+				content: "";
+				margin: 20px 20px 20px 0px;
+			    top: 0;
+			    left: 0;
+			    width:  34.35%;
+			    height: 4px;
+			    position: relative;
+			    background-color: #fff;
+			    transition: all 0.3s ease-out 0s;
+			    display: block;
+				border-radius: 5px;
+			}
+			h3:after {
+				content: "";
+			    margin: 20px 0px 20px 20px;
+			    top: 0;
+			    left: 0;
+			  	width:  34.35%;
+			    height: 4px;
+			    position: relative;
+			    background-color: #fff;
+			    transition: all 0.3s ease-out 0s;
+			    display: block;
+				border-radius: 5px
+			}
+			p{
+				color: #efefef;
+				font-size: 18px;
+				font-family: Lato-regular;
+			}
+		}
+}
+//--FIN DE SECCION 3--//
+
+//--SECCION DATOS--//
+.seccion-datos{
+	background: url(/assets/img/fondo-cuerpo-tres-min.jpg);
+	width: 100%;
+	padding: 10% 0 0;
+	height: 100%;
+	.datos-izuierda{
+		position: relative; 
+		width: 50%;
+		z-index: 1;
+		border-right: solid 1px #CACACA;
+		display: inline-block;
+		float: left;
+		.imagen_texto{
+			text-align: right;
+			padding: 0 15% 0 0;
+			div{
+				display: block;
+			}
+		}
+		.datos-parrafo2{
+			text-align: right;
+			padding: 10% 15%;
+		}
+	}
+	.datos-derecha{
+		position: relative; 
+		width: 49.5%;
+		z-index: 1;
+		border-left: solid 1px #CACACA;
+		vertical-align: top;
+		display: inline-block;
+		.datos-parrafo3{
+			padding: 0% 15% 5%;
+			text-align: left;
+
+		}
+	}
+	.datos-triangulos{
+		margin: 10% 0 0;
+		position: relative;
+		z-index: 0;
+
+		img{
+			position: absolute;
+			bottom: 0;
+		}
+		.datos-triangulo-derecha{
+			right: 0;
+		}
+		.datos-triangulo-izquierda{
+			left: 0;
+		}
+	}
+}
+//--FIN DE SECCION DATOS--//
+
+//--SECCION INFO--//
+ 
+.franquicias-info{
+	position: relative;
+	background: white;
+	margin-top: 0%;
+	.fondo_sesgado_dos:before{
+	    content: '';
+	    top: -120px;
+	    left: 0;
+	    width: 100%;
+	    height: 139px;
+	    z-index: 2 !important;
+	    position: absolute;
+		background:url('/assets/img/fondo-sesgado-dos-min.png') no-repeat bottom center;
+	    -moz-background-size:100% 139px;
+	    background-size:100% 139px;
+	}
+	.fondo_sesgado_dos{
+		position: relative;
+		width: 100%;
+		height: 100px;
+	}
+	.franquicias-info-container{
+		.franquicias-info-form{
+			.franquicias-info-form-fields{
+				padding: 5%;
+			}
+			.franquicias-info-titulo{
+				text-transform: uppercase;
+			    text-align: center;
+			    position: relative;
+			    color: #7B7B7B;
+			    font-size: 30px;
+			    font-weight: bold;
+			    margin-bottom: 40px;
+			    display: inline-block;
+			}
+			p{
+			    color: #7B7B7B;
+			}
+			.franquicias-info-text{
+				text-align: center;
+				padding: 0 25%;
+			}
+			.franquicias-formulario-col{
+				display: inline-block;
+				width: 50%;
+				padding: 0 2% 0;
+			}
+			.franquicias-formulario-col-2{
+				display: inline-block;
+				width: 49%;
+				textarea{
+					height: 309px;
+    				resize: none;
+				}
+			}
+			.form-control {
+			    display: block;
+			    width: 100%;
+			    height: 50px;
+			    padding: 6px 12px;
+				font-family: 'Lato', sans-serif;
+			    font-size: 14px;
+			    line-height: 1.42857143;
+			    color: #555;
+			    background-color: transparent;
+			    border: 1px solid #fff;
+			    background-image: none;
+			    border-radius: 3px;
+			    margin-bottom: 15px;
+			    opacity: .8;
+			     -webkit-transition: all 1s;
+			    -moz-transition: all 1s;
+			    -o-transition: all 1s;
+			    transition: all 1s;
+			    outline: 0px !important;   
+				background: #f6f6f6;
+			}
+			.form-control:focus {
+			    border: 1px solid #f39c12;
+			    border-color: #000;
+			    outline: 0px none;
+			    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.075) inset, 0px 0px 0px rgba(102, 175, 233, 0.6);
+			}
+			.form-control:focus {
+			    border: 1px solid #f39c12;
+			    border-color: #000;
+			    outline: 0px none;
+			    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.075) inset, 0px 0px 0px rgba(102, 175, 233, 0.6);
+			}
+			.form-control:-webkit-input-placeholder {
+			    color: red;
+			}
+			.form-control:-moz-placeholder {
+			    /* Firefox 18- */
+			    
+			    color: red;
+			}
+			.form-control:-moz-placeholder {
+			    /* Firefox 19+ */
+			    
+			    color: red;
+			}
+			.form-control:-ms-input-placeholder {
+			    color: red;
+			}
+			.submit-btn,
+			.submit-btn:active,
+			.submit-btn:focus,
+			.submit-btn:visited {
+			    background-color: #C1C1C1;
+			    border: 1px solid #8C8A8A;
+			    border-radius: 4px;
+			    width: 100%;
+			    height: 50px;
+			    text-transform: uppercase;
+			    font-size: 18px;
+			    color: #fff;
+			    -webkit-transition: all 1s;
+			    -moz-transition: all 1s;
+			    -o-transition: all 1s;
+			    transition: all 1s;
+			    outline: 0px !important;
+			    font-family: 'Lato', sans-serif;
+			}
+			.submit-btn:hover {
+			    background-color: #7a7a7a;
+			    color: #fff;
+			}
+		}
+	}
+}
+.iconos{
+    //margin-top: 3px;
+    position: relative;
+    font-style: normal;
+    font-size: 65px ;
+    margin-left: 2%;
+    color: #efefef;
+}
+
+.icono_diseno:before {
+    content: "\f0c0";
+	font-family: fontAwesome;
+}
+.icono_atencion:before {
+    content: "\f219";
+	font-family: fontAwesome;
+}
+.icono_tendencias:before{
+    content: "\f0ac";
+	font-family: fontAwesome;
+	margin-left: 8px;
+	font-size: 78px;
+}
+
+.linea_horizomtal_izqui_img:after{
+	content: url("/assets/img/linea-izquierda.png");
+    margin: -20% 0px 0;    
+    right: 0;
+    position: absolute;
+}
+.linea_horizomtal_izqui:after {
+    content: url("/assets/img/linea-izquierda.png");
+    margin: 0%  0px 0;    
+    right: 0;
+    position: absolute;
+}
+.linea_horizomtal_dere_uno:before {
+    content: url("/assets/img/linea-derecha.png");
+    margin: 0px 0px 0px 0px;    
+    left: 0;
+    position: absolute;
+}
+.linea_horizomtal_dere_dos:before {
+    content: url("/assets/img/linea-derecha.png");
+    margin: 0px 0px 0px 0px;    
+    left: 0;
+    position: absolute;
+}
+.linea_horizomtal_dere_tres:before {
+    content: url("/assets/img/linea-derecha.png");
+    margin: 0px 0px 0px 0px;   
+    left: 0;
+    position: absolute;
+}
+
+@media only screen and (max-width: 1095px){
+	.titulo-dos{
+		position: absolute;
+		width: 30%;
+		img{
+			margin: -60% 0% 0% -1% !important;
+		}
+		.titulo{
+			display: none;
+		}
+	}
+	.caracteristicas{
+		width: 100%;
+		margin: 0 3%;
+	}
+	.franquicias-top-content{
+		//width: 80%;
+		//height:80%;
+		//margin: 10%;
+		margin: 15% 0 10%;
+		width: 100%;
+		position: relative;
+		z-index: 1;
+	}
+	.franquicias-top-left-title{
+		position: relative;
+		width: 100%;
+		text-align: center;
+		margin: 0;
+	}
+	.franquicias-top-content-center{
+		width: 80%;
+		display: inline-block;
+		margin: 0% 10%;
+		text-align: center;
+		.franquicias-top-boton{
+			display: none;
+		}
+		.franquicias-top-parrafo{
+			display: none;
+		}
+	}
+	.franquicias-top-right-title{
+		position: relative;
+		width: 100%;
+		text-align: center;
+		margin: 0;
+		.franquicias-top-boton{
+			display: inherit;
+		}
+		.franquicias-top-parrafo{
+			display: inherit;
+		}
+	}
+}
+@media only screen and (max-width: 900px){
+	
+	
+	.franquicias-nosotros-titulos{
+			width: 94% !important;
+			margin: 0% 3% 5% !important;
+	}
+	.fondo_segado_uno:before {
+	    content: '';
+	    top: -4%;
+	    left: 0;
+	    width: 150% !important;
+	    height: 4%;
+	    z-index: 2;
+	    position: absolute;
+		background:url('/assets/img/fondo-sesgado-v2.png') no-repeat bottom center;
+	    -moz-background-size:100% 139px;
+	    background-size:100% 139px;
+	}
+	.seccion3-content{
+		padding: 5% !important; 
+	}
+	.datos-izuierda{
+		width: 100% !important;
+		border-right: 0px !important;
+		.datos-parrafo2{
+			padding: 5% 15% !important;
+			text-align: left !important;
+		}
+	}
+
+	.linea_horizomtal_izqui_img:after{
+		display: none;
+	}
+	.linea_horizomtal_izqui:after {
+	    display: none;
+	}
+	.linea_horizomtal_dere_uno:before {
+	    display: none;
+	}
+	.linea_horizomtal_dere_dos:before {
+	    display: none;
+	}
+	.linea_horizomtal_dere_tres:before {
+	    display: none;
+	}
+	.datos-derecha{
+		width: 100% !important;
+	}
+
+	.fondo_sesgado_dos:before{
+	    content: '';
+	    top: -120px;
+	    left: 0;
+	    width: 150%;
+	    height: 139px;
+	    z-index: 2 !important;
+	    position: absolute;
+		background:url('/assets/img/fondo-sesgado-dos-min.png') no-repeat bottom center;
+	    -moz-background-size:100% 139px;
+	    background-size:100% 139px;
+	}
+}
+
+@media only screen and (max-width: 768px){
+	.franquicias-formulario-col{
+		width: 100% !important;
+	}
+	.franquicias-formulario-col-2{
+		width: 100% !important;
+	}
+}
+
+@media only screen and (max-width: 414px){
+	.franquicias-info-text{
+		padding: 0 5% !important;
+	}
+	.triangulos{
+		display: none;
+	}
+	.titulo-dos{
+		display: none;
+	}
+	.fondo_sesgado_dos:before{
+		width: 150% !important;
+	}
+	.franquicias-top-boton{
+		display: none !important;
+	}
+}

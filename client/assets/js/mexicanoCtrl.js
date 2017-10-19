@@ -20,14 +20,17 @@ angular.module('application').controller('mexicanoCtrl',
     }
     $scope.closeModal = function(){
       $scope.concursante = {};
+      FB.logout(function(response) {
+      });
       $scope.dataReceived = false;
+
     }
     $scope.go = function(state){
         window.scrollTo(0, 0);
         $state.go(state);
     }
     $scope.login = function() {
-      Facebook.login(function(response) {
+      FB.login(function(response) {
         me();
       });
     };
@@ -59,9 +62,8 @@ angular.module('application').controller('mexicanoCtrl',
     }
 
     $scope.sendData = function(){
-      $scope.dataReceived = true;
       $dbApi.insertConcursantesMexicano($scope.concursante).then(function(response){
-        console.log(response.data);
+        $scope.dataReceived = true;
         if(response.data == 'exito'){
           $scope.registed = true;
         }

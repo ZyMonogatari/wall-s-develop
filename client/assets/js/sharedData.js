@@ -94,7 +94,7 @@ angular.module('application')
             instagram : 'https://www.instagram.com/wallsbarbershop_isla/',
             twitter: 'https://twitter.com/WallsBarbershop',
             select: false,
-            mapsUrl: "#"
+            mapsUrl: "https://www.google.com/maps/place/Wall's+Barbershop+Isla+Mujeres/@21.258107,-86.7517697,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x686539e8861cfae8!8m2!3d21.258107!4d-86.749581?hl=es-419"
         },
         cozumel: {
             nombre: 'WALL\'S COZUMEL',
@@ -140,7 +140,7 @@ angular.module('application')
             instagram : 'https://www.instagram.com/wallsbarbershop_playa/',
             twitter: 'https://twitter.com/WallsBarbershop',
             select: false,
-            mapsUrl: "#"
+            mapsUrl: "https://www.google.com/maps/place/Walls+Barbershop+Playa+del+Carmen/@20.6274284,-87.0762812,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x9bec3d28d2a2f2ad!8m2!3d20.6274284!4d-87.0740925?hl=es-419"
         },
         meridaPlazaArena: {
             nombre: 'WALL\'S MERIDA PLAZA ARENA',
@@ -178,14 +178,15 @@ angular.module('application')
             shortName: 'UPTOWN - MERIDA',
             direccion: 'Centro comercial Uptown Mérida, Calle 17 # 104 -A por calle 10 y calle 32-A Col. Vista alegre',
             whatsapp: '999 304 7933',
-            position: '8.000000, -85.0000000',
+            y: '21.012251',
+            x: '-89.583146',
             img: '/assets/img/sucursales/Uptown.jpg',
             imgMobile: '/assets/img/sucursales/UptownMobil.png',
             fb: 'https://www.facebook.com/wallsmerida/', 
             instagram : 'https://www.instagram.com/wallsmerida/',
             twitter: 'https://twitter.com/WallsBarbershop',
             select: false,
-            mapsUrl: "#"
+            mapsUrl: "https://www.google.com/maps?cid=2905519779488992636&hl=es-419&_ga=2.27414971.661748082.1505413378-60004342.1505244176"
         },
         campeche: {
             nombre: 'WALL\'S CAMPECHE',
@@ -201,7 +202,7 @@ angular.module('application')
             instagram : 'https://www.instagram.com/wallsbarbershop_campeche/',
             twitter: 'https://twitter.com/WallsBarbershop',
             select: false,
-            mapsUrl: "#"
+            mapsUrl: "https://www.google.com/maps/place/Wall's+Barbershop+Campeche/@19.8263683,-90.553577,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xf1158001b362b441!8m2!3d19.8263683!4d-90.5513883?hl=es-419"
         },
         veracruz: {
             nombre : 'WALL\'S BOCA DEL RIO',
@@ -302,14 +303,15 @@ angular.module('application')
             shortName: 'GUADALAJARA',
             direccion: 'Av. Aviación 3000, San Juan de Ocotán, 45019 Zapopan, Jal.Guadalajara (México)',
             telefono: '(044) 332 066 34 88',
-            position: '16.800000, -85.0000000',
+            y: '20.729825',
+            x: ' -103.452480',
             img: '/assets/img/sucursales/Guadalajara.jpg',
             imgMobile: '/assets/img/sucursales/GuadalajaraMobile.png',
             fb: 'https://www.facebook.com/wallsbarbershopgdl/', 
             instagram : 'https://www.instagram.com/wallsbarbershop_gdl/',
             twitter: 'https://twitter.com/WallsBarbershop',
             select: false,
-            mapsUrl: "#"
+            mapsUrl: "https://www.google.com/maps/place/Walls+Barbershop+Guadalajara/@20.7298452,-103.4546634,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xd97fb23bf0226750!8m2!3d20.7298452!4d-103.4524747?hl=es-419"
         }
     };
     return {

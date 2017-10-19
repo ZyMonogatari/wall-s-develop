@@ -1,5 +1,5 @@
 angular.module('application').controller('franquiciasCtrl',
-  ['$scope', '$window', 'NgMap', '$state', '$messageApi', function($scope, $window, NgMap, $state, $messageApi){
+  ['$scope', '$window', 'NgMap', '$state', '$messageApi', 'FoundationApi', function($scope, $window, NgMap, $state, $messageApi, FoundationApi){
     document.title = "Franquicias - Wall´s Barbershop";    
     $scope.displaySesionN = 'none';
     $scope.mostrarMenu = function (){
@@ -18,8 +18,8 @@ angular.module('application').controller('franquiciasCtrl',
     }
     $scope.message = {};
     $scope.send = function(){
-        console.log($scope.message);
-        $messageApi.sendMessage($scope.message);
+        FoundationApi.publish('main-notifications', { title: 'Mensaje enviado', content: 'Se ha enviado su mensaje, muchas gracias'});
+       //$messageApi.sendMessage($scope.message);
     }
 
     $scope.scroll = function(){
@@ -47,6 +47,7 @@ angular.module('application').controller('franquiciasCtrl',
     angular.element(document.querySelector('#bounceIn-button')).addClass('bounceIn3s');
     
    $window.onscroll = function(event){
+        var delayTime = 100;
     if(document.getElementById('cabecera-walls-logo').getBoundingClientRect().top <= 0){
           $scope.cabecera.position = 'fixed';
           $scope.cabecera.top = '0px';
@@ -71,34 +72,34 @@ angular.module('application').controller('franquiciasCtrl',
         $scope.cabecera.source = '/assets/img/logo.png';
         $scope.$apply();
       }
-    if((document.getElementById('fadeInLeft-logo').getBoundingClientRect().top + 300) <= screen.height){
+    if((document.getElementById('fadeInLeft-logo').getBoundingClientRect().top + delayTime) <= screen.height){
         angular.element(document.querySelector('#fadeInLeft-logo')).addClass('fadeInLeft1s');
     }
-    if((document.getElementById('fadeIn-text').getBoundingClientRect().top + 300) <= screen.height){
+    if((document.getElementById('fadeIn-text').getBoundingClientRect().top + delayTime) <= screen.height){
         angular.element(document.querySelector('#fadeIn-text')).addClass('fadeInLeft1s');
     }
-    if((document.getElementById('single1').getBoundingClientRect().top + 300) <= screen.height){
+    if((document.getElementById('single1').getBoundingClientRect().top + delayTime) <= screen.height){
         angular.element(document.querySelector('#single1')).addClass('fadeInUp1s');
     }
-    if((document.getElementById('single2').getBoundingClientRect().top + 300) <= screen.height){
+    if((document.getElementById('single2').getBoundingClientRect().top + delayTime) <= screen.height){
         angular.element(document.querySelector('#single2')).addClass('fadeInUp1s');
     }
-    if((document.getElementById('single3').getBoundingClientRect().top + 300) <= screen.height){
+    if((document.getElementById('single3').getBoundingClientRect().top + delayTime) <= screen.height){
         angular.element(document.querySelector('#single3')).addClass('fadeInUp1s');
     }
-    if((document.getElementById('fadeInLeftBig-title').getBoundingClientRect().top + 300) <= screen.height){
+    if((document.getElementById('fadeInLeftBig-title').getBoundingClientRect().top + delayTime) <= screen.height){
         angular.element(document.querySelector('#fadeInLeftBig-title')).addClass('fadeInLeftBig2s');
     }
-    if((document.getElementById('fadeInLeft-text').getBoundingClientRect().top + 300) <= screen.height){
+    if((document.getElementById('fadeInLeft-text').getBoundingClientRect().top + delayTime) <= screen.height){
         angular.element(document.querySelector('#fadeInLeft-text')).addClass('fadeInLeft1s');
     }
-    if((document.getElementById('single2').getBoundingClientRect().top + 300) <= screen.height){
+    if((document.getElementById('single2').getBoundingClientRect().top + delayTime) <= screen.height){
         angular.element(document.querySelector('#single2')).addClass('fadeInUp1s');
     }
-    if((document.getElementById('single-area2').getBoundingClientRect().top + 300) <= screen.height){
+    if((document.getElementById('single-area2').getBoundingClientRect().top + delayTime) <= screen.height){
         angular.element(document.querySelector('#single-area2')).addClass('fadeInUp1s');
     }
-    if((document.getElementById('info-bounce').getBoundingClientRect().top + 300) <= screen.height){
+    if((document.getElementById('info-bounce').getBoundingClientRect().top + delayTime) <= screen.height){
         angular.element(document.querySelector('#info-bounce')).addClass('bounceIn1s');
     }    
    }

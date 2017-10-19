@@ -136,17 +136,10 @@ angular.module('application').controller('galeriaCtrl',
         $scope.logoTransform = 'scale(1, 1)';
         $scope.$apply();
       }
-    if((document.getElementById('cuerpo1').getBoundingClientRect().top -50)  <= 0 & (document.getElementById('cuerpo1').getBoundingClientRect().top) >= -1000){
-      $scope.actualBody = 2;
-      $scope.$apply();
-    } else if((document.getElementById('cuerpo1').getBoundingClientRect().top -50)  >= 0){
-      $scope.actualBody = 1;
-      $scope.$apply();
-    }
-    if((document.getElementById('cuerpo2').getBoundingClientRect().top -50)  <= 0){
+    /*if((document.getElementById('cuerpo2').getBoundingClientRect().top -50)  <= 0){
       $scope.actualBody = 3;
       $scope.$apply();
-    }
+    }*/
     for(var i = 0; i < document.getElementsByClassName('galleryBox').length; i++){
       if((document.getElementsByClassName('galleryBox')[i].getBoundingClientRect().top + 50) <= screen.height & screen.width > 768){
           angular.element(document.getElementsByClassName('galleryBox')[i]).addClass('appear');

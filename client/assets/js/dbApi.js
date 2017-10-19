@@ -26,6 +26,9 @@ angular.module('application')
       },
       checkEmail : function(email){
         return get('emailCheckerMexicano.php?email=' + email);
+      },
+      updatePass : function(params){
+        return get('updatePass.php?email=' + params.email + '&newPass=' + params.pass + '&card=' + params.card);
       }
     }
   });

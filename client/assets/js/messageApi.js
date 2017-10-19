@@ -12,11 +12,15 @@ angular.module('application')
 
     return {
       sendMessage : function(message){
-       return get('sendMessage.php?name=' + message.name + '&email=' + message.email + '&empresa=' + message.empresa +
-        '&address=' + message.address + '&phone=' + message.phone + '&state=' + message.state +'&why=' + message.why);
+        console.log(message);
+
+       return get('sendMessage.php?name=' + message.name + '&phone=' + message.phone + '&state=' + message.state +'&why=' + message.why + '&email=' + message.email + '&empresa=' + message.empresa + '&address=' + message.address);
       },
       sendEmailMexicano : function(email){
         return get('mexicano_que_se_respeta_mailer.php?email=' + email);
+      },
+      sendPasswordCode : function(cardMail){
+        return get('passwordRecovery.php?cardMail=' + cardMail);
       }
     }
   });

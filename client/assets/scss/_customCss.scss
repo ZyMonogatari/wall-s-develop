@@ -2,6 +2,7 @@
 	margin: 0 0 10% 0;
 	border-radius: 20px;
 }
+
 .grid-content{
 	overflow-y: initial;
 	padding: 0;
@@ -165,7 +166,10 @@ body{
 	cursor: pointer;
 	width: auto;
     display: inline-block;
-    padding: 3px 5px;
+    padding: 5px;
+    h6{
+    	margin: 0;
+    }
 }
 .leerMasFooter-div{
 	text-align: center;
@@ -230,17 +234,27 @@ body{
 	height: 100%;
 	background-size : cover;
 	width : 100%;
-	position : fixed;
+	position : relative;
 	background-repeat: no-repeat;
+	padding: 10%;
+}
+.fondo-fixed-content{
+	text-align: center;
+	.galeria-video{
+		margin-bottom: 2%;
+	}
 }
 .fondo-footer{
 	background-image: url(/assets/img/fondo-footer.jpg);
-	height: 150%; 
 	background-size : cover;
 	width : 100%; 
-	position : fixed; 
+	position : relative; 
 	background-repeat: no-repeat;
-	top : -40%;
+	overflow: auto;
+	text-align: center;
+	background-attachment: fixed;
+	z-index: -1;
+	margin: -10% 0;
 }
 
 .cuerpo1{
@@ -253,7 +267,7 @@ body{
 	//height: 130%;
 	position: relative;
 	width : 100%; 
-	margin: 50% 0 0 0;
+	margin: 0;
 	//left : -5%;
 	//top: 400%;
 }
@@ -261,7 +275,6 @@ body{
 .cuerpo3{
 	position: relative; 
 	width : 100%;
-	margin: 50% 0 0;
 	height: 700px;
 }
 
@@ -288,7 +301,7 @@ body{
 
 .titulos-div-footer{
 	position: relative;
-	margin: 33% 20%; 
+	margin: 15% 0%; 
 }
 .titulos-div-footer div p{
 	color: white;
@@ -354,7 +367,9 @@ body{
 .cuerpo1-titulos-div{
 	
 	text-align: center; 
-	
+	p{
+		font-size: 25px;
+	}
 }
 
 .cuerpo2-div{
@@ -602,6 +617,9 @@ body{
 	}
 	.cuerpo1-titulos-div{
 		margin: 0 0 10%;
+		p{
+			font-size: 20px;
+		}
 	}
 	.wallsCardLogoDiv2{
 		display: inherit;
@@ -621,14 +639,10 @@ body{
 	.home-cuerpo-absolute{
 		top: 60%;
 	}
-	.cuerpo2{
-		margin: 70% 0 0 0;
-	}
 	.home-sucursales-title{
 		display: none;
 	}
 	.cuerpo3{
-		margin: 120% 0 0;
 		height: 10%;
 	}
 	.borde-sesgado-bottom-black{
@@ -668,9 +682,6 @@ body{
 @media only screen and (max-width: 580px){
 	.home-cuerpo-absolute{
 		top: 50%;
-	}
-	.cuerpo2{
-		margin: 120% 0 0 0;
 	}
 	.video{
 		width: 60%;
@@ -712,6 +723,9 @@ body{
 }
 
 @media only screen and (max-width: 414px){
+	.cuerpo1-titulos-div p {
+	    font-size: 18px;
+	}
 	.wallscardImg{
 		border-radius: 10px;
 	}
@@ -742,7 +756,7 @@ body{
 		font-size: 25px !important;
 	}
 	.socialIconsDivMovil{
-		width: 90%;
+		width: 100%;
 	}
 	/*.cuerpo2-titulo {
     	font-size: 50px;
@@ -859,7 +873,7 @@ body{
 		top: 210%;
 	}*/
 	.angleDiv{
-		width: 8%;
+		display: none;
 	}
 	.item-1, 
 	.item-2, 
@@ -882,9 +896,6 @@ body{
 		font-size: 35px;
 	}
 	
-	.socialIconsDivMovil{
-		width: 75%;
-	}
 	.socialIcon{
 		margin-left: 4px;
     	margin-right: 4px;
