@@ -1,6 +1,7 @@
 angular.module('application').controller('wallsCardCtrl',
   ['$scope', '$window', '$state', '$dbApi', 'FoundationApi', '$messageApi', function($scope, $window,  $state, $dbApi, FoundationApi, $messageApi){
-  	$scope.screenHeight = '720px';
+    document.title = "Wall´s Card- Wall´s Barbershop";
+    $scope.screenHeight = '720px';
   	console.log($scope.screenHeight);
   	$scope.displaySesionN = 'none';
     angular.element(document.querySelector('#selloBounce2s')).addClass('bounceIn2s');

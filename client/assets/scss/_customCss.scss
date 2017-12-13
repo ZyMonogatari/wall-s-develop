@@ -253,7 +253,6 @@ body{
 	overflow: auto;
 	text-align: center;
 	background-attachment: fixed;
-	z-index: -1;
 	margin: -10% 0;
 }
 
@@ -424,6 +423,7 @@ body{
     bottom: 0;
     width: 100%;
     background: #454545;
+    overflow: auto;
 }
 
 @media only screen and (max-width: 1400px){
@@ -590,7 +590,6 @@ body{
 	.footer-text{
 		width: 100%;
     	text-align: center;
-    	margin: 3px 0 0;
 	}
 	.cuerpo1{
 		position: relative; 
@@ -654,6 +653,7 @@ body{
 	
 	.socialIconsDivMovil{
 		display: inherit;
+		margin: 1% 0;
 	}
 	.socialIconsDiv{
 		display: none;
@@ -753,7 +753,7 @@ body{
 	}
 	.socialIcon{
 
-		font-size: 25px !important;
+		font-size: 20px !important;
 	}
 	.socialIconsDivMovil{
 		width: 100%;

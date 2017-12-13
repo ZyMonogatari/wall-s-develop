@@ -121,623 +121,529 @@ controller: wallsCardCtrl
 </div>
 <zf-notification-set id="main-notifications" position="top-left" ></zf-notification-set>
 
-    <!-- PRELOADER 
-    <div class="spn_hol">
-        <div class="spinner">
-            <div class="bounce1"></div>
-            <div class="bounce2"></div>
-            <div class="bounce3"></div>
+
+<div class="wallscard-top">
+    <div class="wallsCard-top-overlay"></div>
+    <div class="wallscard-top-content">
+        <div class="wallscard-top-content-left">
+            <div class="wallscard-top-left-container" id="fadeInLeftIcon2s" ng-click="scrollToRegist()">
+                <div class="wallscard-left-icon">
+                    <i>
+                    </i>
+                </div>
+                <div class="wallscard-left-title">
+                    <h3>
+                        Registrarme
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="wallscard-top-content-center">
+            <div>
+                <div class="wallscard-top-franja">
+                    <img src="./assets/img/sello-walls-card-min.png" id="selloBounce2s">
+                </div>
+                <!--div class="wallscard-top-logo">
+                    
+                </div-->
+            </div>
+        </div>
+        <div class="wallscard-top-content-right">
+            <div class="wallscard-top-right-container" id="fadeInRight2sIcon" ng-click="scrollToPoints()">
+                <div class="wallscard-right-icon">
+                    <i>
+                    </i>
+                </div>
+                <div class="wallscard-right-title">
+                    <h3>
+                        ver mis puntos
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wallscard-conoce">
+    <div class="wallscard-membrecia">
+        <div class="wallscard-membrecia-titulo">
+            <h2>
+                conoce nuestra membresía
+            </h2>
+        </div>
+        <div> 
+            <img src="/assets/img/menbrecia-min.png" id="bounceIn1sMembrecia">
+        </div>
+        <div class="wallscard-membrecia-descripcion">
+            <p>
+                ¡La única tarjeta que tiene más actitud que otras!
+            </p>
         </div>
     </div>
-
- END PRELOADER -->
-
- <!-- =========================
-     START ABOUT US SECTION
-============================== -->
-    <section class="wc-header wc-parallax home-parallax page" id="HOME" ng-style="{'height' : screenHeight}">
-
-      <!--   <div class="fondo-top-izquierdo"></div>    
-         <div class="fondo-top-derecho"></div> -->
-         <div class="wc-fondo-diagonal"></div>      
-        <div class="wc-section_overlay" ng-style="{'height' : screenHeight}">
-            <nav class="wc-navbar wc-navbar-default navbar-fixed-top" role="navigation">
-                <div class="container">
-                   
-                    <!-- CAMBIAR AL MENÚ PARA WALL´S - CAMBIAR AL MENÚ PARA WALL´S -CAMBIAR AL MENÚ PARA WALL´S
-                    <div ng-include="'/templates/navBar.html'"></div>
-<div ng-include="'/templates/icons.html'" class="grid-block iconsDiv"></div> -->
-                    
-                    
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                   
-                    <!-- /.navbar-collapse -->
-                </div>
-                <!-- /.container- -->
-            </nav>
-
-            <div class="container home-container">
-                <div class="row" style="margin-top: 100px;">
-                    <div class="col-md-12">
-                        <div class="wc-logo text-center">
-
-                                <!-- LOGO 
-                            <img width="125" height="55" src="./assets/img/logo.png" alt="">-->
-                        </div>
+    <div class="wallscard-beneficios">
+        <div class="wallscard-beneficios-left" id="fadeInLeftIcons1s">
+            <div class="beneficios-feature">
+                <div class="beneficios-feature-textos">
+                    <div class="beneficios-feature-titulo">
+                        <h3 class="font-right">
+                            ¡Gratis!
+                        </h3>
+                    </div>
+                    <div class="beneficios-feature-descripcion">
+                        <p class="font-right">
+                            El día de tu cumpleaños cualquier servicio es gratis!
+                        </p>
                     </div>
                 </div>
-                <div class="row">
-                      <div class="wc-feature_inner containCustomResp">
-            <div class="container customContainer">
-                <div class="row">
-                    <div class="col-md-2 wc-right_no_padding wc-texto_top_derecha" id="fadeInLeftIcon2s">
-                        <!-- FEATURE -->
-
-                        <div class="wc-left_single_feature featureTextLeft customfeatureTextLeft">
-                            <!-- ICON -->
-                           
-
-                            <!-- FEATURE HEADING AND DESCRIPTION -->
-                            <div ng-click="scrollToRegist()" style="cursor:pointer";><i class="wc-icono-registrase"></i></div>
-                            <h3 class="RobotoCondensed-Bold">Registrarme</h3>
-                            
-                        </div>
-
-                        <!-- END SINGLE FEATURE -->
-
-
-                        <!-- FEATURE -->
-                        
-                        <!-- END SINGLE FEATURE -->
-
-
-                        <!-- FEATURE -->
-                        
-                        <!-- END SINGLE FEATURE -->
-
-                    </div>
-                    <div class="col-md-8 wc-col-md-8 wc-sello_imagen">
-                        <div class="">
-                            <!-- FEATURE IMAGE -->
-                            <img  id="selloBounce2s" src="./assets/img/sello-walls-card-min.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-2 wc-left_no_padding wc-texto_top_izquierda  customfeatureTextRight" id="fadeInRight2sIcon">
-
-                        <!-- FEATURE -->
-                        <div class="wc-right_single_feature featureTextRight">
-                            <!-- ICON -->
-                            
-
-                            <!-- FEATURE HEADING AND DESCRIPTION -->
-                            <div ng-click="scrollToPoints()" class="iconLeftResp" style="cursor:pointer"><i class="wc-iconos-mis-puntos "></i></div>
-                            <h3 class="textoLeftResp RobotoCondensed-Bold">Ver mis puntos</h3>
-                            
-                        </div>
-                        <!-- END SINGLE FEATURE -->
-
-
-                        <!-- FEATURE -->
-                        
-                        <!-- END SINGLE FEATURE -->
-
-
-                        <!-- FEATURE -->
-                        
-                        <!-- END SINGLE FEATURE -->
-                    </div>
+                <div class="beneficios-feature-image">
+                    <img src="/assets/img/icono-cumple-mes-min.png">
                 </div>
-                  
             </div>
-        </div>
+            
+            <div class="beneficios-feature">
+                <div class="beneficios-feature-textos">
+                    <div class="beneficios-feature-titulo">
+                        <h3 class="font-right">
+                            Cumpleaños
+                        </h3>
+                    </div>
+                    <div class="beneficios-feature-descripcion">
+                        <p class="font-right">
+                            50 por ciento de descuento en todo el mes de tu cumpleaños
+                        </p>
+                    </div>
+                </div>
+                <div class="beneficios-feature-image">
+                    <img src="/assets/img/icono-torta-cumple-min.png">
+                </div>
+            </div>
+
+            <div class="beneficios-feature">
+                <div class="beneficios-feature-textos">
+                    <div class="beneficios-feature-titulo">
+                        <h3 class="font-right">
+                            3x2
+                        </h3>
+                    </div>
+                    <div class="beneficios-feature-descripcion">
+                        <p class="font-right">
+                            En servicio de cortes de cabello.
+                        </p>
+                    </div>
+                </div>
+                <div class="beneficios-feature-image">
+                    <img src="/assets/img/icono-3x2-min.png">
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- END HEADER SECTION -->
-
-
-<!-- =========================
-     START FEATURES
-============================== -->
-    <section id="FEATURES" class="wc-membrecia page" >
-    <div class="wc-fondo-diagonal-dos"></div> 
-        <div class="wc-membrecia_inner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <!-- FEATURES SECTION TITLE -->
-                        <div class="wc-membrecia_title wow fadeIn" data-wow-duration="1s">
-                            <h2 class="RobotoCondensed-Bold">Conoce nuestra membresía</h2>
-                             <div class="wc-imagenen-menbrecia-central"><img id="bounceIn1sMembrecia" src="./assets/img/menbrecia-min.png" alt=""></div>
-                            <p>¡La única tarjeta que tiene más actitud que otras!</p>
-                        </div>
-                        <!-- END FEATURES SECTION TITLE -->
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 wc-right_no_padding" id="fadeInLeftIcons1s">
-                        <!-- FEATURE -->
-
-                        <div class="wc-left_single_membrecia">
-                            <!-- ICON -->
-                            <div><span class="pe-7s-like"></span><img class="wow bounceIn" data-wow-duration="1s" src="./assets/img/icono-cumple-mes-min.png" alt=""></div>
-
-                            <!-- FEATURE HEADING AND DESCRIPTION -->
-                            <h3>¡Gratis!</h3>
-                            <p>El día de tu cumpleaños cualquier servicio es gratis!</p>
-                        </div>
-
-                        <!-- END SINGLE FEATURE -->
-
-
-                        <!-- FEATURE -->
-                        <div class="wc-left_single_membrecia">
-                            <!-- ICON -->
-                            <div><span class="pe-7s-science"></span><img class="wow bounceIn" data-wow-duration="1s" src="./assets/img/icono-torta-cumple-min.png" alt=""></div>
-
-                            <!-- FEATURE HEADING AND DESCRIPTION -->
-                            <h3>Cumpleaños</h3>
-                            <p>50 por ciento de descuento en todo el mes de tu cumpleaños</p>
-                        </div>
-                        <!-- END SINGLE FEATURE -->
-
-
-                        <!-- FEATURE -->
-                        <div class="wc-left_single_membrecia">
-                            <!-- ICON -->
-                            <div><span class="pe-7s-look"></span><img class="wow bounceIn" data-wow-duration="1s" src="./assets/img/icono-3x2-min.png" alt=""></div>
-
-                            <!-- FEATURE HEADING AND DESCRIPTION -->
-                            <h3>3x2</h3>
-                            <p>En servicio de cortes de cabello. </p>
-                        </div>
-                        <!-- END SINGLE FEATURE -->
-
-                    </div>
-                    <div class="col-md-4">
-                        <div class="wc-membrecia_iphone">
-                            <!-- FEATURE PHONE IMAGE -->
-                            <img id="bounceInCard1s" src="./assets/img/tarejeta-walls-card-min.png" alt="">
-                          <div class="wc-texto-menbrecia-beneficios">  <h3 class="RobotoCondensed-Bold whiteFont">Beneficios VIP de tu tarjeta Wall’s Card</h3></div>
-                        </div>
-                        
-                    </div>
-                    <div class="col-md-4 wc-left_no_padding" id="fadeInRightIcons1s">
-
-                        <!-- FEATURE -->
-                        <div class="wc-right_single_membrecia">
-                            <!-- ICON -->
-                            <div><span class="pe-7s-monitor"></span><img class="wow bounceIn" data-wow-duration="1s" src="./assets/img/icono-octavo-min.png" alt=""></div>
-
-                            <!-- FEATURE HEADING AND DESCRIPTION -->
-                            <h3>El 8vo gratis!</h3>
-                            <p>Tu octavo corte es gratis!</p>
-                        </div>
-                        <!-- END SINGLE FEATURE -->
-
-
-                        <!-- FEATURE -->
-                        <div class="wc-right_single_membrecia">
-                            <!-- ICON -->
-                            <div><span class="pe-7s-phone"></span><img class="wow bounceIn" data-wow-duration="1s" src="./assets/img/icono-tarjeta-walls-card-min.png" alt=""></div>
-
-                            <!-- FEATURE HEADING AND DESCRIPTION -->
-                            <h3>10% de descuento</h3>
-                            <p>Opten un 10 por ciento de descuento en todos productos y servicios (sólo martes y jueves).</p>
-                        </div>
-                        <!-- END SINGLE FEATURE -->
-
-
-                        <!-- FEATURE -->
-                        <div class="wc-right_single_membrecia">
-                            <!-- ICON -->
-                            <div><span class="pe-7s-gleam"></span><img class="wow bounceIn" data-wow-duration="1s" src="./assets/img/icono-suma-puntos-min.png" alt=""></div>
-
-                            <!-- FEATURE HEADING AND DESCRIPTION -->
-                            <h3>Suma Puntos</h3>
-                            <p>Suma puntos y cámbialos por descuentos en servicios o productos</p>
-                        </div>
-                        <!-- END SINGLE FEATURE -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- END FEATURES SECTION -->
-
-
-<!-- =========================
-   SECCIÓN REGISTRO WALLS CARD
-============================== -->
-    <section class="wc-contact page" id="REGISTRO">
-          
-
-        <div class="wc-section_overlay">
-    
-            <div class="container">
-            <div class="wc-fondo-diagonal-izquierdo fadeInLeft" data-wow-duration="4s" data-wow-delay=".3s">
-                        <!-- FONDO DIAGONAL IZQUIERDO -->
-                            
-                        </div>
-                        
-                <div class="col-md-10 col-md-offset-1 " id="bounceInRegistraText1s">
-                    <!-- Start Contact Section Title-->
-                    <div class="wc-section_title">
-                        <h2 class="RobotoCondensed-Bold">Registra tu Wall’s Card</h2>
-                        <p>Wall’s Card es propiedad de Wall’s Barber Shop y es válida para su uso en el programa de beneficios, vigente en las sucursales afiliadas participantes en la república mexicana.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="wc-contact_form" id="bounceInForm1s">
-                <div class="container">
-
-                <!-- START ERROR AND SUCCESS MESSAGE -->
-                    <div class="form_error text-center">
-                        <div class="name_error hide error">Please Enter your name</div>
-                        <div class="email_error hide error">Please Enter your Email</div>
-                        <div class="email_val_error hide error">Please Enter a Valid Email Address</div>
-                        <div class="message_error hide error">Please Enter Your Message</div>
-                    </div>
-                    <div class="wc-Sucess"></div>
-                <!-- END ERROR AND SUCCESS MESSAGE -->
-
-                
-                   <!-- CONTACT FORM starts here, Go to contact.php and add your email ID, thats it.-->   
-                   
-                    <form ng-submit="sendRegist()" >
-                <input type="hidden" value="1" name="info[activo]" />
-                <div class="row">
-                            <div class="col-md-4 wc-columna-ancho">
-                <p class="wc-estilo-texto-formulario">¡La única tarjeta que tiene más actitud que otras!</p>
-					
-                           
-                            </div>
-                            <div class="col-md-8 wc-col-md-8">
-                             <div class="col-md-6">
-                             <input required name="info[nombre]" id="nombre" class="form-control" placeholder="Nombre" ng-model="regist.name">
-                    
-					<input required name="info[apellidos]" id="apellidos" class="form-control" placeholder="Apellidos" ng-model="regist.lastname">
-                    
-					<input required name="info[telefono]" title="Debe tener al menos 10 digitos" pattern="\S{10}" onkeydown="return validarNumeros(event)" maxlength="10" id="telefono" class="form-control" placeholder="Teléfono" ng-model="regist.phone">
-                             
-                             <input required name="info[email]" type="email" data-pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" class="form-control" placeholder="Email" ng-model="regist.email">
-                             
-                             <input type="text" required id="fecha" name="info[fecha_nacimiento]" class="form-control" placeholder="Fecha de nacimiento (AAAA-MM-DD)" ng-model="regist.birthday"  onkeyup="
-                              var date = this.value;
-                              if (date.match(/^\d{4}$/) !== null) {
-                                 this.value = date + '-';
-                              } else if (date.match(/^\d{4}\-\d{2}$/) !== null) {
-                                 this.value = date + '-';
-                              }" maxlength="10">
-                    
-					        </div>
-                            
-                            <div class="col-md-6">
-                            <select required name="info[id_estados]" id="estadoR" class="form-control" ng-model="regist.state" ng-change="loadSucursal()">
-                    		<option value="" >-Seleccione Estado-</option>
-							<option value="1" >Aguascalientes</option>
-        	            	<option value="2" >Baja California</option>
-        	            	<option value="3" >Baja California Sur</option>
-        	            	<option value="4" >Campeche</option>
-        	            	<option value="5" >Chiapas</option>
-        	            	<option value="6" >Chihuahua</option>
-        	            	<option value="7" >Coahuila</option>
-        	            	<option value="8" >Colima</option>
-        	            	<option value="9" >CDMX</option>
-        	            	<option value="10" >Durango</option>
-                            <option value="15" >Estado de Mexico</option>
-        	            	<option value="11" >Guanajuato</option>
-        	            	<option value="12" >Guerrero</option>
-        	            	<option value="13" >Hidalgo</option>
-        	            	<option value="14" >Jalisco</option>
-        	            	<option value="16" >Michoacan</option>
-        	            	<option value="17" >Morelos</option>
-        	            	<option value="18" >Nayarit</option>
-        	            	<option value="19" >Nuevo Leon</option>
-        	            	<option value="20" >Oaxaca</option>
-        	            	<option value="21" >Puebla</option>
-        	            	<option value="22" >Queretaro</option>
-        	            	<option value="23" >Quintana Roo</option>
-        	            	<option value="24" >San Luis Potosi</option>
-        	            	<option value="25" >Sinaloa</option>
-        	            	<option value="26" >Sonora</option>
-        	            	<option value="27" >Tabasco</option>
-        	            	<option value="28" >Tamaulipas</option>
-        	            	<option value="29" >Tlaxcala</option>
-        	            	<option value="30" >Veracruz</option>
-        	            	<option value="31" >Yucatan</option>
-        	            	<option value="32" >Zacatecas</option>
-					</select>
-                    <select name="info[id_sucursales]" required id="sucursalesR" class="form-control" ng-model="regist.sucursal">
-        	<option value="">-Sucursal-</option>
-            <option value="{{sucursal.id}}" ng-repeat="sucursal in sucursales">{{sucursal.nombre}}</option>
-        </select>
-                    
-                            
-                            <input required id="no_tarjeta" pattern="^(0|[1-9][0-9]*)"  maxlength="8" name="info[num_tarjeta]" class="form-control" placeholder="Nº de tarjeta" ng-model="regist.card">
-                        
-						<input required type="password" title="Debe tener al menos 6 caracteres"  pattern=".{6,}" id="contra1" name="info[password]" class="form-control" placeholder="Crea tu contraseña" ng-model="regist.password">
-                        
-                        <div class="wc-datos-acuerdo-formulario">
-                            <label>
-						<input type="checkbox" required id="compartir_datos" name="compartir_datos" value="Si" ng-model="regist.agree">
-              				Compartir mis datos de registro con los proveedores de contenido de Wall's Barbershop para fines de marketing. </label>
-						
-                            </div>
-						
-                        </div>
-
- 
-                            <div class="col-md-12">
-                            	<div class="wc-datos-acuerdo-formulario-dos"><span>Nos comprometemos a proteger tu privacidad y por tanto no alquilaremos ni venderemos tu dirección de correo electrónico. Al continuar, confirmas tu conformidad con nuestros <a target="_blank" zf-open="terms">términos y condiciones</a> y las <a target="_blank" zf-open="politicas">políticas de privacidad </a>de Wall's Barbershop</span></div>
-                               
-                                <button type="submit" class="btn btn-default submit-btn form_submit wc-estilo-fondo-boton-formulario"> ENVIAR </button>
-                            </div>
-                        </div>
-                         </div>
-                    </form>
-                    <!-- END FORM --> 
-                </div>
-            </div>
-         </div>
-    </section>
-    <!-- END CONTACT -->
-
-
- <!-- =========================
-     SECCIÓN CONDICIONES
-============================== -->
-
-
-    <section class="page wc-cuerpo_uno">
- 
-        <div class="container">
         
-        <div class="wc-fondo-diagonal-derecho wow fadeInLeft" data-wow-duration="5s" data-wow-delay=".5s">
-                        <!-- FONDO DIAGONAL DERECHO -->
-                            <img src="./assets/img/cuerpo-fondo-diagonal-derecha-min.png" alt="">
-                        </div>
-                        
-       
-                        
-                        
-                        
-         <div class="wc-sello-izquierda wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">
-                        <!-- SELLO LATERAL IZQUIERDO -->
-                            <img src="./assets/img/sello-izquierda-min.png" alt="">
-                        </div>
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    <!-- ABOUT US SECTION TITLE-->
-                    <div class="wc-seccion_titulo_blanco">
-                        <h2 class="RobotoCondensed-Bold">¡Condiciones!</h2>
-                        
-                    </div>
-                </div>
-
+        <div class="wallscard-beneficios-center">
+            <div>
+                <img src="/assets/img/tarejeta-walls-card-min.png" id="bounceInCard1s">
+            </div>
+            <div>
+                <h3 >
+                    Beneficios VIP de tu tarjeta Wall’s Card
+                </h3>
             </div>
         </div>
-        <div class="wc-inner_about_area">
-            <div class="container">
-                           <div class="row">
-                         <!--columna izquierda uno -->
-            <div class="col-md-4 wc-columna-ancho">
-             <p class="wc-estilo-texto-vertical">¡Condiciones!</p>
+        
+        <div class="wallscard-beneficios-right" id="fadeInRightIcons1s">
+            
+             <div class="beneficios-feature">
+                <div class="beneficios-feature-image">
+                    <img src="/assets/img/icono-octavo-min.png">
+                </div>
+                <div class="beneficios-feature-textos">
+                    <div class="beneficios-feature-titulo">
+                        <h3>
+                            El 8vo Gratis!
+                        </h3>
+                    </div>
+                    <div class="beneficios-feature-descripcion">
+                        <p>
+                            Tu octavo corte es gratis!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="beneficios-feature">
+                <div class="beneficios-feature-image">
+                    <img src="/assets/img/icono-tarjeta-walls-card-min.png">
+                </div>
+                <div class="beneficios-feature-textos">
+                    <div class="beneficios-feature-titulo">
+                        <h3>
+                            10% de descuento
+                        </h3>
+                    </div>
+                    <div class="beneficios-feature-descripcion">
+                        <p>
+                            Obten un 10 por ciento de descuento en todos productos y servicios (sólo martes y jueves).
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
 
-             </div>
-             <!--columna derach dos -->
-             <div class="col-md-8 wc-col-md-8 wc-columna-texto-condiciones">
-                   <div class="col-md-6"><p>Wall’s Card es propiedad de Wall’s Barber Shop y es válida para su uso en el programa de beneficios, vigente en las sucursales afiliadas participantes en la república mexicana. </p></div>
-                   <div class="col-md-6"> <p>Es necesario presentarla para tener derecho a dichos beneficios, para conocer los términos y condiciones, así como beneficios y vigencia del programa de Lealtad Cliente Frecuente consulte aquí indicando usuario y clave. </p></div>
-                   <div class="col-md-6"><p>Los beneficios no deberán ser considerados como dinero o valor monetario de ningún tipo, y esta tarjeta no deberá equiparse a una tarjeta de crédito, débito, ahorro o prepago. Los beneficios y la tarjeta son personales e intransferibles. Aplican restricciones. </p></div>
-                   <div class="col-md-6"><p>Recuerda que cada visita es igual a un punto, esto quiere decir que después de reunir siete punto (7 Visitas) en tu visita número 8, el servicio que desees realizar será completamente ¡Gratis!</p> </div>
-             </div>
-                    
+            <div class="beneficios-feature">
+                <div class="beneficios-feature-image">
+                    <img src="/assets/img/icono-suma-puntos-min.png">
+                </div>
+                <div class="beneficios-feature-textos">
+                    <div class="beneficios-feature-titulo">
+                        <h3>
+                            SUMA PUNTOS
+                        </h3>
+                    </div>
+                    <div class="beneficios-feature-descripcion">
+                        <p>
+                            Suma puntos y cámbialos por descuentos en servicios o productos
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
     </div>
-                </div>
+</div>
+
+<div class="wallscard-registra fondo-degradado">
+    <div class="wallscard-registra-diagonal"></div>
+    <div class="wallscard-registra-contenido">
+        <div class="wallscard-registra-titulos" id="bounceInRegistraText1s">
+            <div class="wallscard-registra-titulo">
+                <h2>
+                    Registra tu wall's card
+                </h2>
+            </div>
+            <div class="wallscard-registra-texto">
+                <p>
+                    Wall’s Card es propiedad de Wall’s Barber Shop y es válida para su uso en el programa de beneficios, vigente en las sucursales afiliadas participantes en la república mexicana.
+                </p>
             </div>
         </div>
+        <div class="wallscard-registra-content" id="bounceInForm1s">
+            <div class="wallscard-registra-content-titulo">
+                <p>
+                    ¡La única 
+                    <br>
+                    tarjeta 
+                    <br>
+                    que tiene 
+                    <br>
+                    más
+                    <br>
+                    actitud
+                    <br>
+                    que 
+                    <br>
+                     otras!
+                </p>
+            </div>
+            <div class="wallscard-registra-content-titulo-resp">
+                <p>
+                    ¡La única 
+                    tarjeta 
+                    que tiene 
+                    más
+                    actitud
+                    que 
+                     otras!
+                </p>
+            </div>
+            <div class="wallscard-registra-content-form">
+                <form ng-submit="sendRegist()"> 
+                    <div class="wallscard-registra-col-left">
+                        <input required name="info[nombre]" id="nombre" class="form-control" placeholder="Nombre" ng-model="regist.name">
+                            
+                        <input required name="info[apellidos]" id="apellidos" class="form-control" placeholder="Apellidos" ng-model="regist.lastname">
+                                
+                        <input required name="info[telefono]" title="Debe tener al menos 10 digitos" pattern="^(0|[1-9][0-9]*)" maxlength="10" minlength="10" id="telefono" class="form-control" placeholder="Teléfono" ng-model="regist.phone">
 
-     </section>
-    <!-- Fin cuerpo condiciones -->
+                        <input required name="info[email]" type="email" data-pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" class="form-control" placeholder="Email" ng-model="regist.email">
+                                         
+                        <input type="text" required id="fecha" name="info[fecha_nacimiento]" class="form-control" placeholder="Fecha de nacimiento (AAAA-MM-DD)" ng-model="regist.birthday" onkeyup="var date = this.value;
+                                          if (date.match(/^\d{4}$/) !== null) {
+                                             this.value = date + '-';
+                                          } else if (date.match(/^\d{4}\-\d{2}$/) !== null) {
+                                             this.value = date + '-';
+                                          }" 
+                        maxlength="10">
+                    </div>
+                    <div class="wallscard-registra-col-right">
+                        <select required name="info[id_estados]" id="estadoR" class="form-control" ng-model="regist.state" ng-change="loadSucursal()">
+                            <option value="" >-Seleccione Estado-</option>
+                            <option value="1" >Aguascalientes</option>
+                            <option value="2" >Baja California</option>
+                            <option value="3" >Baja California Sur</option>
+                            <option value="4" >Campeche</option>
+                            <option value="5" >Chiapas</option>
+                            <option value="6" >Chihuahua</option>
+                            <option value="7" >Coahuila</option>
+                            <option value="8" >Colima</option>
+                            <option value="9" >CDMX</option>
+                            <option value="10" >Durango</option>
+                            <option value="15" >Estado de Mexico</option>
+                            <option value="11" >Guanajuato</option>
+                            <option value="12" >Guerrero</option>
+                            <option value="13" >Hidalgo</option>
+                            <option value="14" >Jalisco</option>
+                            <option value="16" >Michoacan</option>
+                            <option value="17" >Morelos</option>
+                            <option value="18" >Nayarit</option>
+                            <option value="19" >Nuevo Leon</option>
+                            <option value="20" >Oaxaca</option>
+                            <option value="21" >Puebla</option>
+                            <option value="22" >Queretaro</option>
+                            <option value="23" >Quintana Roo</option>
+                            <option value="24" >San Luis Potosi</option>
+                            <option value="25" >Sinaloa</option>
+                            <option value="26" >Sonora</option>
+                            <option value="27" >Tabasco</option>
+                            <option value="28" >Tamaulipas</option>
+                            <option value="29" >Tlaxcala</option>
+                            <option value="30" >Veracruz</option>
+                            <option value="31" >Yucatan</option>
+                            <option value="32" >Zacatecas</option>
+                        </select>
+                        
+                        <select name="info[id_sucursales]" required id="sucursalesR" class="form-control" ng-model="regist.sucursal">
+                            <option value="">-Sucursal-</option>
+                            <option value="{{sucursal.id}}" ng-repeat="sucursal in sucursales">{{sucursal.nombre}}</option>
+                        </select>
+                            
+                                    
+                        <input required id="no_tarjeta" pattern="^(0|[1-9][0-9]*)"  maxlength="8" name="info[num_tarjeta]" class="form-control" placeholder="Nº de tarjeta" ng-model="regist.card">
+                                
+                        <input required type="password" title="Debe tener al menos 6 caracteres"  pattern=".{6,}" id="contra1" name="info[password]" class="form-control" placeholder="Crea tu contraseña" ng-model="regist.password">
 
-<!-- =========================
-   SECCIÓN LOGIN PUNTOS WALLS CARD
-============================== -->
-    <section class="wc-contact page" id="LOGIN">
+                        <label>
+                            <input type="checkbox" required id="compartir_datos" name="compartir_datos" value="Si" ng-model="regist.agree">
+                            Compartir mis datos de registro con los proveedores de contenido de Wall's Barbershop para fines de marketing. 
+                        </label>
+
+                    </div>
+                    <div class="wallscard-registra-row">
+                        <div class="wallscard-registra-span">
+                            <span>
+                                Nos comprometemos a proteger tu privacidad y por tanto no alquilaremos ni venderemos tu dirección de correo electrónico. Al continuar, confirmas tu conformidad con nuestros <a zf-open="terms">términos y condiciones</a> y las <a zf-open="politicas">políticas de privacidad </a> de Wall's Barbershop
+                            </span>
+                        </div>
+                        
+                        <button class="submit-btn">ENVIAR</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wallscard-condiciones ">
+    <div class="wallscard-condiciones-sello">
+        <img src="/assets/img/sello-izquierda-min.png">
+    </div>
+    <div class="wallscard-condiciones-diagonal"></div>
+    <div class="wallscard-condiciones-contenido">
+        <div class="wallscard-condiciones-titulo">
+            <div>
+                <h2>
+                    ¡Condiciones!
+                </h2>
+            </div>
+        </div>
+        
+        <div class="wallscard-condiciones-content">
+            <div class="wallscard-condiciones-content-titulo">
+                <p>
+                   ¡Condiciones! 
+                </p>
+            </div>
+            <div class="wallscard-condiciones-content-textos">
+                <div class="wallscard-condiciones-content-texto">
+                    <p>
+                        Wall’s Card es propiedad de Wall’s Barber Shop y es válida para su uso en el programa de beneficios, vigente en las sucursales afiliadas participantes en la república mexicana.
+                    </p>
+                </div>
+                <div class="wallscard-condiciones-content-texto">
+                    <p>
+                        Es necesario presentarla para tener derecho a dichos beneficios, para conocer los términos y condiciones, así como beneficios y vigencia del programa de Lealtad Cliente Frecuente consulte aquí indicando usuario y clave.
+                    </p>
+                </div>
+                <div class="wallscard-condiciones-content-texto">
+                    <p>
+                       Los beneficios no deberán ser considerados como dinero o valor monetario de ningún tipo, y esta tarjeta no deberá equiparse a una tarjeta de crédito, débito, ahorro o prepago. Los beneficios y la tarjeta son personales e intransferibles. Aplican restricciones. 
+                    </p>
+                </div>
+                <div class="wallscard-condiciones-content-texto">
+                    <p>
+                        Recuerda que cada visita es igual a un punto, esto quiere decir que después de reunir siete punto (7 Visitas) en tu visita número 8, el servicio que desees realizar será completamente ¡Gratis!
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wallscard-puntos fondo-degradado">
+    <div class="wallscard-puntos-diagonal"></div>
+    <div class="wallscard-puntos-content" id="bounceInPointsForm1s">
+        <div class="wallscard-puntos-content-left">
+            <p>
+                Consulta tus puntos con la única 
+                <br> 
+                tarjeta que tiene más actitud que 
+                <br>
+                otras, y disfruta de servicios gratis en 
+                <br>
+                tu cumpleaños, y el mes de tu 
+                <br>
+                cumpleaños obtendrás 50% de 
+                <br>
+                descuento en cualquier servicio que 
+                <br>
+                solicites.
+                <br>
+                <br>
+
+                Tendrás un precio especial de un 3X2 
+                <br>
+                para los cortes de cabello, en tu octava 
+                <br>
+                visita el corte te sale gratis.
+                <br>
+                <br>
+                Con usar tu tarjeta obtendrás un 10% 
+                <br>
+                de descuento en todos productos y 
+                <br>
+                servicios (sólo martes y jueves).
+                <br>
+                <br>
+                SÓLO TIENES QUE SUMAR PUNTO Y 
+                <br>
+                DISFRUTAR DE LOS BENEFICIOS DE 
+                <br>
+                TU TARJETA!
+            </p>
+        </div>
+        <div class="wallscard-puntos-content-left-resp">
+            <p>
+                Consulta tus puntos con la única  
+                tarjeta que tiene más actitud que 
+                otras, y disfruta de servicios gratis en 
+                tu cumpleaños, y el mes de tu 
+                cumpleaños obtendrás 50% de 
+                descuento en cualquier servicio que 
+                solicites.
+                <br>
+                <br>
+
+                Tendrás un precio especial de un 3X2 
+                para los cortes de cabello, en tu octava 
+                visita el corte te sale gratis.
+                <br>
+                <br>
+                Con usar tu tarjeta obtendrás un 10% 
+                de descuento en todos productos y 
+                servicios (sólo martes y jueves).
+                <br>
+                <br>
+                SÓLO TIENES QUE SUMAR PUNTO Y 
+                DISFRUTAR DE LOS BENEFICIOS DE 
+                TU TARJETA!
+            </p>
+        </div>
+        <div class="wallscard-puntos-content-right">
+            <div class="wallscard-puntos-content-titulo">
+                <h2>Mis puntos</h2>
+            </div>
+            <div class="wallscard-puntos-content-texto">
+                <p>
+                    Wall’s Card es propiedad de Wall’s Barber Shop y es válida para su uso en el programa de beneficios, vigente en las sucursales afiliadas participantes en la república mexicana.
+                </p>
+            </div>
+            <form ng-submit="getClientData()">
+                <div class="wallscard-puntos-form">
+                    <div>
+                        <input class="form-control" id="sTarjetaEmail" placeholder="Nº de tarjeta / Email" ng-model="clientData.cardMail">
+                    </div>
+                    <div>
+                        <input class="form-control" id="sPassw" placeholder="contraseña" type="password" ng-model=" clientData.password">
+                    </div>
+                </div>
+                <div class="wallscard-puntos-row">
+                    <div class="wallscard-puntos-span">
+                        <span>
+                            Nos comprometemos a proteger tu privacidad y por tanto no alquilaremos ni venderemos tu dirección de correo electrónico. Al continuar, confirmas tu conformidad con nuestros <a zf-open="terms">términos y condiciones</a> y las <a zf-open="politicas">políticas de privacidad </a>de Wall's Barbershop
+                        </span>
+                    </div>
+                        
+                    <button class="submit-btn">CONSULTAR</button>
+                </div>
+                <!--div class="password-recovery-div">
+                    <a zf-open="password-recovery-modal" >¿Olvidaste tu contraseña? haz click aqui</a>
+                </div-->
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="franquicias-seccion3">
+  <div class="seccion3-overlay"></div>
+  <div class="seccion3-content" id="fadeInLeftBigText2s">
+    <div>
+      <h3> ¡ABRE TU FRANQUICIA! </h3>
+    </div>
+    <div class="seccion3-parrafo">
+      <p>
+        Somos una empresa joven con gran espíritu de emprendimiento, con el propósito firme de lograr obtener la preferencia de nuestros clientes, por medio de la innovación y concepto modernista de nuestras franquicias.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="franquicias-info">
+  <div class="fondo_sesgado_dos"></div>
+  <div class="franquicias-info-container">
+    <div class="franquicias-info-form">
+      <div class="franquicias-info-text">
+        <p class="franquicias-info-titulo">¡MÁS INFORMACIÓN!</p>
+        <p>
+          Si está interesado, le podemos contactar a través de uno de nuestros agentes autorizados, a continuación rellene el siguiente formulario y en breve nos comunicaremos con usted.
+        </p>
+      </div>
+
+      <div class="footer-servicios-div fondo-degradado">
+    <div class="titulos-div-footer-sucursales">
+      <div>
+        <p>
           
-
-        <div class="wc-section_overlay">
-    
-            <div class="container">
-            <div class="wc-fondo-diagonal-izquierdo-dos fadeInLeft" data-wow-duration="4s" data-wow-delay=".3s">
-                        <!-- FONDO DIAGONAL IZQUIERDO -->
-                            
-                        </div>
-                        
-                
-            </div>
-
-            <div class="wc-contact_form" id="bounceInPointsForm1s">
-                <div class="container">
-
-                <!-- START ERROR AND SUCCESS MESSAGE -->
-                    <div class="form_error text-center">
-                        <div class="name_error hide wc-error">Please Enter your name</div>
-                        <div class="email_error hide error">Please Enter your Email</div>
-                        <div class="email_val_error hide error">Please Enter a Valid Email Address</div>
-                        <div class="message_error hide error">Please Enter Your Message</div>
-                    </div>
-                    <div class="Sucess"></div>
-                <!-- END ERROR AND SUCCESS MESSAGE -->
-
-                
-                   <!-- CONTACT FORM starts here, Go to contact.php and add your email ID, thats it.-->   
-                   
-                   
-                  
-                   
-                    <form ng-submit="getClientData()">
-                
-                <div class="row">
-                            <div class="col-md-4 wc-columna-ancho-login">
-                            <div class="wc-estilo-texto-login">
-                <p>Consulta tus puntos con la única tarjeta que tiene más actitud que otras, y disfruta de servicios gratis en tu cumpleaños, y el mes de tu cumpleaños obtendrás 50% de descuento en cualquier servicio que solicites.</p><p>
-Tendrás un precio especial de un 3X2 para los cortes de cabello, en tu octava visita el corte te sale gratis.</p><p>
-Con usar tu tarjeta obtendrás un 10% de descuento en todos productos y servicios (sólo martes y jueves).</p><p>
-SÓLO TIENES QUE SUMAR PUNTO Y DISFRUTAR DE LOS BENEFICIOS DE TU TARJETA!
-</p></div>
-					
-                           
-                            </div>
-                            <div class="col-md-8 wc-col-md-8">
-                            <div class="col-md-10 col-md-offset-1 wow bounceIn">
-                    <!-- Start Contact Section Title-->
-                    <div class="wc-section_title">
-                        <h2 class="RobotoCondensed-Bold">Mis Puntos</h2>
-                        <p>Wall’s Card es propiedad de Wall’s Barber Shop y es válida para su uso en el programa de beneficios, vigente en las sucursales afiliadas participantes en la república mexicana.</p>
-                    </div>
-                </div>
-                             <div class="col-md-6">
-                           
-                             <input class="form-control" id="sTarjetaEmail" placeholder="Nº de tarjeta / Email" ng-model="clientData.cardMail">
-					        </div>
-                            
-                            <div class="col-md-6">
-                             <input class="form-control" id="sPassw" placeholder="contraseña" type="password" ng-model=" clientData.password">
-                           
-						
-                            </div>
-						
-                        
-
- 
-                            <div class="col-md-12">
-                            	<div class="wc-datos-acuerdo-formulario-dos"><span>Nos comprometemos a proteger tu privacidad y por tanto no alquilaremos ni venderemos tu dirección de correo electrónico. Al continuar, confirmas tu conformidad con nuestros <a zf-open="terms">términos y condiciones</a> y las <a zf-open="politicas">políticas de privacidad</a>de Wall's Barbershop</span></div>
-                                
-                               <!--<a class="various" data-fancybox-type="iframe" href="puntos.php"> --><button class="btn btn-default submit-btn form_submit wc-estilo-fondo-boton-formulario" id="consultaPuntos" type="submit"  >CONSULTAR</button>
-                                <br>
-                                <br>
-                                <br>
-                                
-                                
-                            </div>
-                        </div>
-                         </div>
-                    </form>
-                    <!-- END FORM --> 
-                </div>
-            </div>
-         </div>
-    </section>
-    <!-- END CONTACT -->
-
- <!-- =========================
-     SECCIÓN ¡ABRE TU FRANQUICIA!
-============================== -->
-
-    <section class="wc-seccion_abre_franquicia wc-parallax">
-        <div class="wc-section_overlay">
-            <div class="container">
-                <div class="row">
-                  
-                    <div class="col-md-10 col-md-offset-1">
-                    <!-- FEATURES SECTION TITLE -->
-                    <div class="wc-seccion_titulo_blanco_dos" id="fadeInLeftBigText2s">
-                   
-                        <h2 class="RobotoCondensed-Bold">¡ABRE TU FRANQUICIA!</h2>
-                        <p>Somos una empresa joven con gran espíritu de emprendimiento, con el propósito firme de lograr obtener la preferencia de nuestros clientes, por medio de la innovación y concepto modernista de nuestras franquicias.</p>
-                    </div>
-                    <!-- END FEATURES SECTION TITLE -->
-                </div>
-                    </div>
-                </div>
-            </div>
+          LIC. AARON ALVARADO <br>
+          TEL: 044 9981 45 96 50 <br>
+          FRANQUICIAS@YOSOYWALLS.COM 
+        </p>
+      </div>
+      <div class="leerMasFooter-div">
+        <div class="leerMasFooter" ng-click="go('franquicias')">
+          <h6 class="whiteFont Lato-Regular">
+            Solicitar info.
+          </h6>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+  <div class="home-footer-brand">
+      <div ng-include="'/templates/socialIconsMovil.html'" class="socialIconsDivMovil"></div>
+    <div ng-include="'/templates/socialIcons.html'" class="socialIconsDiv"></div>
+    <div class="footer-text">
+      <h6 class="text-center whiteFont">©2015 All Rights Reserved  Diseño <a href="http://chicleypegacreativo.com/" target="_blank" style="color: inherit;"><strong>Chicle y Pega Estudio Creativo</strong></a></h6>
+    </div>
+  </div>
 
 
-
-    <!-- FIN ABRE TU FRANQUICIA  -->
-
-
-
-
-
-<!-- =========================
-     START CONTCT FORM AREA
-============================== -->
-<section class="wc-fondo_segado_dos"></section>
-    <section class="wc-contact fondo-degradado page" id="CONTACT">
-        <div class="wc-section_overlay" style="padding:0 0 10%;">
-            <div class="container">
-                <div class="col-md-10 col-md-offset-1 wow bounceIn">
-                    <!-- Start Contact Section Title-->
-                    <div class="wc-section_title_formulario">
-                        <h2 class="RobotoCondensed-Bold">¡Más información!</h2>
-                        <p>Si está interesado, le podemos contactar a través de uno de nuestros agentes autorizados, a continuación nuestros datos de contacto, escribanos y en breve nos comunicaremos con usted.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="wc-contact_form wow bounceIn">
-                <div class="container">
-
-                <!-- START ERROR AND SUCCESS MESSAGE -->
-                    
-                   
-                <!-- END ERROR AND SUCCESS MESSAGE -->
-
-                <!-- CONTACT FORM starts here, Go to contact.php and add your email ID, thats it.-->    
-                   
-                    <!-- END FORM --> 
-                    <div class="wc-section_title_footer">
-                        <h2 class="RobotoCondensed-Bold">Lic. Aaron Alvarado <br>
-                            TEL: 044 9981 45 96 50<br>
-                            franquicias@yosoywalls.com</h2>
-                                            </div>
-                                            <div class="wc-boton-leer-mas">
-				<a href="#"><h6 class="wc-texto-boton-leer-mas whiteFont"> 
-					<i class="fa fa-rocket whiteFont" aria-hidden="true"></i>
-					Solicitar info. 
-				</h6></a>
-			</div>
-
-                </div>
-            </div>            
-        </div>
-        <div class="home-footer-brand">
-            <div ng-include="'/templates/socialIconsMovil.html'" class="socialIconsDivMovil"></div>
-            <div ng-include="'/templates/socialIcons.html'" class="socialIconsDiv"></div>
-            <div class="footer-text">
-                <h6 class="text-center whiteFont">©2015 All Rights Reserved  Diseño <a href="http://chicleypegacreativo.com/" target="_blank" style="color: inherit;"><strong>Chicle y Pega Estudio Creativo</strong></a></h6>
-            </div>
-        </div>
-    </section>
-    <!-- END CONTACT -->
-
-
-<!-- =========================
-     FOOTER 
-============================== -->
-
-    <!--section class="wc-copyright">
-        <h2></h2>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="wc-copy_right_text">
-                        <p>©2015 All Rights Reserved  Diseño <a href="http://chicleypegacreativo.com/" target="_blank" style="color: inherit;"><strong>Chicle y Pega Estudio Creativo</strong></a></p>        
-                        
-                  </div>
-                     
-                </div>                
-            </div>
-        </div>
-    </section-->
-    <!-- END FOOTER -->
-
-
+    </div>
+  </div>
+</div>

@@ -1,4 +1,7 @@
-
+.header-container-servicios{
+	height: 80vh;
+	overflow: auto;
+}
 .top{
 	position: fixed;
 	width: 100%;
@@ -65,7 +68,6 @@
 .cuerpo1-servicios{
 	position: relative;
 	width: 100%;
-	margin: 40% 0 0;
 
 }
 .cuerpo1-servicios-div{
@@ -182,6 +184,7 @@
 }
 .borde-sesgado-gris{
 	width: 100%;
+	margin: 0 0 -2%;
 }
 .borde-sesgado-servicios{
     z-index: 0;
@@ -275,22 +278,13 @@
 .leer-mas-servicios:hover{
 	background: #7A7A7A;
 }
-@media only screen and (max-width: 1300px){
-	.cuerpo1-servicios {
-		margin: 50% 0 0;
-	}
-}
-@media only screen and (max-width: 1100px){
-	.cuerpo1-servicios {
-		margin: 60% 0 0;
-	}
-}
+
 @media only screen and (max-width: 768px){
 	.servicios-columna-parrafo{
 		font-size: 15px;
 	}
 	.servicios-columna-titulo{
-		font-size: 20px;
+		font-size: 18px;
 		margin: 5% 0;
 	}
 	.footer-servicios{
@@ -303,15 +297,14 @@
 	.video-servicios-div{
 		display: none;
 	}
-	.cuerpo1-servicios {
-    
-    	margin: 126% 0 0;
+	.header-container-servicios{
+		height: 95vh;
 	}
 	.footer-servicios{
 		margin: 0;
 	}
 	.columna-left, .columna-right{
-		padding: 10% 2%;
+		padding: 5% 2%;
 	}
 	
 	.columna-top-1{
@@ -343,9 +336,6 @@
 @media only screen and (max-width: 414px){
 	.titulos-div-footer-sucursales div p {
 	    font-size: 20px;
-	}
-	.cuerpo1-servicios {
-	    margin: 166% 0 0;
 	}
 	.columna-top-1, .columna-top-2, .columna-top-3{
 		p{
@@ -400,6 +390,10 @@
 	}
 }
 @media only screen and (max-width: 375px){
+	.header-container-servicios{
+		height: 93vh;
+		overflow: auto;
+	}
 	.footer-servicios-titulos {
 		top: 30px;
 	}
@@ -414,31 +408,14 @@
 	.servicios-columna-texto{
 		width: 100%;
 		position: relative;
-		height: 45vh;
+		height: 30vh;
 	}
 }
-/*
-
-
 
 @media only screen and (max-width: 320px){
-	.cuerpo2-servicios{
-		top: 620px;
-	}
-	.borde-sesgado-gris{
-		top: -25%;
-	}
-	.cuerpo-absolute{
-		top: 20%;
-	}
-	.cuerpo1-servicios{
-		top: 80%;
-	}
-	.footer-servicios{
-		top: 2900px;
-	}
-	.footer-servicios-brand{
-		font-size: 80%;
+	.servicios-columna-texto{
+		width: 100%;
+		position: relative;
+		height: 38vh;
 	}
 }
-*/
