@@ -19,7 +19,7 @@ angular.module('application')
 
         },
         studio : {
-            nombre: 'WALL\'S Studio',
+            nombre: 'WALL\'S STUDIO',
             shortName: 'STUDIO - CANCUN',
             direccion: 'Km 1.5 Zona hotelera, Av Bonampak, Plaza Maria Town Center, Cancún, México',
             telefono: null,

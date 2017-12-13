@@ -1,6 +1,7 @@
 angular.module('application').controller('sucursalesCtrlV2',
-  ['$scope', '$window', 'NgMap', '$interval', '$timeout', '$state', '$sharedData', function($scope, $window, NgMap, $interval, $timeout, $state, $sharedData){
+  ['$scope', '$window', 'NgMap', '$interval', '$timeout', '$state', '$sharedData', 'smoothScroll', function($scope, $window, NgMap, $interval, $timeout, $state, $sharedData, smoothScroll){
     document.title = "Sucursales- Wall´s Barbershop";
+    
     $scope.cabecera = {};
     $scope.cabecera.source = '/assets/img/logo.png';
     $scope.cabecera.position = 'absolute';
@@ -34,6 +35,12 @@ angular.module('application').controller('sucursalesCtrlV2',
         if(param){
             $scope.showInfoDiv(key);
         }
+    }
+    $scope.searchSelect = function(key){
+        var element = document.getElementById('bottom');
+        $scope.showInfoDiv(key);
+        window.scrollTo(0, element.offsetTop);
+
     }
     $scope.showInfoDiv =function(key){
         if(key){

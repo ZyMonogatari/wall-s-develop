@@ -6,6 +6,7 @@
     'ngAnimate',
     //Facebook
     'facebook',
+    'smoothScroll',
     //maps
     'ngMap',
     //foundation

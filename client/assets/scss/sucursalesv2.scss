@@ -162,10 +162,15 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 }
-
+.buscador-div{
+	position: relative; 
+	width: 30%; 
+	display: inline-block;
+}
 .sucursales-cabecera-titulos-div{
+	text-align: center;
 	position: absolute;
-	top: -400px;
+	top: -500px;
 	margin: auto;
 	left: 0; 
 	right: 0;
@@ -333,6 +338,9 @@
 }
 
 @media only screen and (max-width: 768px){
+	.buscador-div{
+		display: none;
+	}
 	.map-container{
 		display: none;
 	}

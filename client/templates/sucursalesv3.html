@@ -11,7 +11,14 @@ controller: sucursalesCtrlV2
 </div>
 
 <div class="sucursalesv2-cuerpo-absolute">
+
   <div class="sucursales-cabecera-titulos-div">
+    <div class="buscador-div">
+      <select ng-change="searchSelect(buscador)" ng-init="buscador='default'" ng-model="buscador">
+        <option selected disabled hidden value="default">Selecciona una sucursal</option>
+        <option ng-repeat="(key, sucursal) in sucursales" value="{{key}}">{{sucursal.nombre}}</option>
+      </select>
+    </div>
     <p class="whiteFont RobotoCondensed-Bold">Trabajamos desde el 2010, sin parar, con entusiasmo, creatividad y curiosidad, nos enfocamos por la calidad del servicio esencial para ser lideres en este campo</p>
   </div>
   <div class="sucursales-cuerpo-sello">
@@ -96,7 +103,7 @@ controller: sucursalesCtrlV2
     </div>   
   </div>
 
-  <div class="sucursales-footer-div">
+  <div class="sucursales-footer-div" id="bottom">
     <div class="sucursales-cuerpo3-div fondo-degradado">
         <div class="titulos-div-footer-sucursales">
           <div>
