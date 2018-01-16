@@ -6,7 +6,6 @@
     'ngAnimate',
     //Facebook
     'facebook',
-    'smoothScroll',
     //maps
     'ngMap',
     //foundation
@@ -27,11 +26,6 @@
 
   function config($urlProvider, $locationProvider, $stateProvider) {
     $urlProvider.otherwise('/');
-    $stateProvider.state('wblog', {
-            url: "/wblog",
-            //templateUrl: 'wblog/index.php'
-            controller: 'blogCtrl'
-        })
     $locationProvider.html5Mode({
       enabled: true,
       requireBase: false

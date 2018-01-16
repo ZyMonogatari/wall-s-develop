@@ -1,5 +1,5 @@
 angular.module('application').controller('sucursalesCtrlV2',
-  ['$scope', '$window', 'NgMap', '$interval', '$timeout', '$state', '$sharedData', 'smoothScroll', function($scope, $window, NgMap, $interval, $timeout, $state, $sharedData, smoothScroll){
+  ['$scope', '$window', 'NgMap', '$interval', '$timeout', '$state', '$sharedData',  function($scope, $window, NgMap, $interval, $timeout, $state, $sharedData){
     document.title = "Sucursales- Wall´s Barbershop";
     
     $scope.cabecera = {};
